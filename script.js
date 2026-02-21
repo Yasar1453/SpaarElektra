@@ -2,14 +2,21 @@
 // Header scroll effect
 // ========================================
 const header = document.querySelector('.header');
+const isHomepage = document.querySelector('.hero') !== null;
 if (header) {
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    if (isHomepage) {
+        // Alleen op de homepage: transparant → wit bij scrollen
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    } else {
+        // Op alle andere pagina's: altijd wit
+        header.classList.add('scrolled');
+    }
 }
 
 // ========================================
