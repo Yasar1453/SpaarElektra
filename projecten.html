@@ -8,294 +8,238 @@
     <link rel="stylesheet" href="projecten-page.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header (zelfde als index.html) -->
     <header class="header scrolled">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra Logo" class="logo-img">
-                    </a>
-                </div>
-                <nav class="nav">
-                    <ul class="nav-menu">
-                        <li class="nav-item dropdown">
-                            <a href="#diensten">Wat wij doen</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
-                                <li><a href="data-installatie.html">Data Installatie</a></li>
-                                <li><a href="camera-intercom-installatie.html">Camera- En Intercom Installatie</a></li>
-                                <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
-                                <li><a href="inspecties.html">Inspecties</a></li>
-                                <li><a href="verlichting.html">Verlichting</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="projecten.html">Projecten</a></li>
-                        <li class="nav-item"><a href="#impact">Impact</a></li>
-                        <li class="nav-item"><a href="#onderhoud">Onderhoud</a></li>
-                        <li class="nav-item"><a href="mensen.html">Mensen</a></li>
-                        <li class="nav-item"><a href="careers.html">Kom werken!</a></li>
-                    </ul>
-                </nav>
-                <div class="header-actions">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra" class="logo-img">
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="elektrische-installaties.html">Wat wij doen <span class="dropdown-arrow">&#8595;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
+                            <li><a href="data-installatie.html">Data Installatie</a></li>
+                            <li><a href="camera-intercom-installatie.html">Camera- En Intercom Installatie</a></li>
+                            <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
+                            <li><a href="inspecties.html">Inspecties</a></li>
+                            <li><a href="verlichting.html">Verlichting</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="projecten.html">Projecten</a></li>
+                    <li class="nav-item"><a href="#impact">Impact</a></li>
+                    <li class="nav-item"><a href="#onderhoud">Onderhoud</a></li>
+                    <li class="nav-item"><a href="mensen.html">Mensen</a></li>
+                    <li class="nav-item"><a href="careers.html">Kom werken!</a></li>
+                </ul>
+                <div class="nav-actions">
                     <a href="contact.html" class="contact-btn">Contact</a>
+                    <button class="search-btn" aria-label="Zoeken">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
                 </div>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="contact-btn">Contact</a>
+                <button class="search-btn" aria-label="Zoeken">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
             </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span class="menu-label">menu</span>
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <section class="projects-hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="container">
-                <h1>Onze projecten</h1>
-                <p class="hero-subtitle">Voor een elektrisch veilig Nederland</p>
-                <p class="hero-description">Bij SpaarElektra realiseren we elektrotechnische installaties: van industriële complexen tot woningbouw</p>
-                <a href="#main-content" class="scroll-link">Scroll verder</a>
+    <!-- Hero Section - Split Layout (Aqua+ stijl) -->
+    <section class="proj-hero">
+        <div class="proj-hero-left">
+            <h1 class="proj-hero-title">Onze projecten</h1>
+            <div class="proj-hero-info">
+                <div class="proj-breadcrumb">
+                    <a href="index.html">Home</a> <span>&bull;</span> <span>Onze projecten</span>
+                </div>
+                <h3 class="proj-hero-subtitle">Voor een elektrisch veilig Nederland</h3>
+                <p class="proj-hero-desc">Bij SpaarElektra realiseren we elektrotechnische installaties: van industriële complexen tot zorginstellingen en woningbouw. We bieden op maat gemaakte oplossingen die voldoen aan de hoogste kwaliteitseisen, altijd in samenwerking met onze klanten. Onze projecten weerspiegelen toewijding aan kwaliteit, vakmanschap en klantgerichtheid, voor een veilige omgeving.</p>
+                <a href="#main-content" class="proj-scroll-link">&#8595; Scroll verder</a>
+            </div>
+        </div>
+        <div class="proj-hero-right">
+            <img src="Fotos/Homepage-fotos/Test-1.webp" alt="SpaarElektra project" class="proj-hero-img">
+        </div>
+    </section>
+
+    <!-- Projects Carousel Section - Dark bg -->
+    <section id="main-content" class="proj-carousel-section">
+        <p class="proj-carousel-label">Projecten waar we trots op zijn</p>
+        <div class="proj-carousel-wrapper">
+            <div class="proj-carousel-nav">
+                <button class="proj-arrow next" id="projNext">&#8594;</button>
+                <button class="proj-arrow prev" id="projPrev">&#8592;</button>
+            </div>
+            <div class="proj-carousel-track">
+                <!-- Row 1 -->
+                <div class="proj-carousel-row" id="projRow1">
+                    <a href="#" class="proj-card">
+                        <div class="proj-card-img" style="background-image: url('Fotos/Projecten-Home/Antareslaan Home.jpg')"></div>
+                        <div class="proj-card-title">Antareslaan</div>
+                    </a>
+                    <a href="project-art-hotel.html" class="proj-card">
+                        <div class="proj-card-img" style="background-image: url('Fotos/Projecten-Home/ART Hotel.jpg')"></div>
+                        <div class="proj-card-title">ART Hotel</div>
+                    </a>
+                    <a href="#" class="proj-card">
+                        <div class="proj-card-img" style="background-image: url('Fotos/Projecten-Home/Citadines Home.jpg')"></div>
+                        <div class="proj-card-title">Citadines</div>
+                    </a>
+                    <a href="#" class="proj-card">
+                        <div class="proj-card-img" style="background-image: url('Fotos/Projecten-Home/Daily Style Home.jpg')"></div>
+                        <div class="proj-card-title">Daily Style</div>
+                    </a>
+                    <a href="#" class="proj-card">
+                        <div class="proj-card-img" style="background-image: url('Fotos/Projecten-Home/Dok 4 Ijmuiden.jpg')"></div>
+                        <div class="proj-card-title">Dok 4 IJmuiden</div>
+                    </a>
+                    <a href="#" class="proj-card">
+                        <div class="proj-card-img" style="background-image: url('Fotos/Projecten-Home/Generaal Vetterstraat Home.jpg')"></div>
+                        <div class="proj-card-title">Generaal Vetterstraat</div>
+                    </a>
+                </div>
+                <!-- Row 2 (offset) -->
+                <div class="proj-carousel-row row-offset" id="projRow2">
+                    <a href="#" class="proj-card">
+                        <div class="proj-card-img" style="background-image: url('Fotos/Projecten-Home/Hotel Nicolaas Witsen.jpg')"></div>
+                        <div class="proj-card-title">Hotel Nicolaas Witsen</div>
+                    </a>
+                    <a href="#" class="proj-card">
+                        <div class="proj-card-img" style="background-image: url('Fotos/Projecten-Home/Hotel Paris.jpg')"></div>
+                        <div class="proj-card-title">Hotel Paris - Krisotel</div>
+                    </a>
+                    <a href="#" class="proj-card">
+                        <div class="proj-card-img" style="background-image: url('Fotos/Projecten-Home/Huygens Plaxe Home.jpg')"></div>
+                        <div class="proj-card-title">Huygens Place</div>
+                    </a>
+                    <a href="#" class="proj-card">
+                        <div class="proj-card-img" style="background-image: url('Fotos/Projecten-Home/ID Apart Hotel.jpg')"></div>
+                        <div class="proj-card-title">ID Apart Hotel</div>
+                    </a>
+                    <a href="#" class="proj-card">
+                        <div class="proj-card-img" style="background-image: url('Fotos/Projecten-Home/Home from President OneDrive.png')"></div>
+                        <div class="proj-card-title">President</div>
+                    </a>
+                </div>
+            </div>
+            <div class="proj-carousel-dots" id="projDots"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section - Dark bg -->
+    <section class="proj-cta">
+        <p class="proj-cta-text">Onder de indruk van onze portfolio? Heeft u ook een uitdaging?</p>
+        <div class="proj-cta-buttons">
+            <a href="elektrische-installaties.html" class="proj-cta-btn filled">Bekijk onze oplossingen</a>
+            <a href="mailto:info@spaarelektra.nl" class="proj-cta-btn outline">Mail ons meteen!</a>
+        </div>
+    </section>
+
+    <!-- Client Logos Section - Light bg -->
+    <section class="proj-clients">
+        <div class="proj-clients-inner">
+            <div class="proj-clients-header">
+                <p class="proj-clients-title">Zij gingen u voor</p>
+                <p class="proj-clients-desc">De praktijk is ons bewijs. Door de jaren heen hebben al veel organisaties voor onze oplossingen gekozen. Grote en bekende namen, maar ook mkb-bedrijven. In al deze projecten maken wij het verschil. Bekijk onze klantenverhalen en ontdek waarom.</p>
+            </div>
+            <div class="proj-logos-grid">
+                <div class="proj-logo-item"><img src="Fotos/Foto-Samenwerking/Art hotel.png" alt="Art Hotel"></div>
+                <div class="proj-logo-item"><img src="Fotos/Foto-Samenwerking/Corendon.png" alt="Corendon"></div>
+                <div class="proj-logo-item"><img src="Fotos/Foto-Samenwerking/Ibis.png" alt="Ibis"></div>
+                <div class="proj-logo-item"><img src="Fotos/Foto-Samenwerking/IDhotel.png" alt="ID Hotel"></div>
+                <div class="proj-logo-item"><img src="Fotos/Foto-Samenwerking/citadines.png" alt="Citadines"></div>
+                <div class="proj-logo-item"><img src="Fotos/Foto-Samenwerking/Mericure.png" alt="Mercure"></div>
+                <div class="proj-logo-item"><img src="Fotos/Foto-Samenwerking/Nicolaas.png" alt="Nicolaas Witsen"></div>
+                <div class="proj-logo-item"><img src="Fotos/Foto-Samenwerking/Jamin.png" alt="Jamin"></div>
+                <div class="proj-logo-item"><img src="Fotos/Foto-Samenwerking/Decorwonen.png" alt="Decorwonen"></div>
+                <div class="proj-logo-item"><img src="Fotos/Foto-Samenwerking/BilalChicken.png" alt="Bilal Chicken"></div>
             </div>
         </div>
     </section>
 
-    <!-- Header Divider -->
-    <div id="projecten" class="header-divider" role="separator" aria-hidden="true"></div>
-
-    <!-- Main Content -->
-    <main id="main-content" class="projects-main">
-        <div class="container">
-            <!-- Intro Text -->
-            <section class="projects-intro">
-                <h2>Projecten waar we trots op zijn</h2>
-                <p>Van complete elektrotechnische installaties tot specifieke oplossingen - elk project pakken we professioneel aan. Bekijk hieronder een selectie van onze succesvolle projecten.</p>
-            </section>
-
-            <!-- Projects Grid -->
-            <section class="projects-grid">
-                <div class="project-item">
-                    <a href="#" class="project-link">
-                        <div class="project-image-wrapper">
-                            <img src="Fotos/Projecten-Home/Antareslaan Home.jpg" alt="Antareslaan">
-                        </div>
-                        <h3 class="project-title">Antareslaan</h3>
-                    </a>
-                </div>
-
-                <div class="project-item">
-                    <a href="project-art-hotel.html" class="project-link">
-                        <div class="project-image-wrapper">
-                            <img src="Fotos/Projecten-Home/ART Hotel.jpg" alt="ART Hotel">
-                        </div>
-                        <h3 class="project-title">ART Hotel</h3>
-                    </a>
-                </div>
-
-                <div class="project-item">
-                    <a href="#" class="project-link">
-                        <div class="project-image-wrapper">
-                            <img src="Fotos/Projecten-Home/Citadines Home.jpg" alt="Citadines">
-                        </div>
-                        <h3 class="project-title">Citadines</h3>
-                    </a>
-                </div>
-
-                <div class="project-item">
-                    <a href="#" class="project-link">
-                        <div class="project-image-wrapper">
-                            <img src="Fotos/Projecten-Home/Daily Style Home.jpg" alt="Daily Style">
-                        </div>
-                        <h3 class="project-title">Daily Style</h3>
-                    </a>
-                </div>
-
-                <div class="project-item">
-                    <a href="#" class="project-link">
-                        <div class="project-image-wrapper">
-                            <img src="Fotos/Projecten-Home/Dok 4 Ijmuiden.jpg" alt="Dok 4 IJmuiden">
-                        </div>
-                        <h3 class="project-title">Dok 4 IJmuiden</h3>
-                    </a>
-                </div>
-
-                <div class="project-item">
-                    <a href="#" class="project-link">
-                        <div class="project-image-wrapper">
-                            <img src="Fotos/Projecten-Home/Generaal Vetterstraat Home.jpg" alt="Generaal Vetterstraat">
-                        </div>
-                        <h3 class="project-title">Generaal Vetterstraat</h3>
-                    </a>
-                </div>
-
-                <div class="project-item">
-                    <a href="#" class="project-link">
-                        <div class="project-image-wrapper">
-                            <img src="Fotos/Projecten-Home/Hotel Nicolaas Witsen.jpg" alt="Hotel Nicolaas Witsen">
-                        </div>
-                        <h3 class="project-title">Hotel Nicolaas Witsen</h3>
-                    </a>
-                </div>
-
-                <div class="project-item">
-                    <a href="#" class="project-link">
-                        <div class="project-image-wrapper">
-                            <img src="Fotos/Projecten-Home/Hotel Paris.jpg" alt="Hotel Paris">
-                        </div>
-                        <h3 class="project-title">Hotel Paris - Krisotel</h3>
-                    </a>
-                </div>
-
-                <div class="project-item">
-                    <a href="#" class="project-link">
-                        <div class="project-image-wrapper">
-                            <img src="Fotos/Projecten-Home/Huygens Plaxe Home.jpg" alt="Huygens Plaxe">
-                        </div>
-                        <h3 class="project-title">Huygens Plaxe</h3>
-                    </a>
-                </div>
-
-                <div class="project-item">
-                    <a href="#" class="project-link">
-                        <div class="project-image-wrapper">
-                            <img src="Fotos/Projecten-Home/ID Apart Hotel.jpg" alt="ID Apart Hotel">
-                        </div>
-                        <h3 class="project-title">ID Apart Hotel</h3>
-                    </a>
-                </div>
-
-                <div class="project-item">
-                    <a href="#" class="project-link">
-                        <div class="project-image-wrapper">
-                            <img src="Fotos/Projecten-Home/Home from President OneDrive.png" alt="President">
-                        </div>
-                        <h3 class="project-title">President</h3>
-                    </a>
-                </div>
-            </section>
-
-            <!-- CTA Section -->
-            <section class="projects-cta">
-                <h2>Wilt u ook een project realiseren?</h2>
-                <p>Neem contact met ons op voor een vrijblijvende offerte</p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="cta-button primary">Neem contact op</a>
-                    <a href="#diensten" class="cta-button secondary">Bekijk onze diensten</a>
-                </div>
-            </section>
-
-            <!-- Client Logos Section -->
-            <section class="client-logos">
-                <h2>Zij gingen u voor</h2>
-
-                <!-- First row - 5 logos -->
-                <div class="logos-row">
-                    <div class="logo-item">
-                        <img src="Fotos/Foto-Samenwerking/Art hotel.png" alt="Art Hotel">
-                    </div>
-                    <div class="logo-item">
-                        <img src="Fotos/Foto-Samenwerking/Corendon.png" alt="Corendon">
-                    </div>
-                    <div class="logo-item">
-                        <img src="Fotos/Foto-Samenwerking/Ibis.png" alt="Ibis">
-                    </div>
-                    <div class="logo-item">
-                        <img src="Fotos/Foto-Samenwerking/IDhotel.png" alt="ID Hotel">
-                    </div>
-                    <div class="logo-item">
-                        <img src="Fotos/Foto-Samenwerking/citadines.png" alt="Citadines">
-                    </div>
-                </div>
-
-                <!-- Second row - 5 logos -->
-                <div class="logos-row">
-                    <div class="logo-item">
-                        <img src="Fotos/Foto-Samenwerking/Mericure.png" alt="Mercure">
-                    </div>
-                    <div class="logo-item">
-                        <img src="Fotos/Foto-Samenwerking/Nicolaas.png" alt="Nicolaas Witsen">
-                    </div>
-                    <div class="logo-item">
-                        <img src="Fotos/Foto-Samenwerking/Jamin.png" alt="Jamin">
-                    </div>
-                    <div class="logo-item">
-                        <img src="Fotos/Foto-Samenwerking/Decorwonen.png" alt="Decorwonen">
-                    </div>
-                    <div class="logo-item">
-                        <img src="Fotos/Foto-Samenwerking/BilalChicken.png" alt="Bilal Chicken">
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <!-- Footer -->
+    <!-- Footer (zelfde als index.html) -->
     <footer class="footer">
-        <div class="container">
-            <!-- Footer Top Section -->
+        <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-top-left">
-                    <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra Logo" class="footer-logo">
+                    <p class="emergency-label">Storing melden? Bel direct:</p>
+                    <a href="tel:0203033446" class="emergency-number">(020) 303 3446</a>
                 </div>
                 <div class="footer-top-right">
-                    <p class="emergency-label">Storing melden?</p>
-                    <a href="tel:0203033446" class="emergency-number">Bel direct: 020 303 3446</a>
+                    <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra" class="footer-logo">
                 </div>
             </div>
 
-            <!-- Footer Content -->
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>SpaarElektra</h3>
-                    <p>Hoofdkantoor</p>
+                    <h4>Contact</h4>
+                    <p>Hoofdkantoor SpaarElektra</p>
                     <p>Poortland 34</p>
                     <p>1046 BD Amsterdam</p>
-                    <p>Tel: 020 303 3446</p>
-                    <p>Email: info@spaarelektra.nl</p>
+                    <a href="contact.html" class="footer-contact-btn">Neem contact op</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Over ons</h4>
+                    <h4>Bekijk ook</h4>
                     <ul>
-                        <li><a href="#bedrijf">Het bedrijf</a></li>
-                        <li><a href="#historie">Onze historie</a></li>
-                        <li><a href="#team">Ons team</a></li>
-                        <li><a href="#vacatures">Vacatures</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Oplossingen</h4>
-                    <ul>
-                        <li><a href="#installaties">Installaties</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#over-ons">Over SpaarElektra</a></li>
+                        <li><a href="mensen.html">Ons team</a></li>
+                        <li><a href="careers.html">Vacatures</a></li>
                         <li><a href="#onderhoud">Onderhoud</a></li>
-                        <li><a href="#smart-home">Smart Home</a></li>
-                        <li><a href="#zonnepanelen">Zonnepanelen</a></li>
+                        <li><a href="#privacy">Privacy Statement</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
+                    <h4>Onze oplossingen</h4>
                     <ul>
-                        <li><a href="#contact">Contactformulier</a></li>
-                        <li><a href="#vestigingen">Vestigingen</a></li>
-                        <li><a href="#support">Klantenservice</a></li>
+                        <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
+                        <li><a href="data-installatie.html">Data Installatie</a></li>
+                        <li><a href="camera-intercom-installatie.html">Camera- en Intercom</a></li>
+                        <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
+                        <li><a href="inspecties.html">Inspecties</a></li>
+                        <li><a href="verlichting.html">Verlichting</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Volg ons</h4>
-                    <div class="social-links">
-                        <a href="#linkedin">LinkedIn</a>
-                        <a href="#facebook">Facebook</a>
-                        <a href="#instagram">Instagram</a>
-                    </div>
+                    <h4>Volg ons online</h4>
+                    <ul>
+                        <li><a href="#facebook">Facebook</a></li>
+                        <li><a href="#instagram">Instagram</a></li>
+                        <li><a href="#linkedin">LinkedIn</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 SpaarElektra. Alle rechten voorbehouden.</p>
-                <div class="footer-links">
-                    <a href="#privacy">Privacy</a>
-                    <a href="#voorwaarden">Algemene voorwaarden</a>
-                    <a href="#cookies">Cookie beleid</a>
+                <div class="footer-bottom-links">
+                    <a href="#sitemap">Sitemap</a>
+                    <span>&bull;</span>
+                    <a href="#disclaimer">Disclaimer</a>
                 </div>
+                <div class="footer-copyright">&copy; 2026</div>
             </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script src="projecten-page.js"></script>
 </body>
 </html>
