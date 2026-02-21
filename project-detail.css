@@ -1,17 +1,15 @@
 /* ========================================
    Project Detail Page - Aqua+ style (Black/Red)
-   Exact match to Aqua+ measurements
+   Scaled down for better proportions
    ======================================== */
 
 /* ========================================
-   HERO - Full-width background image
-   Aqua+: ~564px height, bg cover, gradient overlay
-   "Project" label 24px bold red, h1 68px white bold
+   HERO
    ======================================== */
 .pd-hero {
     position: relative;
     width: 100%;
-    height: 564px;
+    height: 460px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -34,31 +32,27 @@
     z-index: 2;
     max-width: 1480px;
     margin: 0 auto;
-    padding: 0 50px 80px;
+    padding: 0 50px 60px;
     width: 100%;
 }
 
 .pd-hero-label {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 900;
     color: var(--accent);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .pd-hero h1 {
-    font-size: clamp(40px, 4.5vw, 68px);
+    font-size: clamp(32px, 3.5vw, 52px);
     font-weight: 900;
     color: var(--white);
-    line-height: 1;
+    line-height: 1.05;
     margin: 0;
 }
 
 /* ========================================
-   SPEC BAR - 3 white cards overlapping hero
-   Aqua+: white bg, shadow, flex row
-   Each item: icon 48px top, label 24px bold, value 18px
-   Positioned 25% from left, 75% width
-   Border-right: thin line rgb(180,165,170)
+   SPEC BAR
    ======================================== */
 .pd-specs {
     position: relative;
@@ -71,8 +65,8 @@
 .pd-specs-inner {
     display: flex;
     background: var(--white);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    margin-top: -80px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.12);
+    margin-top: -70px;
     margin-left: 25%;
     width: 75%;
 }
@@ -82,8 +76,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
-    padding: 24px 40px;
+    gap: 6px;
+    padding: 20px 30px;
     border-right: 1px solid #b4a5aa;
 }
 
@@ -92,46 +86,45 @@
 }
 
 .pd-spec-icon {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 .pd-spec-icon svg {
-    width: 48px;
-    height: 48px;
-    max-width: 48px;
-    max-height: 48px;
+    width: 36px;
+    height: 36px;
+    max-width: 36px;
+    max-height: 36px;
     stroke: #6b7275;
     fill: none;
     stroke-width: 1.5;
 }
 
 .pd-spec-label {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 900;
     color: var(--accent);
 }
 
 .pd-spec-value {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
     color: #6b7275;
 }
 
 /* ========================================
-   PAGE INTRO - Breadcrumb, location, h2, intro
-   Aqua+: content aligned with spec bar left edge
+   PAGE INTRO
    ======================================== */
 .pd-intro {
     max-width: 1480px;
     margin: 0 auto;
-    padding: 50px 50px 40px;
+    padding: 40px 50px 30px;
 }
 
 .pd-intro-inner {
@@ -140,9 +133,9 @@
 }
 
 .pd-breadcrumb {
-    font-size: 16px;
+    font-size: 14px;
     color: #6b7275;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 .pd-breadcrumb a {
@@ -155,39 +148,37 @@
 }
 
 .pd-breadcrumb .sep {
-    margin: 0 8px;
+    margin: 0 6px;
 }
 
 .pd-location {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 900;
     color: #b4a5aa;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
 }
 
 .pd-intro h2 {
-    font-size: clamp(32px, 3.5vw, 50px);
+    font-size: clamp(26px, 2.8vw, 38px);
     font-weight: 900;
     color: var(--accent);
     line-height: 1.2;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 .pd-intro-text {
-    font-size: 22px;
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.65;
     color: #6b7275;
 }
 
 /* ========================================
-   TEXT BLOCKS - Body content sections
-   Aqua+: 22px, line-height 1.75, gray
-   Aligned with spec bar / intro left edge
+   TEXT BLOCKS
    ======================================== */
 .pd-text-block {
     max-width: 1480px;
     margin: 0 auto;
-    padding: 30px 50px;
+    padding: 20px 50px;
 }
 
 .pd-text-block-inner {
@@ -196,18 +187,18 @@
 }
 
 .pd-text-block h3 {
-    font-size: clamp(26px, 2.5vw, 34px);
+    font-size: clamp(20px, 2vw, 26px);
     font-weight: 900;
     color: var(--accent);
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     line-height: 1.3;
 }
 
 .pd-text-block p {
-    font-size: 22px;
-    line-height: 1.75;
+    font-size: 17px;
+    line-height: 1.7;
     color: #6b7275;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
 .pd-text-block p:last-child {
@@ -215,14 +206,12 @@
 }
 
 /* ========================================
-   IMAGE SLIDER - Horizontal gallery
-   Aqua+: nav buttons stacked vertically on right
-   Filled bg, white arrows. Dots = small circles.
+   IMAGE SLIDER
    ======================================== */
 .pd-gallery {
-    max-width: 1680px;
+    max-width: 1480px;
     margin: 0 auto;
-    padding: 60px 0 40px;
+    padding: 40px 0 30px;
     position: relative;
 }
 
@@ -238,12 +227,12 @@
 }
 
 .pd-gallery-btn {
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     border: none;
     background: var(--accent);
     color: var(--white);
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -266,7 +255,7 @@
 
 .pd-gallery-track {
     display: flex;
-    gap: 24px;
+    gap: 20px;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -279,14 +268,14 @@
 }
 
 .pd-gallery-slide {
-    flex: 0 0 38%;
-    min-width: 340px;
+    flex: 0 0 30%;
+    min-width: 280px;
 }
 
 .pd-gallery-slide img {
     width: 100%;
     height: auto;
-    aspect-ratio: 574 / 515;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     display: block;
 }
@@ -295,12 +284,12 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding-top: 24px;
+    padding-top: 20px;
 }
 
 .pd-gallery-dots .dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: transparent;
     border: 2px solid #999;
@@ -319,7 +308,7 @@
 .pd-video {
     max-width: 1480px;
     margin: 0 auto;
-    padding: 40px 50px;
+    padding: 30px 50px;
 }
 
 .pd-video-inner {
@@ -334,21 +323,19 @@
 }
 
 /* ========================================
-   CTA BLOCK - Dark card aligned with content
-   Aqua+: dark blue bg, positioned in content column
-   SpaarElektra: dark bg with red accent
+   CTA BLOCK
    ======================================== */
 .pd-cta {
     max-width: 1480px;
     margin: 0 auto;
-    padding: 60px 50px 80px;
+    padding: 50px 50px 60px;
 }
 
 .pd-cta-card {
     margin-left: 25%;
-    max-width: 60%;
+    max-width: 55%;
     background: var(--bg-dark);
-    padding: 70px 60px;
+    padding: 50px 45px;
     position: relative;
     overflow: hidden;
 }
@@ -366,32 +353,32 @@
 }
 
 .pd-cta-title {
-    font-size: clamp(26px, 2.5vw, 34px);
+    font-size: clamp(20px, 2vw, 26px);
     font-weight: 900;
     color: var(--white);
-    margin-bottom: 16px;
-    max-width: 500px;
+    margin-bottom: 12px;
+    max-width: 400px;
     position: relative;
     z-index: 1;
 }
 
 .pd-cta-desc {
-    font-size: 22px;
+    font-size: 16px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.75);
-    margin-bottom: 30px;
-    max-width: 600px;
+    margin-bottom: 24px;
+    max-width: 500px;
     position: relative;
     z-index: 1;
 }
 
 .pd-cta-btn {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 10px 24px;
     background: var(--accent);
     color: var(--white);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     transition: all 0.3s ease;
     position: relative;
@@ -403,18 +390,15 @@
 }
 
 /* ========================================
-   RELATED PROJECTS SLIDER - Full-width
-   Aqua+: dark blue bg. SpaarElektra: dark bg
-   Nav buttons stacked vertically, filled red
-   Dots = small circles
+   RELATED PROJECTS SLIDER
    ======================================== */
 .pd-related {
     background: var(--bg-dark);
-    padding: 50px 0 60px;
+    padding: 40px 0 50px;
 }
 
 .pd-related-inner {
-    max-width: 1680px;
+    max-width: 1480px;
     margin: 0 auto;
     padding: 0 50px;
     position: relative;
@@ -424,11 +408,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 .pd-related-label {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 900;
     color: var(--white);
 }
@@ -440,12 +424,12 @@
 }
 
 .pd-related-btn {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     border: none;
     background: var(--accent);
     color: var(--white);
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -464,7 +448,7 @@
 
 .pd-related-track {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -477,7 +461,7 @@
 }
 
 .pd-related-card {
-    flex: 0 0 280px;
+    flex: 0 0 230px;
     text-decoration: none;
     display: block;
     transition: transform 0.3s ease;
@@ -495,22 +479,22 @@
 }
 
 .pd-related-card-title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--white);
-    padding: 12px 0 0;
+    padding: 10px 0 0;
 }
 
 .pd-related-dots {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding-top: 24px;
+    padding-top: 20px;
 }
 
 .pd-related-dots .dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.4);
@@ -528,37 +512,37 @@
    ======================================== */
 @media (max-width: 1200px) {
     .pd-intro-inner {
-        margin-left: 15%;
-        max-width: 75%;
+        margin-left: 10%;
+        max-width: 80%;
     }
 
     .pd-text-block-inner {
-        margin-left: 15%;
-        max-width: 70%;
+        margin-left: 10%;
+        max-width: 75%;
     }
 
     .pd-cta-card {
-        margin-left: 15%;
+        margin-left: 10%;
         max-width: 75%;
     }
 
     .pd-gallery-slide {
-        flex: 0 0 45%;
+        flex: 0 0 38%;
     }
 }
 
 @media (max-width: 1024px) {
     .pd-hero {
-        height: 450px;
+        height: 380px;
         margin-top: 70px;
     }
 
     .pd-hero-content {
-        padding: 0 24px 60px;
+        padding: 0 24px 50px;
     }
 
     .pd-hero-label {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .pd-specs {
@@ -574,7 +558,7 @@
     .pd-spec-item {
         border-right: none;
         border-bottom: 1px solid #e5e5e5;
-        padding: 20px 24px;
+        padding: 16px 20px;
     }
 
     .pd-spec-item:last-child {
@@ -582,7 +566,7 @@
     }
 
     .pd-intro {
-        padding: 40px 24px 30px;
+        padding: 30px 24px 20px;
     }
 
     .pd-intro-inner {
@@ -591,15 +575,11 @@
     }
 
     .pd-intro h2 {
-        font-size: clamp(28px, 5vw, 40px);
-    }
-
-    .pd-intro-text {
-        font-size: 20px;
+        font-size: clamp(24px, 4vw, 32px);
     }
 
     .pd-text-block {
-        padding: 20px 24px;
+        padding: 16px 24px;
     }
 
     .pd-text-block-inner {
@@ -608,11 +588,11 @@
     }
 
     .pd-text-block p {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .pd-gallery {
-        padding: 40px 0 30px;
+        padding: 30px 0 20px;
     }
 
     .pd-gallery-nav {
@@ -620,7 +600,7 @@
         transform: none;
         flex-direction: row;
         justify-content: flex-end;
-        padding: 0 24px 16px;
+        padding: 0 24px 12px;
     }
 
     .pd-gallery-track {
@@ -628,12 +608,12 @@
     }
 
     .pd-gallery-slide {
-        flex: 0 0 55%;
-        min-width: 280px;
+        flex: 0 0 50%;
+        min-width: 260px;
     }
 
     .pd-video {
-        padding: 30px 24px;
+        padding: 20px 24px;
     }
 
     .pd-video-inner {
@@ -642,13 +622,13 @@
     }
 
     .pd-cta {
-        padding: 40px 24px 60px;
+        padding: 30px 24px 40px;
     }
 
     .pd-cta-card {
         margin-left: 0;
         max-width: 100%;
-        padding: 50px 30px;
+        padding: 40px 24px;
     }
 
     .pd-related-inner {
@@ -662,55 +642,47 @@
 
 @media (max-width: 768px) {
     .pd-hero {
-        height: 380px;
+        height: 320px;
     }
 
     .pd-hero h1 {
-        font-size: clamp(32px, 8vw, 48px);
+        font-size: clamp(28px, 7vw, 40px);
     }
 
     .pd-hero-content {
-        padding: 0 16px 40px;
+        padding: 0 16px 36px;
     }
 
     .pd-specs {
         padding: 0 16px;
     }
 
-    .pd-spec-label {
-        font-size: 20px;
-    }
-
-    .pd-spec-value {
-        font-size: 16px;
-    }
-
     .pd-intro {
-        padding: 30px 16px 20px;
+        padding: 24px 16px 16px;
     }
 
     .pd-intro h2 {
-        font-size: 28px;
-    }
-
-    .pd-intro-text {
-        font-size: 18px;
-    }
-
-    .pd-text-block {
-        padding: 16px;
-    }
-
-    .pd-text-block h3 {
         font-size: 24px;
     }
 
+    .pd-intro-text {
+        font-size: 16px;
+    }
+
+    .pd-text-block {
+        padding: 12px 16px;
+    }
+
+    .pd-text-block h3 {
+        font-size: 20px;
+    }
+
     .pd-text-block p {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .pd-gallery-nav {
-        padding: 0 16px 12px;
+        padding: 0 16px 10px;
     }
 
     .pd-gallery-track {
@@ -718,33 +690,33 @@
     }
 
     .pd-gallery-slide {
-        flex: 0 0 80%;
+        flex: 0 0 75%;
     }
 
     .pd-gallery-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
     }
 
     .pd-cta {
-        padding: 30px 16px 50px;
+        padding: 24px 16px 36px;
     }
 
     .pd-cta-card {
-        padding: 40px 20px;
+        padding: 32px 20px;
     }
 
     .pd-cta-title {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .pd-cta-desc {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .pd-related {
-        padding: 40px 0 50px;
+        padding: 30px 0 40px;
     }
 
     .pd-related-inner {
@@ -752,21 +724,21 @@
     }
 
     .pd-related-card {
-        flex: 0 0 240px;
+        flex: 0 0 200px;
     }
 }
 
 @media (max-width: 480px) {
     .pd-hero {
-        height: 320px;
+        height: 280px;
     }
 
     .pd-gallery-slide {
-        flex: 0 0 90%;
-        min-width: 250px;
+        flex: 0 0 85%;
+        min-width: 220px;
     }
 
     .pd-related-card {
-        flex: 0 0 220px;
+        flex: 0 0 180px;
     }
 }
