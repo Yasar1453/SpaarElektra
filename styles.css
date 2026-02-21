@@ -267,7 +267,7 @@ body {
 /* Mobile Nav Overlay */
 .header.menu-open {
     background: var(--white) !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: none !important;
 }
 
 .header.menu-open .logo-img {
@@ -277,7 +277,7 @@ body {
 .header.menu-open .nav {
     display: block !important;
     position: fixed;
-    top: 72px;
+    top: 69px;
     left: 0;
     right: 0;
     bottom: 0;
