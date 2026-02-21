@@ -38,14 +38,14 @@
 
 .pd-hero-label {
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 700;
     color: var(--accent);
     margin-bottom: 6px;
 }
 
 .pd-hero h1 {
     font-size: clamp(32px, 3.5vw, 52px);
-    font-weight: 900;
+    font-weight: 700;
     color: var(--white);
     line-height: 1.05;
     margin: 0;
@@ -109,7 +109,7 @@
 
 .pd-spec-label {
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 700;
     color: var(--accent);
 }
 
@@ -154,14 +154,14 @@
 
 .pd-location {
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 700;
     color: #b4a5aa;
     margin-bottom: 10px;
 }
 
 .pd-intro h2 {
     font-size: clamp(26px, 2.8vw, 38px);
-    font-weight: 900;
+    font-weight: 700;
     color: var(--accent);
     line-height: 1.2;
     margin-bottom: 18px;
@@ -189,7 +189,7 @@
 
 .pd-text-block h3 {
     font-size: clamp(20px, 2vw, 26px);
-    font-weight: 900;
+    font-weight: 700;
     color: var(--accent);
     margin-bottom: 14px;
     line-height: 1.3;
@@ -355,7 +355,7 @@
 
 .pd-cta-title {
     font-size: clamp(20px, 2vw, 26px);
-    font-weight: 900;
+    font-weight: 700;
     color: var(--white);
     margin-bottom: 12px;
     max-width: 400px;
@@ -414,7 +414,7 @@
 
 .pd-related-label {
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 700;
     color: var(--white);
 }
 
