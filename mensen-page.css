@@ -107,9 +107,24 @@
     background: var(--white);
     padding: 80px 0 60px;
     overflow: hidden;
+    position: relative;
+}
+
+/* Accent background block behind slider title (like Aqua+) */
+.mp-team::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 260px;
+    background: #f5f0ed;
+    z-index: 0;
 }
 
 .mp-team-header {
+    position: relative;
+    z-index: 1;
     max-width: 1480px;
     margin: 0 auto;
     padding: 0 50px 0 200px;
@@ -162,6 +177,8 @@
 }
 
 .mp-team-track {
+    position: relative;
+    z-index: 1;
     display: flex;
     gap: 24px;
     overflow-x: auto;
@@ -256,11 +273,9 @@
 }
 
 .mp-text-inner {
-    max-width: 1480px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 0 50px;
-    max-width: 700px;
-    margin-left: 200px;
 }
 
 .mp-text h2 {
@@ -547,7 +562,7 @@
     }
 
     .mp-text-inner {
-        margin-left: 280px;
+        max-width: 750px;
     }
 
     .mp-face-card {
@@ -598,7 +613,6 @@
     }
 
     .mp-text-inner {
-        margin-left: 100px;
         padding: 0 24px;
     }
 
@@ -662,6 +676,10 @@
         padding: 60px 0 40px;
     }
 
+    .mp-team::before {
+        display: none;
+    }
+
     .mp-team-header {
         padding: 0 16px;
         flex-direction: column;
@@ -683,7 +701,6 @@
     }
 
     .mp-text-inner {
-        margin-left: 0;
         max-width: 100%;
         padding: 0 16px;
     }
