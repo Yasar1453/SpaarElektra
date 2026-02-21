@@ -49,6 +49,7 @@
     color: var(--white);
     line-height: 1.05;
     margin: 0;
+    max-width: 40%;
 }
 
 /* ========================================
@@ -543,6 +544,10 @@
 
     .pd-hero-label {
         font-size: 16px;
+    }
+
+    .pd-hero h1 {
+        max-width: 100%;
     }
 
     .pd-specs {
