@@ -2,37 +2,94 @@
    Projecten Page - Aqua+ style (Black/Red)
    ======================================== */
 
+/* Header on light-hero pages: dark text, no bg initially */
+.page-light-hero .header {
+    background: transparent;
+}
+
+.page-light-hero .header .logo-img {
+    filter: none;
+}
+
+.page-light-hero .header .nav-item a {
+    color: var(--text-dark);
+}
+
+.page-light-hero .header .menu-label {
+    color: var(--text-dark);
+}
+
+.page-light-hero .header .hamburger-icon span {
+    background: var(--text-dark);
+}
+
+.page-light-hero .header .search-btn {
+    border-color: var(--text-dark);
+    color: var(--text-dark);
+}
+
+.page-light-hero .header .nav-item a:hover {
+    color: var(--accent);
+}
+
+/* When scrolled, show white bg */
+.page-light-hero .header.scrolled {
+    background: var(--white);
+}
+
+/* Header above hero image */
+.page-light-hero .header {
+    z-index: 1001;
+}
+
 /* ========================================
-   HERO - Split layout
+   HERO - Image block in upper right (Aqua+ style)
    ======================================== */
 .proj-hero {
-    display: flex;
-    min-height: 100vh;
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.proj-hero-left {
-    flex: 1;
-    background: var(--bg-light);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     position: relative;
-    padding: 140px 60px 60px;
+    background: var(--bg-light);
+    min-height: 100vh;
+    padding: 0;
+    overflow: hidden;
 }
 
+/* Image block - positioned upper right */
+.proj-hero-image {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    width: 45%;
+    height: 65%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.proj-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Title spans full width, overlaps image */
 .proj-hero-title {
-    font-size: clamp(60px, 8vw, 120px);
+    position: relative;
+    z-index: 2;
+    font-size: clamp(70px, 9vw, 140px);
     font-weight: 800;
     color: var(--primary);
-    line-height: 1;
-    margin-bottom: 40px;
-    letter-spacing: -2px;
+    line-height: 0.95;
+    letter-spacing: -3px;
+    padding: 160px 0 0 50px;
+    max-width: 90%;
 }
 
+/* Info block below title, left side */
 .proj-hero-info {
+    position: relative;
+    z-index: 2;
     max-width: 500px;
+    padding: 30px 0 80px 50px;
 }
 
 .proj-breadcrumb {
@@ -81,19 +138,6 @@
 
 .proj-scroll-link:hover {
     color: var(--accent-dark);
-}
-
-.proj-hero-right {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-}
-
-.proj-hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
 }
 
 /* ========================================
@@ -359,12 +403,17 @@
    RESPONSIVE
    ======================================== */
 @media (min-width: 1920px) {
-    .proj-hero-left {
-        padding: 160px 5vw 80px;
+    .proj-hero-title {
+        padding-left: 5vw;
+        font-size: clamp(100px, 8vw, 160px);
     }
 
-    .proj-hero-title {
-        font-size: clamp(80px, 7vw, 140px);
+    .proj-hero-info {
+        padding-left: 5vw;
+    }
+
+    .proj-hero-image {
+        right: 5vw;
     }
 
     .proj-carousel-label {
@@ -392,21 +441,25 @@
 
 @media (max-width: 1024px) {
     .proj-hero {
-        flex-direction: column;
         min-height: auto;
     }
 
-    .proj-hero-left {
-        padding: 120px 24px 50px;
+    .proj-hero-image {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 50vh;
+        min-height: 300px;
     }
 
     .proj-hero-title {
         font-size: clamp(48px, 10vw, 80px);
+        padding: 40px 0 0 24px;
     }
 
-    .proj-hero-right {
-        height: 50vh;
-        min-height: 300px;
+    .proj-hero-info {
+        padding: 20px 24px 50px;
     }
 
     .proj-carousel-label {
@@ -440,18 +493,18 @@
 }
 
 @media (max-width: 768px) {
-    .proj-hero-left {
-        padding: 90px 20px 40px;
+    .proj-hero-image {
+        height: 40vh;
+        min-height: 250px;
     }
 
     .proj-hero-title {
         font-size: clamp(36px, 12vw, 60px);
-        margin-bottom: 24px;
+        padding: 30px 0 0 20px;
     }
 
-    .proj-hero-right {
-        height: 40vh;
-        min-height: 250px;
+    .proj-hero-info {
+        padding: 16px 20px 40px;
     }
 
     .proj-carousel-section {
