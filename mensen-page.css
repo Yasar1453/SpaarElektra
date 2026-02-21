@@ -1,7 +1,36 @@
 /* ========================================
    Mensen Page - Aqua+ Style (Black/Red)
+   Font: pill-gothic (same as Aqua+)
    All classes use mp- prefix
    ======================================== */
+
+/* ========================================
+   FONT FAMILIES (matching Aqua+)
+   pill-gothic-900mg = headings
+   pill-gothic-600mg = body text
+   ======================================== */
+.mp-hero,
+.mp-team,
+.mp-text,
+.mp-imgtext,
+.mp-faces,
+.mp-cta {
+    font-family: pill-gothic-600mg, 'Barlow', sans-serif;
+}
+
+.mp-hero-title,
+.mp-hero-subtitle,
+.mp-team-title,
+.mp-team-name,
+.mp-text h2,
+.mp-imgtext-content h2,
+.mp-faces-title,
+.mp-cta h2,
+.mp-scroll-link,
+.mp-btn,
+.mp-cta-btn {
+    font-family: pill-gothic-900mg, 'Barlow', sans-serif;
+}
 
 /* ========================================
    HERO - Aqua+ style: big title over photo
@@ -17,16 +46,16 @@
     max-width: 1480px;
     margin: 0 auto;
     padding: 0 50px;
-    min-height: 700px;
+    min-height: 800px;
 }
 
-/* Single hero image - positioned right */
+/* Single hero image - positioned right, Aqua+ size: 840x800 */
 .mp-hero-img {
     position: absolute;
-    top: 40px;
+    top: 0;
     right: 50px;
-    width: 55%;
-    height: 560px;
+    width: 58%;
+    height: 800px;
     object-fit: cover;
     z-index: 1;
 }
@@ -38,9 +67,9 @@
     font-size: clamp(80px, 12vw, 170px);
     font-weight: 900;
     color: #b4a5aa;
-    line-height: 0.95;
+    line-height: 1.2;
     margin: 0;
-    padding-top: 60px;
+    padding-top: 100px;
     letter-spacing: -0.02em;
 }
 
@@ -49,14 +78,14 @@
     position: relative;
     z-index: 2;
     max-width: 520px;
-    padding: 30px 0 60px 40px;
+    padding: 20px 0 80px 40px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
 }
 
 .mp-breadcrumb {
-    font-size: 14px;
+    font-size: 16px;
     color: #6b7275;
 }
 
@@ -70,19 +99,19 @@
 }
 
 .mp-breadcrumb-sep {
-    margin: 0 6px;
+    margin: 0 8px;
 }
 
 .mp-hero-subtitle {
-    font-size: clamp(20px, 2.5vw, 28px);
-    font-weight: 700;
+    font-size: clamp(24px, 2.5vw, 34px);
+    font-weight: 900;
     color: var(--accent);
     margin: 0;
 }
 
 .mp-hero-text {
-    font-size: 17px;
-    line-height: 1.7;
+    font-size: 22px;
+    line-height: 1.75;
     color: #6b7275;
     margin: 0;
 }
@@ -91,8 +120,8 @@
     display: inline-block;
     color: var(--accent);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 900;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 
@@ -105,7 +134,7 @@
    ======================================== */
 .mp-team {
     background: var(--white);
-    padding: 80px 0 60px;
+    padding: 100px 0 80px;
     overflow: hidden;
     position: relative;
 }
@@ -117,7 +146,7 @@
     top: 0;
     left: 0;
     width: 320px;
-    height: 260px;
+    height: 280px;
     background: #f5f0ed;
     z-index: 0;
 }
@@ -131,12 +160,12 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .mp-team-title {
-    font-size: clamp(28px, 3.5vw, 42px);
-    font-weight: 700;
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 900;
     color: var(--accent);
     margin: 0;
     max-width: 500px;
@@ -150,12 +179,12 @@
 }
 
 .mp-team-btn {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border: none;
     background: var(--accent);
     color: var(--white);
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -193,8 +222,9 @@
     display: none;
 }
 
+/* Aqua+ card image = 401x564 */
 .mp-team-card {
-    flex: 0 0 320px;
+    flex: 0 0 280px;
     transition: transform 0.3s ease;
 }
 
@@ -217,36 +247,38 @@
 }
 
 .mp-team-info {
-    padding: 16px 0;
+    padding: 18px 0;
 }
 
 .mp-team-role {
-    font-size: 13px;
+    font-size: 14px;
     color: #6b7275;
     margin: 0 0 6px;
     text-transform: none;
 }
 
 .mp-team-name {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 22px;
+    font-weight: 900;
     color: var(--accent);
     margin: 0 0 10px;
 }
 
 .mp-team-quote {
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.65;
     color: var(--text-dark);
     font-style: italic;
     margin: 0;
 }
 
 .mp-team-dots {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding-top: 30px;
+    padding-top: 40px;
 }
 
 .mp-team-dots .dot {
@@ -265,30 +297,30 @@
 }
 
 /* ========================================
-   TEXT SECTIONS
+   TEXT SECTIONS - Aqua+ style: centered, wider text
    ======================================== */
 .mp-text {
     background: var(--white);
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 .mp-text-inner {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 50px;
 }
 
 .mp-text h2 {
-    font-size: clamp(26px, 3vw, 38px);
-    font-weight: 700;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 900;
     color: var(--accent);
     line-height: 1.2;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .mp-text p {
-    font-size: 17px;
-    line-height: 1.7;
+    font-size: 22px;
+    line-height: 1.75;
     color: #6b7275;
     margin: 0;
 }
@@ -298,7 +330,7 @@
    ======================================== */
 .mp-imgtext {
     background: var(--white);
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .mp-imgtext-inner {
@@ -306,7 +338,7 @@
     margin: 0 auto;
     padding: 0 50px;
     display: flex;
-    gap: 60px;
+    gap: 80px;
     align-items: center;
 }
 
@@ -325,32 +357,32 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
 }
 
 .mp-imgtext-content h2 {
-    font-size: clamp(26px, 3vw, 38px);
-    font-weight: 700;
+    font-size: clamp(26px, 3vw, 34px);
+    font-weight: 900;
     color: var(--accent);
     line-height: 1.2;
     margin: 0;
 }
 
 .mp-imgtext-content p {
-    font-size: 17px;
-    line-height: 1.7;
+    font-size: 22px;
+    line-height: 1.75;
     color: #6b7275;
     margin: 0;
 }
 
 .mp-btn {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 14px 32px;
     background: var(--accent);
     color: var(--white);
     text-decoration: none;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 900;
     transition: all 0.3s ease;
     align-self: flex-start;
 }
@@ -388,8 +420,9 @@
 
 .mp-cert-badge span {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 900;
     color: var(--primary);
+    font-family: pill-gothic-900mg, 'Barlow', sans-serif;
 }
 
 /* ========================================
@@ -397,7 +430,7 @@
    ======================================== */
 .mp-faces {
     background: var(--bg-dark);
-    padding: 80px 0;
+    padding: 100px 0;
     overflow: hidden;
 }
 
@@ -411,12 +444,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .mp-faces-title {
-    font-size: clamp(28px, 3.5vw, 42px);
-    font-weight: 700;
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 900;
     color: var(--white);
     margin: 0;
 }
@@ -428,12 +461,12 @@
 }
 
 .mp-faces-btn {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border: none;
     background: var(--accent);
     color: var(--white);
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -492,14 +525,15 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 12px 16px;
+    padding: 14px 16px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
 }
 
 .mp-face-overlay span {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 900;
     color: var(--white);
+    font-family: pill-gothic-900mg, 'Barlow', sans-serif;
 }
 
 /* ========================================
@@ -507,7 +541,7 @@
    ======================================== */
 .mp-cta {
     background: var(--accent);
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .mp-cta-inner {
@@ -519,27 +553,27 @@
 
 .mp-cta h2 {
     font-size: clamp(32px, 4vw, 52px);
-    font-weight: 700;
+    font-weight: 900;
     color: var(--white);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .mp-cta p {
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 22px;
+    line-height: 1.75;
     color: rgba(255, 255, 255, 0.9);
-    max-width: 600px;
-    margin: 0 auto 30px;
+    max-width: 650px;
+    margin: 0 auto 36px;
 }
 
 .mp-cta-btn {
     display: inline-block;
-    padding: 14px 36px;
+    padding: 16px 40px;
     border: 2px solid var(--white);
     color: var(--white);
     text-decoration: none;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 900;
     transition: all 0.3s ease;
     background: transparent;
 }
@@ -562,7 +596,7 @@
     }
 
     .mp-text-inner {
-        max-width: 750px;
+        max-width: 850px;
     }
 
     .mp-face-card {
@@ -580,22 +614,26 @@
 
     .mp-hero-inner {
         padding: 0 24px;
-        min-height: 560px;
+        min-height: 600px;
     }
 
     .mp-hero-img {
         width: 50%;
-        height: 460px;
+        height: 600px;
         right: 24px;
     }
 
     .mp-hero-title {
         font-size: clamp(60px, 10vw, 120px);
-        padding-top: 40px;
+        padding-top: 60px;
     }
 
     .mp-hero-content {
         padding: 20px 0 40px 20px;
+    }
+
+    .mp-hero-text {
+        font-size: 18px;
     }
 
     .mp-team-header {
@@ -609,11 +647,16 @@
     }
 
     .mp-team-card {
-        flex: 0 0 280px;
+        flex: 0 0 240px;
     }
 
     .mp-text-inner {
         padding: 0 24px;
+    }
+
+    .mp-text p,
+    .mp-imgtext-content p {
+        font-size: 18px;
     }
 
     .mp-imgtext-inner {
@@ -636,6 +679,10 @@
     .mp-cta-inner {
         padding: 0 24px;
     }
+
+    .mp-cta p {
+        font-size: 18px;
+    }
 }
 
 /* ========================================
@@ -657,7 +704,7 @@
         top: auto;
         right: auto;
         width: 100%;
-        height: 320px;
+        height: 360px;
         margin-bottom: 20px;
     }
 
@@ -670,6 +717,10 @@
     .mp-hero-content {
         padding: 0 0 30px;
         max-width: 100%;
+    }
+
+    .mp-hero-text {
+        font-size: 17px;
     }
 
     .mp-team {
@@ -693,7 +744,7 @@
     }
 
     .mp-team-card {
-        flex: 0 0 260px;
+        flex: 0 0 220px;
     }
 
     .mp-text {
@@ -703,6 +754,11 @@
     .mp-text-inner {
         max-width: 100%;
         padding: 0 16px;
+    }
+
+    .mp-text p,
+    .mp-imgtext-content p {
+        font-size: 17px;
     }
 
     .mp-imgtext {
@@ -748,6 +804,10 @@
     .mp-cta-inner {
         padding: 0 16px;
     }
+
+    .mp-cta p {
+        font-size: 17px;
+    }
 }
 
 /* ========================================
@@ -759,15 +819,15 @@
     }
 
     .mp-hero-subtitle {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .mp-hero-text {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .mp-team-card {
-        flex: 0 0 230px;
+        flex: 0 0 200px;
     }
 
     .mp-team-title {
@@ -775,19 +835,19 @@
     }
 
     .mp-text h2 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .mp-text p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .mp-imgtext-content h2 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .mp-imgtext-content p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .mp-certs {
