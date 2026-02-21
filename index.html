@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaarElektra - Elektrotechnische Installaties</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra" class="logo-img">
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="elektrische-installaties.html">Wat wij doen <span class="dropdown-arrow">&#8595;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
+                            <li><a href="data-installatie.html">Data Installatie</a></li>
+                            <li><a href="camera-intercom-installatie.html">Camera- En Intercom Installatie</a></li>
+                            <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
+                            <li><a href="inspecties.html">Inspecties</a></li>
+                            <li><a href="verlichting.html">Verlichting</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="projecten.html">Projecten</a></li>
+                    <li class="nav-item"><a href="#impact">Impact</a></li>
+                    <li class="nav-item"><a href="#onderhoud">Onderhoud</a></li>
+                    <li class="nav-item"><a href="mensen.html">Mensen</a></li>
+                    <li class="nav-item"><a href="careers.html">Kom werken!</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="contact.html" class="contact-btn">Contact</a>
+                    <button class="search-btn" aria-label="Zoeken">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="contact-btn">Contact</a>
+                <button class="search-btn" aria-label="Zoeken">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span class="menu-label">menu</span>
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section (niet aanpassen - al goed) -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('Fotos/Homepage-fotos/Test-1.webp');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="hero-text-wrapper">
+                        <h1 class="hero-title">Elektrotechniek<br>van A tot Z</h1>
+                        <p class="hero-description">Als familiebedrijf leveren wij al meer dan 25 jaar vakmanschap en betrouwbaarheid. Van nieuwbouw tot renovatie, van klein onderhoud tot grote projecten - wij zijn uw partner in elektrotechnische installaties.</p>
+                        <a href="#contact" class="cta-button">Neem contact op</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('Fotos/Homepage-fotos/test-2.jpeg');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="hero-text-wrapper">
+                        <h1 class="hero-title">Elektrotechniek<br>van A tot Z</h1>
+                        <p class="hero-description">Als familiebedrijf leveren wij al meer dan 25 jaar vakmanschap en betrouwbaarheid. Van nieuwbouw tot renovatie, van klein onderhoud tot grote projecten - wij zijn uw partner in elektrotechnische installaties.</p>
+                        <a href="#contact" class="cta-button">Neem contact op</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('Fotos/Homepage-fotos/test-2.webp');">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="hero-text-wrapper">
+                        <h1 class="hero-title">Elektrotechniek<br>van A tot Z</h1>
+                        <p class="hero-description">Als familiebedrijf leveren wij al meer dan 25 jaar vakmanschap en betrouwbaarheid. Van nieuwbouw tot renovatie, van klein onderhoud tot grote projecten - wij zijn uw partner in elektrotechnische installaties.</p>
+                        <a href="#contact" class="cta-button">Neem contact op</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-dots"></div>
+        <div class="scroll-indicator">
+            <span></span>
+            <p>Scroll omlaag</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="main">
+        <div class="projects-filter">
+            <p class="filter-label">Toon de volgende onderdelen:</p>
+            <button class="filter-btn active" data-filter="all">Alle resultaten</button>
+            <button class="filter-btn" data-filter="projecten">Projecten</button>
+            <button class="filter-btn" data-filter="utiliteiten">Utiliteiten</button>
+            <button class="filter-btn" data-filter="oplossingen">Oplossingen</button>
+        </div>
+
+        <div class="projects-carousel">
+            <div class="carousel-nav">
+                <button class="carousel-arrow next" aria-label="Volgende">&#8594;</button>
+                <button class="carousel-arrow prev" aria-label="Vorige">&#8592;</button>
+            </div>
+
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Row 1 -->
+                <div class="carousel-row">
+                    <a href="project-art-hotel.html" class="project-card">
+                        <div class="project-image" style="background-image: url('Fotos/Projecten-Home/Antareslaan Home.jpg');"></div>
+                        <span class="project-badge">project</span>
+                        <div class="project-info">
+                            <h3>Antareslaan</h3>
+                            <p>Complete elektrotechnische installatie voor een modern kantoorgebouw</p>
+                        </div>
+                    </a>
+                    <a href="project-art-hotel.html" class="project-card">
+                        <div class="project-image" style="background-image: url('Fotos/Projecten-Home/ART Hotel.jpg');"></div>
+                        <span class="project-badge">project</span>
+                        <div class="project-info">
+                            <h3>ART Hotel</h3>
+                            <p>Volledige elektra-installatie voor een designhotel in Amsterdam</p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-card">
+                        <div class="project-image" style="background-image: url('Fotos/Projecten-Home/Citadines Home.jpg');"></div>
+                        <span class="project-badge">project</span>
+                        <div class="project-info">
+                            <h3>Citadines</h3>
+                            <p>Grootschalige renovatie van de elektrische infrastructuur</p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-card">
+                        <div class="project-image" style="background-image: url('Fotos/Projecten-Home/Daily Style Home.jpg');"></div>
+                        <span class="project-badge">project</span>
+                        <div class="project-info">
+                            <h3>Daily Style</h3>
+                            <p>Moderne elektrotechnische oplossingen voor retail</p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-card">
+                        <div class="project-image" style="background-image: url('Fotos/Projecten-Home/Dok 4 Ijmuiden.jpg');"></div>
+                        <span class="project-badge">project</span>
+                        <div class="project-info">
+                            <h3>Dok 4 IJmuiden</h3>
+                            <p>Elektrotechniek voor nieuwbouw woningproject aan het water</p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-card">
+                        <div class="project-image" style="background-image: url('Fotos/Projecten-Home/Generaal Vetterstraat Home.jpg');"></div>
+                        <span class="project-badge">project</span>
+                        <div class="project-info">
+                            <h3>Generaal Vetterstraat</h3>
+                            <p>Complete elektra voor woningbouwproject in Amsterdam</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Row 2 -->
+                <div class="carousel-row row-offset">
+                    <a href="#" class="project-card">
+                        <div class="project-image" style="background-image: url('Fotos/Projecten-Home/Hotel Nicolaas Witsen.jpg');"></div>
+                        <span class="project-badge">project</span>
+                        <div class="project-info">
+                            <h3>Hotel Nicolaas Witsen</h3>
+                            <p>Elektrische renovatie van een historisch hotel</p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-card">
+                        <div class="project-image" style="background-image: url('Fotos/Projecten-Home/Hotel Paris.jpg');"></div>
+                        <span class="project-badge">project</span>
+                        <div class="project-info">
+                            <h3>Hotel Paris - Krisotel</h3>
+                            <p>Internationaal hotelproject met duurzame installaties</p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-card">
+                        <div class="project-image" style="background-image: url('Fotos/Projecten-Home/Huygens Plaxe Home.jpg');"></div>
+                        <span class="project-badge">project</span>
+                        <div class="project-info">
+                            <h3>Huygens Place</h3>
+                            <p>Hoogwaardige installaties voor premium woningen</p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-card">
+                        <div class="project-image" style="background-image: url('Fotos/Projecten-Home/ID Apart Hotel.jpg');"></div>
+                        <span class="project-badge">project</span>
+                        <div class="project-info">
+                            <h3>ID Apart Hotel</h3>
+                            <p>Smart hotel installaties met geavanceerde technologie</p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-card">
+                        <div class="project-image" style="background-image: url('Fotos/Projecten-Home/Home from President OneDrive.png');"></div>
+                        <span class="project-badge">project</span>
+                        <div class="project-info">
+                            <h3>President</h3>
+                            <p>Exclusieve elektrotechnische installaties voor een luxe hotel</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+
+        <!-- Company intro within projects dark section -->
+        <div class="company-statement">
+            <h2>Spaar Electra is uw partner op het gebied van elektrotechnisch werk. Sinds 2006 zetten wij ons in voor veilig en correct uitgevoerd elektrowerk.</h2>
+            <a href="#over-ons" class="statement-btn">Over ons</a>
+        </div>
+    </section>
+
+    <!-- Services Showcase Section -->
+    <section class="services-showcase">
+        <div class="services-showcase-inner">
+            <div class="services-showcase-header">
+                <h2 class="services-showcase-title">Elektrawerk en veiligheid: van ontwerp tot onderhoud</h2>
+                <p class="services-showcase-description">SpaarElektra biedt u de kennis, de systemen en de nazorg om een maximaal veilige omgeving te kunnen realiseren. Onze zorg voert verder dan het leveren en installeren van elektrotechnische systemen. Bij SpaarElektra bent u verzekerd van een totaaloplossing.</p>
+            </div>
+
+            <div class="services-slider-wrapper">
+                <div class="services-slider-nav">
+                    <button class="services-nav-btn next" aria-label="Volgende">&#8594;</button>
+                    <button class="services-nav-btn prev" aria-label="Vorige">&#8592;</button>
+                </div>
+                <div class="services-slider" id="servicesSlider">
+                    <a href="elektrische-installaties.html" class="service-slide">
+                        <div class="service-slide-image" style="background-image: url('Fotos/Diensten/Elektrische Installaties Photo.jpg');"></div>
+                        <div class="service-slide-info">
+                            <h3>Elektrotechniek</h3>
+                            <p>Van nieuwbouw tot renovatie, wij verzorgen complete elektrische installaties met oog voor kwaliteit en veiligheid.</p>
+                        </div>
+                    </a>
+                    <a href="verlichting.html" class="service-slide">
+                        <div class="service-slide-image" style="background-image: url('Fotos/Diensten/Verlichting-1.jpg');"></div>
+                        <div class="service-slide-info">
+                            <h3>Verlichting</h3>
+                            <p>Professionele verlichtingsoplossingen voor kantoren, hotels en woningen met energiezuinige LED-technologie.</p>
+                        </div>
+                    </a>
+                    <a href="data-installatie.html" class="service-slide">
+                        <div class="service-slide-image" style="background-image: url('Fotos/Diensten/Verlichting-2.jpg');"></div>
+                        <div class="service-slide-info">
+                            <h3>Data Installatie</h3>
+                            <p>Betrouwbare data-infrastructuur en netwerkkabeling voor optimale connectiviteit in uw gebouw.</p>
+                        </div>
+                    </a>
+                    <a href="camera-intercom-installatie.html" class="service-slide">
+                        <div class="service-slide-image" style="background-image: url('Fotos/Diensten/Camera.jpg');"></div>
+                        <div class="service-slide-info">
+                            <h3>Camera- en Intercom Installatie</h3>
+                            <p>Beveiligingscamera's en intercomsystemen voor optimale veiligheid en toegangscontrole.</p>
+                        </div>
+                    </a>
+                    <a href="brandbeveiliging.html" class="service-slide">
+                        <div class="service-slide-image" style="background-image: url('Fotos/Diensten/Verlichting-3.jpg');"></div>
+                        <div class="service-slide-info">
+                            <h3>Brandbeveiliging</h3>
+                            <p>Brandmeldinstallaties en noodverlichting voor een veilige werkomgeving conform alle normen.</p>
+                        </div>
+                    </a>
+                    <a href="inspecties.html" class="service-slide">
+                        <div class="service-slide-image" style="background-image: url('Fotos/Diensten/Verlichting-4.jpg');"></div>
+                        <div class="service-slide-info">
+                            <h3>Inspecties</h3>
+                            <p>Periodieke keuringen en inspecties van uw elektrische installaties volgens NEN-normen.</p>
+                        </div>
+                    </a>
+                    <a href="verlichting.html" class="service-slide">
+                        <div class="service-slide-image" style="background-image: url('Fotos/Diensten/Verlichting Bouw (1).jpg');"></div>
+                        <div class="service-slide-info">
+                            <h3>Onderhoud</h3>
+                            <p>Preventief en correctief onderhoud voor optimale prestaties en langere levensduur van uw installaties.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="services-dots" id="servicesDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-top-left">
+                    <p class="emergency-label">Storing melden? Bel direct:</p>
+                    <a href="tel:0203033446" class="emergency-number">(020) 303 3446</a>
+                </div>
+                <div class="footer-top-right">
+                    <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra" class="footer-logo">
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Hoofdkantoor SpaarElektra</p>
+                    <p>Poortland 34</p>
+                    <p>1046 BD Amsterdam</p>
+                    <a href="contact.html" class="footer-contact-btn">Neem contact op</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Bekijk ook</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#over-ons">Over SpaarElektra</a></li>
+                        <li><a href="mensen.html">Ons team</a></li>
+                        <li><a href="careers.html">Vacatures</a></li>
+                        <li><a href="#onderhoud">Onderhoud</a></li>
+                        <li><a href="#privacy">Privacy Statement</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Onze oplossingen</h4>
+                    <ul>
+                        <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
+                        <li><a href="data-installatie.html">Data Installatie</a></li>
+                        <li><a href="camera-intercom-installatie.html">Camera- en Intercom</a></li>
+                        <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
+                        <li><a href="inspecties.html">Inspecties</a></li>
+                        <li><a href="verlichting.html">Verlichting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Volg ons online</h4>
+                    <ul>
+                        <li><a href="#facebook">Facebook</a></li>
+                        <li><a href="#instagram">Instagram</a></li>
+                        <li><a href="#linkedin">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-links">
+                    <a href="#sitemap">Sitemap</a>
+                    <span>&bull;</span>
+                    <a href="#disclaimer">Disclaimer</a>
+                </div>
+                <span class="footer-copyright">&copy; 2026</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
