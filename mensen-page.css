@@ -37,7 +37,7 @@
    ======================================== */
 .mp-hero {
     background: var(--white);
-    padding-top: 80px;
+    padding-top: 130px;
     overflow: hidden;
 }
 
@@ -52,7 +52,7 @@
 /* Single hero image - compact like Aqua+ */
 .mp-hero-img {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 100px;
     width: 42%;
     height: 380px;
