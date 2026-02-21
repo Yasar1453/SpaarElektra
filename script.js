@@ -242,18 +242,29 @@ document.querySelectorAll('.project-card, .service-slide').forEach(el => {
 // ========================================
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 if (mobileMenuBtn && header) {
+    function closeMenu() {
+        if (!header.classList.contains('menu-open')) return;
+        header.classList.add('menu-closing');
+        header.classList.remove('menu-open');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+            header.classList.remove('menu-closing');
+        }, 300);
+    }
+
     mobileMenuBtn.addEventListener('click', () => {
-        header.classList.toggle('menu-open');
-        document.body.style.overflow = header.classList.contains('menu-open') ? 'hidden' : '';
+        if (header.classList.contains('menu-open') || header.classList.contains('menu-closing')) {
+            closeMenu();
+        } else {
+            header.classList.add('menu-open');
+            document.body.style.overflow = 'hidden';
+        }
     });
 
     // Close menu when clicking a nav link
-    document.querySelectorAll('.header.menu-open .nav-item a, .header .nav-item a').forEach(link => {
+    document.querySelectorAll('.header .nav-item a').forEach(link => {
         link.addEventListener('click', () => {
-            if (header.classList.contains('menu-open')) {
-                header.classList.remove('menu-open');
-                document.body.style.overflow = '';
-            }
+            closeMenu();
         });
     });
 }
