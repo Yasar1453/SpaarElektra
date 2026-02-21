@@ -46,16 +46,16 @@
     max-width: 1480px;
     margin: 0 auto;
     padding: 0 50px;
-    min-height: 620px;
+    min-height: 520px;
 }
 
-/* Single hero image - smaller, more centered like Aqua+ */
+/* Single hero image - compact like Aqua+ */
 .mp-hero-img {
     position: absolute;
     top: 20px;
     right: 100px;
-    width: 46%;
-    height: 560px;
+    width: 42%;
+    height: 380px;
     object-fit: cover;
     z-index: 1;
 }
@@ -64,12 +64,12 @@
 .mp-hero-title {
     position: relative;
     z-index: 2;
-    font-size: clamp(70px, 11vw, 150px);
+    font-size: clamp(60px, 9vw, 120px);
     font-weight: 900;
     color: #b4a5aa;
     line-height: 1.15;
     margin: 0;
-    padding-top: 60px;
+    padding-top: 50px;
     letter-spacing: -0.02em;
 }
 
@@ -618,14 +618,14 @@
     }
 
     .mp-hero-img {
-        width: 50%;
-        height: 600px;
+        width: 45%;
+        height: 340px;
         right: 24px;
     }
 
     .mp-hero-title {
-        font-size: clamp(60px, 10vw, 120px);
-        padding-top: 60px;
+        font-size: clamp(50px, 9vw, 100px);
+        padding-top: 40px;
     }
 
     .mp-hero-content {
