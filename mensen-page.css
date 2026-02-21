@@ -4,30 +4,55 @@
    ======================================== */
 
 /* ========================================
-   HERO - Split layout, white bg
+   HERO - Aqua+ style: big title over photo
    ======================================== */
 .mp-hero {
     background: var(--white);
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-top: 80px;
     overflow: hidden;
 }
 
 .mp-hero-inner {
+    position: relative;
     max-width: 1480px;
     margin: 0 auto;
     padding: 0 50px;
-    display: flex;
-    align-items: flex-start;
-    gap: 60px;
+    min-height: 700px;
 }
 
-.mp-hero-left {
-    flex: 0 0 42%;
+/* Single hero image - positioned right */
+.mp-hero-img {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    width: 55%;
+    height: 560px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Big title - overlaps the image */
+.mp-hero-title {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(80px, 12vw, 170px);
+    font-weight: 900;
+    color: #b4a5aa;
+    line-height: 0.95;
+    margin: 0;
+    padding-top: 60px;
+    letter-spacing: -0.02em;
+}
+
+/* Content block - sits below-left under the title */
+.mp-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+    padding: 30px 0 60px 40px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding-top: 40px;
+    gap: 14px;
 }
 
 .mp-breadcrumb {
@@ -48,20 +73,11 @@
     margin: 0 6px;
 }
 
-.mp-hero-title {
-    font-size: clamp(60px, 8vw, 120px);
-    font-weight: 300;
-    color: var(--accent);
-    line-height: 1;
-    margin: 0;
-    letter-spacing: -0.02em;
-}
-
 .mp-hero-subtitle {
     font-size: clamp(20px, 2.5vw, 28px);
     font-weight: 700;
-    color: var(--primary);
-    margin: 8px 0 0;
+    color: var(--accent);
+    margin: 0;
 }
 
 .mp-hero-text {
@@ -69,7 +85,6 @@
     line-height: 1.7;
     color: #6b7275;
     margin: 0;
-    max-width: 500px;
 }
 
 .mp-scroll-link {
@@ -78,48 +93,11 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
-    margin-top: 8px;
     transition: color 0.3s ease;
 }
 
 .mp-scroll-link:hover {
     color: var(--accent-dark);
-}
-
-.mp-hero-right {
-    flex: 0 0 55%;
-    position: relative;
-    margin-right: -50px;
-}
-
-.mp-hero-img-top {
-    width: 100%;
-    overflow: hidden;
-}
-
-.mp-hero-img-top img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 10;
-    object-fit: cover;
-    display: block;
-}
-
-.mp-hero-img-bottom {
-    width: 70%;
-    margin-left: auto;
-    margin-top: -60px;
-    position: relative;
-    z-index: 2;
-    overflow: hidden;
-}
-
-.mp-hero-img-bottom img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    display: block;
 }
 
 /* ========================================
@@ -586,17 +564,23 @@
     }
 
     .mp-hero-inner {
-        gap: 40px;
         padding: 0 24px;
+        min-height: 560px;
     }
 
-    .mp-hero-left {
-        flex: 0 0 45%;
-        padding-top: 20px;
+    .mp-hero-img {
+        width: 50%;
+        height: 460px;
+        right: 24px;
     }
 
-    .mp-hero-right {
-        margin-right: -24px;
+    .mp-hero-title {
+        font-size: clamp(60px, 10vw, 120px);
+        padding-top: 40px;
+    }
+
+    .mp-hero-content {
+        padding: 20px 0 40px 20px;
     }
 
     .mp-team-header {
@@ -650,23 +634,28 @@
     }
 
     .mp-hero-inner {
-        flex-direction: column;
-        gap: 30px;
         padding: 0 16px;
+        min-height: auto;
     }
 
-    .mp-hero-left {
-        flex: 1;
-        padding-top: 10px;
+    .mp-hero-img {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 320px;
+        margin-bottom: 20px;
     }
 
-    .mp-hero-right {
-        flex: 1;
-        margin-right: -16px;
+    .mp-hero-title {
+        font-size: clamp(50px, 14vw, 80px);
+        padding-top: 20px;
+        margin-bottom: 10px;
     }
 
-    .mp-hero-img-bottom {
-        margin-top: -40px;
+    .mp-hero-content {
+        padding: 0 0 30px;
+        max-width: 100%;
     }
 
     .mp-team {
