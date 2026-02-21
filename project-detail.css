@@ -32,7 +32,7 @@
     z-index: 2;
     max-width: 1480px;
     margin: 0 auto;
-    padding: 0 50px 60px;
+    padding: 0 50px max(140px, 12vw);
     width: 100%;
 }
 
@@ -49,7 +49,7 @@
     color: var(--white);
     line-height: 1.05;
     margin: 0;
-    max-width: 22%;
+    max-width: 28%;
 }
 
 /* ========================================
@@ -539,7 +539,7 @@
     }
 
     .pd-hero-content {
-        padding: 0 24px 50px;
+        padding: 0 24px max(140px, 16vw);
     }
 
     .pd-hero-label {
@@ -647,7 +647,8 @@
 
 @media (max-width: 768px) {
     .pd-hero {
-        height: 320px;
+        height: 50vh;
+        min-height: 340px;
     }
 
     .pd-hero h1 {
@@ -655,7 +656,7 @@
     }
 
     .pd-hero-content {
-        padding: 0 16px 36px;
+        padding: 0 16px max(140px, 20vw);
     }
 
     .pd-specs {
@@ -735,7 +736,8 @@
 
 @media (max-width: 480px) {
     .pd-hero {
-        height: 280px;
+        height: 45vh;
+        min-height: 300px;
     }
 
     .pd-gallery-slide {
