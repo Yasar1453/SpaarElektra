@@ -1,154 +1,172 @@
-// Project Detail Page JavaScript
+// ========================================
+// Project Detail Page - Gallery & Related Sliders
+// ========================================
+document.addEventListener('DOMContentLoaded', function () {
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Gallery Slider (horizontal scroll showing ~2.5 images)
-    const galleryTrack = document.querySelector('.gallery-track');
-    const gallerySlides = galleryTrack ? Array.from(galleryTrack.querySelectorAll('.gallery-slide')) : [];
-    const prevBtn = document.querySelector('.gallery-btn.prev');
-    const nextBtn = document.querySelector('.gallery-btn.next');
-    const dots = Array.from(document.querySelectorAll('.gallery-dots .dot'));
+    // ========================================
+    // Image Gallery Slider
+    // ========================================
+    const galleryTrack = document.querySelector('.pd-gallery-track');
+    const galleryNext = document.querySelector('.pd-gallery-btn.next');
+    const galleryPrev = document.querySelector('.pd-gallery-btn.prev');
+    const galleryDots = document.querySelector('.pd-gallery-dots');
 
-    function getGap() {
-        if (!galleryTrack) return 20;
-        const style = window.getComputedStyle(galleryTrack);
-        return parseInt(style.gap) || parseInt(style.columnGap) || 20;
-    }
-
-    function getScrollAmount() {
-        if (!gallerySlides.length) return 300;
-        const w = gallerySlides[0].getBoundingClientRect().width;
-        return Math.round(w + getGap());
-    }
-
-    function updateDotsOnScroll() {
-        if (!galleryTrack || !dots.length) return;
-        const amount = getScrollAmount();
-        const index = Math.round(galleryTrack.scrollLeft / amount);
-        dots.forEach(d => d.classList.remove('active'));
-        if (dots[index]) dots[index].classList.add('active');
-    }
-
-    function nextGallery() {
-        if (!galleryTrack) return;
-        galleryTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-    }
-
-    function prevGallery() {
-        if (!galleryTrack) return;
-        galleryTrack.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-    }
-
-    if (nextBtn) nextBtn.addEventListener('click', nextGallery);
-    if (prevBtn) prevBtn.addEventListener('click', prevGallery);
-
-    dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-            if (!galleryTrack) return;
-            galleryTrack.scrollLeft = i * getScrollAmount();
-            updateDotsOnScroll();
-        });
-    });
-
-    // Auto-advance
-    let galleryAuto = null;
-    function startGalleryAuto() { stopGalleryAuto(); galleryAuto = setInterval(nextGallery, 5000); }
-    function stopGalleryAuto() { if (galleryAuto) { clearInterval(galleryAuto); galleryAuto = null; } }
     if (galleryTrack) {
-        galleryTrack.addEventListener('scroll', () => { window.requestAnimationFrame(updateDotsOnScroll); });
-        galleryTrack.addEventListener('mouseenter', stopGalleryAuto);
-        galleryTrack.addEventListener('mouseleave', startGalleryAuto);
-        galleryTrack.addEventListener('focusin', stopGalleryAuto);
-        galleryTrack.addEventListener('focusout', startGalleryAuto);
-        galleryTrack.setAttribute('tabindex', '0');
-        galleryTrack.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') { e.preventDefault(); nextGallery(); }
-            if (e.key === 'ArrowLeft') { e.preventDefault(); prevGallery(); }
+        const slides = galleryTrack.querySelectorAll('.pd-gallery-slide');
+
+        function getSlideScroll() {
+            const slide = galleryTrack.querySelector('.pd-gallery-slide');
+            if (!slide) return 400;
+            const gap = parseInt(getComputedStyle(galleryTrack).gap) || 24;
+            return slide.offsetWidth + gap;
+        }
+
+        // Create dots
+        if (galleryDots && slides.length > 1) {
+            const visibleWidth = galleryTrack.clientWidth;
+            const totalWidth = galleryTrack.scrollWidth;
+            const numDots = Math.max(1, Math.ceil(totalWidth / visibleWidth));
+            for (let i = 0; i < numDots; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    galleryTrack.scrollTo({ left: i * visibleWidth, behavior: 'smooth' });
+                });
+                galleryDots.appendChild(dot);
+            }
+
+            galleryTrack.addEventListener('scroll', () => {
+                const dots = galleryDots.querySelectorAll('.dot');
+                const activeIndex = Math.round(galleryTrack.scrollLeft / visibleWidth);
+                dots.forEach((d, i) => d.classList.toggle('active', i === activeIndex));
+            });
+        }
+
+        if (galleryNext) {
+            galleryNext.addEventListener('click', () => {
+                galleryTrack.scrollBy({ left: getSlideScroll(), behavior: 'smooth' });
+            });
+        }
+
+        if (galleryPrev) {
+            galleryPrev.addEventListener('click', () => {
+                galleryTrack.scrollBy({ left: -getSlideScroll(), behavior: 'smooth' });
+            });
+        }
+
+        // Update button states
+        function updateGalleryBtns() {
+            if (galleryPrev) galleryPrev.disabled = galleryTrack.scrollLeft <= 5;
+            if (galleryNext) galleryNext.disabled = galleryTrack.scrollLeft + galleryTrack.clientWidth >= galleryTrack.scrollWidth - 5;
+        }
+
+        galleryTrack.addEventListener('scroll', updateGalleryBtns);
+        updateGalleryBtns();
+
+        // Auto-advance
+        let galleryAuto = setInterval(() => {
+            if (galleryTrack.scrollLeft + galleryTrack.clientWidth >= galleryTrack.scrollWidth - 5) {
+                galleryTrack.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                galleryTrack.scrollBy({ left: getSlideScroll(), behavior: 'smooth' });
+            }
+        }, 5000);
+
+        galleryTrack.addEventListener('mouseenter', () => clearInterval(galleryAuto));
+        galleryTrack.addEventListener('mouseleave', () => {
+            galleryAuto = setInterval(() => {
+                if (galleryTrack.scrollLeft + galleryTrack.clientWidth >= galleryTrack.scrollWidth - 5) {
+                    galleryTrack.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    galleryTrack.scrollBy({ left: getSlideScroll(), behavior: 'smooth' });
+                }
+            }, 5000);
         });
-        startGalleryAuto();
-        // initial dots state
-        updateDotsOnScroll();
-        // update on resize
-        window.addEventListener('resize', () => { window.requestAnimationFrame(updateDotsOnScroll); });
     }
 
-    // Smooth scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    // ========================================
+    // Related Projects Slider
+    // ========================================
+    const relatedTrack = document.querySelector('.pd-related-track');
+    const relatedNext = document.querySelector('.pd-related-btn.next');
+    const relatedPrev = document.querySelector('.pd-related-btn.prev');
+    const relatedDots = document.querySelector('.pd-related-dots');
 
+    if (relatedTrack) {
+        function getRelatedScroll() {
+            const card = relatedTrack.querySelector('.pd-related-card');
+            if (!card) return 300;
+            const gap = parseInt(getComputedStyle(relatedTrack).gap) || 20;
+            return card.offsetWidth + gap;
+        }
+
+        // Create dots
+        if (relatedDots) {
+            const visibleWidth = relatedTrack.clientWidth;
+            const totalWidth = relatedTrack.scrollWidth;
+            const numDots = Math.max(1, Math.ceil(totalWidth / visibleWidth));
+            for (let i = 0; i < numDots; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    relatedTrack.scrollTo({ left: i * visibleWidth, behavior: 'smooth' });
+                });
+                relatedDots.appendChild(dot);
+            }
+
+            relatedTrack.addEventListener('scroll', () => {
+                const dots = relatedDots.querySelectorAll('.dot');
+                const activeIndex = Math.round(relatedTrack.scrollLeft / visibleWidth);
+                dots.forEach((d, i) => d.classList.toggle('active', i === activeIndex));
+            });
+        }
+
+        if (relatedNext) {
+            relatedNext.addEventListener('click', () => {
+                relatedTrack.scrollBy({ left: getRelatedScroll(), behavior: 'smooth' });
+            });
+        }
+
+        if (relatedPrev) {
+            relatedPrev.addEventListener('click', () => {
+                relatedTrack.scrollBy({ left: -getRelatedScroll(), behavior: 'smooth' });
+            });
+        }
+
+        // Update button states
+        function updateRelatedBtns() {
+            if (relatedPrev) relatedPrev.disabled = relatedTrack.scrollLeft <= 5;
+            if (relatedNext) relatedNext.disabled = relatedTrack.scrollLeft + relatedTrack.clientWidth >= relatedTrack.scrollWidth - 5;
+        }
+
+        relatedTrack.addEventListener('scroll', updateRelatedBtns);
+        updateRelatedBtns();
+    }
+
+    // ========================================
+    // Scroll animations (subtle fade-in)
+    // ========================================
+    const animateEls = document.querySelectorAll('.pd-text-block, .pd-gallery, .pd-cta');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.05, rootMargin: '50px 0px' });
 
-    // Observe content sections
-    const sections = document.querySelectorAll('.content-section, .project-quote, .project-cta, .related-projects');
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
+    animateEls.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
     });
 
-    // Related projects slider (horizontal scroll) - controls and auto-scroll
-    const rpTrack = document.querySelector('.rp-track');
-    const rpPrev = document.querySelector('.rp-btn.prev');
-    const rpNext = document.querySelector('.rp-btn.next');
-
-    if (rpTrack) {
-        let autoTimer = null;
-
-        // Compute scroll amount based on first card width (including gap)
-        function getScrollAmount() {
-            const card = rpTrack.querySelector('.related-project-card');
-            if (!card) return 320;
-            const style = window.getComputedStyle(rpTrack);
-            const gap = parseInt(style.getPropertyValue('column-gap')) || 20;
-            const cardWidth = card.getBoundingClientRect().width;
-            return Math.round(cardWidth + gap);
-        }
-
-        function scrollNext() {
-            rpTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
-        }
-
-        function scrollPrev() {
-            rpTrack.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-        }
-
-        if (rpNext) rpNext.addEventListener('click', () => { scrollNext(); resetAuto(); });
-        if (rpPrev) rpPrev.addEventListener('click', () => { scrollPrev(); resetAuto(); });
-
-        // Auto-advance every 4.5s
-        function startAuto() {
-            stopAuto();
-            autoTimer = setInterval(() => { scrollNext(); }, 4500);
-        }
-
-        function stopAuto() {
-            if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
-        }
-
-        function resetAuto() { stopAuto(); startAuto(); }
-
-        // Pause on hover / focus
-        rpTrack.addEventListener('mouseenter', stopAuto);
-        rpTrack.addEventListener('mouseleave', startAuto);
-        rpTrack.addEventListener('focusin', stopAuto);
-        rpTrack.addEventListener('focusout', startAuto);
-
-        // Make track keyboard-scrollable with arrow keys when focused
-        rpTrack.setAttribute('tabindex', '0');
-        rpTrack.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight') { e.preventDefault(); scrollNext(); resetAuto(); }
-            if (e.key === 'ArrowLeft') { e.preventDefault(); scrollPrev(); resetAuto(); }
-        });
-
-        startAuto();
-    }
+    // When visible class is added
+    const style = document.createElement('style');
+    style.textContent = '.pd-text-block.visible, .pd-gallery.visible, .pd-cta.visible { opacity: 1 !important; transform: translateY(0) !important; }';
+    document.head.appendChild(style);
 });
