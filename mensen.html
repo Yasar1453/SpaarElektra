@@ -3,438 +3,401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ons Team - SpaarElektra</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="solution-page.css">
-    <link rel="stylesheet" href="mensen-page.css">
+    <title>Mensen - SpaarElektra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="mensen-page.css?v=4">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header - altijd wit op subpagina's -->
     <header class="header scrolled">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra Logo" class="logo-img">
-                    </a>
-                </div>
-                <nav class="nav">
-                    <ul class="nav-menu">
-                        <li class="nav-item dropdown">
-                            <a href="#diensten">Wat wij doen</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
-                                <li><a href="data-installatie.html">Data Installatie</a></li>
-                                <li><a href="camera-intercom-installatie.html">Camera- En Intercom Installatie</a></li>
-                                <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
-                                <li><a href="inspecties.html">Inspecties</a></li>
-                                <li><a href="verlichting.html">Verlichting</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="projecten.html">Projecten</a></li>
-                        <li class="nav-item"><a href="#impact">Impact</a></li>
-                        <li class="nav-item"><a href="#onderhoud">Onderhoud</a></li>
-                        <li class="nav-item"><a href="mensen.html">Mensen</a></li>
-                        <li class="nav-item"><a href="careers.html">Kom werken!</a></li>
-                    </ul>
-                </nav>
-                <div class="header-actions">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra" class="logo-img">
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="elektrische-installaties.html">Wat wij doen <span class="dropdown-arrow">&#8595;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
+                            <li><a href="data-installatie.html">Data Installatie</a></li>
+                            <li><a href="camera-intercom-installatie.html">Camera- En Intercom Installatie</a></li>
+                            <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
+                            <li><a href="inspecties.html">Inspecties</a></li>
+                            <li><a href="verlichting.html">Verlichting</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="projecten.html">Projecten</a></li>
+                    <li class="nav-item"><a href="#impact">Impact</a></li>
+                    <li class="nav-item"><a href="#onderhoud">Onderhoud</a></li>
+                    <li class="nav-item"><a href="mensen.html">Mensen</a></li>
+                    <li class="nav-item"><a href="careers.html">Kom werken!</a></li>
+                </ul>
+                <div class="nav-actions">
                     <a href="contact.html" class="contact-btn">Contact</a>
+                    <button class="search-btn" aria-label="Zoeken">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
                 </div>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="contact-btn">Contact</a>
+                <button class="search-btn" aria-label="Zoeken">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
             </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span class="menu-label">menu</span>
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
         </div>
     </header>
 
-    <!-- Header Divider -->
-    <div class="header-divider"></div>
-
-    <!-- Hero Section -->
-    <section class="mensen-hero">
-        <div class="container">
-            <div class="mensen-hero-wrapper">
-                <div class="mensen-hero-left">
-                    <nav class="breadcrumb-content">
-                        <a href="index.html" class="breadcrumb-link">Home</a>
-                        <span class="breadcrumb-separator">›</span>
-                        <span class="breadcrumb-current">Voor mensen</span>
-                    </nav>
-                    <h1 class="mensen-hero-title">Voor mensen</h1>
+    <!-- ==========================================
+         HERO - Split layout (white bg)
+         ========================================== -->
+    <section class="mp-hero">
+        <div class="mp-hero-inner">
+            <div class="mp-hero-left">
+                <nav class="mp-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="mp-breadcrumb-sep">&bull;</span>
+                    <span>Voor mensen</span>
+                </nav>
+                <h1 class="mp-hero-title">Voor mensen</h1>
+                <h3 class="mp-hero-subtitle">De mens centraal</h3>
+                <p class="mp-hero-text">Bij SpaarElektra draait alles om mensen. Onze medewerkers zijn de ruggengraat van ons bedrijf en vormen een hecht team van vakspecialisten. We geloven in persoonlijke ontwikkeling, samenwerking en een werkomgeving waarin iedereen zijn talenten optimaal kan benutten.</p>
+                <a href="#mp-team" class="mp-scroll-link">Scroll verder &darr;</a>
+            </div>
+            <div class="mp-hero-right">
+                <div class="mp-hero-img-top">
+                    <img src="Fotos/Homepage-fotos/Test-1.webp" alt="SpaarElektra Team aan het werk">
                 </div>
-                <div class="mensen-hero-right">
-                    <img src="Fotos/Homepage-fotos/Test-1.webp" alt="SpaarElektra Team" class="mensen-hero-image">
+                <div class="mp-hero-img-bottom">
+                    <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="SpaarElektra monteur">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- De mens centraal Section -->
-    <section class="mens-centraal-section">
-        <div class="container">
-            <h2 class="mens-centraal-title">De mens centraal</h2>
-            <p class="mens-centraal-text">Bij SpaarElektra draait alles om mensen. Onze medewerkers zijn de ruggengraat van ons bedrijf en vormen een hecht team van vakspecialisten. We geloven in persoonlijke ontwikkeling, samenwerking en een werkomgeving waarin iedereen zijn talenten optimaal kan benutten.</p>
+    <!-- ==========================================
+         TEAM SLIDER - Horizontal scroll, asymmetric
+         ========================================== -->
+    <section class="mp-team" id="mp-team">
+        <div class="mp-team-header">
+            <h2 class="mp-team-title">De mensen achter ons familiebedrijf</h2>
+            <div class="mp-team-nav">
+                <button class="mp-team-btn mp-team-prev" aria-label="Vorige">&larr;</button>
+                <button class="mp-team-btn mp-team-next" aria-label="Volgende">&rarr;</button>
+            </div>
+        </div>
+        <div class="mp-team-track">
+            <div class="mp-team-card">
+                <div class="mp-team-photo">
+                    <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Emirhan Kilinc">
+                </div>
+                <div class="mp-team-info">
+                    <p class="mp-team-role">Directeur</p>
+                    <h3 class="mp-team-name">Emirhan Kilinc</h3>
+                    <p class="mp-team-quote">"Je mag niet misgrijpen"</p>
+                </div>
+            </div>
+            <div class="mp-team-card">
+                <div class="mp-team-photo">
+                    <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Emirhan Kilinc">
+                </div>
+                <div class="mp-team-info">
+                    <p class="mp-team-role">Bedrijfsleider</p>
+                    <h3 class="mp-team-name">Emirhan Kilinc</h3>
+                    <p class="mp-team-quote">"Geen dag is hetzelfde. De afwisseling bevalt me heel goed."</p>
+                </div>
+            </div>
+            <div class="mp-team-card">
+                <div class="mp-team-photo">
+                    <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Emirhan Kilinc">
+                </div>
+                <div class="mp-team-info">
+                    <p class="mp-team-role">Projectleider</p>
+                    <h3 class="mp-team-name">Emirhan Kilinc</h3>
+                    <p class="mp-team-quote">"Wij verkopen veiligheid, wat een prachtproduct!"</p>
+                </div>
+            </div>
+            <div class="mp-team-card">
+                <div class="mp-team-photo">
+                    <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Thomas Kemper">
+                </div>
+                <div class="mp-team-info">
+                    <p class="mp-team-role">Engineer</p>
+                    <h3 class="mp-team-name">Thomas Kemper</h3>
+                    <p class="mp-team-quote">"Je doet het samen, met elkaar. Je bent echt een team."</p>
+                </div>
+            </div>
+            <div class="mp-team-card">
+                <div class="mp-team-photo">
+                    <img src="Fotos/Homepage-fotos/Test-1.webp" alt="Naam Teamlid 5">
+                </div>
+                <div class="mp-team-info">
+                    <p class="mp-team-role">Werkvoorbereider</p>
+                    <h3 class="mp-team-name">Naam Teamlid 5</h3>
+                    <p class="mp-team-quote">"Samen zorgen we voor succesvolle projecten"</p>
+                </div>
+            </div>
+            <div class="mp-team-card">
+                <div class="mp-team-photo">
+                    <img src="Fotos/Homepage-fotos/Test-1.webp" alt="Naam Teamlid 6">
+                </div>
+                <div class="mp-team-info">
+                    <p class="mp-team-role">Uitvoerder</p>
+                    <h3 class="mp-team-name">Naam Teamlid 6</h3>
+                    <p class="mp-team-quote">"Innovatie en techniek gaan hand in hand"</p>
+                </div>
+            </div>
+            <div class="mp-team-card">
+                <div class="mp-team-photo">
+                    <img src="Fotos/Homepage-fotos/Test-1.webp" alt="Naam Teamlid 7">
+                </div>
+                <div class="mp-team-info">
+                    <p class="mp-team-role">Hoofdmonteur</p>
+                    <h3 class="mp-team-name">Naam Teamlid 7</h3>
+                    <p class="mp-team-quote">"Kwaliteit staat bij ons voorop"</p>
+                </div>
+            </div>
+            <div class="mp-team-card">
+                <div class="mp-team-photo">
+                    <img src="Fotos/Homepage-fotos/Test-1.webp" alt="Naam Teamlid 8">
+                </div>
+                <div class="mp-team-info">
+                    <p class="mp-team-role">Monteur</p>
+                    <h3 class="mp-team-name">Naam Teamlid 8</h3>
+                    <p class="mp-team-quote">"Vakmanschap is meesterschap"</p>
+                </div>
+            </div>
+            <div class="mp-team-card">
+                <div class="mp-team-photo">
+                    <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Emirhan Kilinc">
+                </div>
+                <div class="mp-team-info">
+                    <p class="mp-team-role">Monteur</p>
+                    <h3 class="mp-team-name">Emirhan Kilinc</h3>
+                    <p class="mp-team-quote">"Blij om deel uit te maken van het team"</p>
+                </div>
+            </div>
+        </div>
+        <div class="mp-team-dots"></div>
+    </section>
+
+    <!-- ==========================================
+         TEXT SECTIONS - Left-aligned, narrow
+         ========================================== -->
+    <section class="mp-text">
+        <div class="mp-text-inner">
+            <h2>Professioneel en innovatief met een familiaire sfeer</h2>
+            <p>Bij SpaarElektra voelt iedereen zich welkom. De oorsprong ligt in een familiebedrijf en daardoor heerst hier nog steeds een familiaire sfeer: laagdrempelig, gemoedelijk en met oog voor elkaar. Collega's kennen elkaar, werken nauw samen en staan altijd klaar om te helpen. Tegelijkertijd zijn we een innovatief en professioneel bedrijf, waar we vooroplopen in techniek en ontwikkeling en streven naar duurzame toekomstbestendige oplossingen. Of je nu een nieuwe medewerker bent of al jarenlang klant, bij SpaarElektra word je deel van een hecht en gedreven team dat samen werkt aan veilige en betrouwbare installaties.</p>
         </div>
     </section>
 
-    <!-- Team Members Slider -->
-    <section class="team-members-section">
-        <div class="container">
-            <h2 class="team-members-title">De mensen achter ons familiebedrijf</h2>
+    <section class="mp-text">
+        <div class="mp-text-inner">
+            <h2>Onze rijke historie</h2>
+            <p>SpaarElektra kent een lange en bijzondere geschiedenis. Wat begon als een klein installatiebedrijf is uitgegroeid tot een toonaangevend elektrotechnisch bedrijf in de regio Amsterdam. Met jarenlange ervaring in elektrotechniek, data-installaties en beveiligingssystemen hebben we ons bewezen bij talloze projecten. Van luxe hotels tot kantoorpanden &mdash; onze vakmensen leveren altijd kwaliteit. Die traditie van vakmanschap en innovatie dragen we met trots uit, elke dag opnieuw.</p>
+        </div>
+    </section>
 
-            <div class="team-members-slider-wrapper">
-                <button class="team-members-arrow left" aria-label="Vorige">‹</button>
-                <button class="team-members-arrow right" aria-label="Volgende">›</button>
-                <div class="team-members-slider">
-                    <div class="team-member-item">
-                        <div class="team-member-photo">
-                            <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Emirhan Kilinc">
-                        </div>
-                        <div class="team-member-details">
-                            <p class="team-member-position">Directeur</p>
-                            <h3 class="team-member-fullname">Emirhan Kilinc</h3>
-                            <p class="team-member-statement">"Je mag niet misgrijpen"</p>
-                        </div>
-                    </div>
+    <!-- ==========================================
+         IMAGE-TEXT BLOCK - Opleiding (image left)
+         ========================================== -->
+    <section class="mp-imgtext">
+        <div class="mp-imgtext-inner">
+            <div class="mp-imgtext-image">
+                <img src="Fotos/Homepage-fotos/Test-1.webp" alt="SpaarElektra Monteur op locatie">
+            </div>
+            <div class="mp-imgtext-content">
+                <h2>Opleiding bij SpaarElektra</h2>
+                <p>SpaarElektra is een erkend leerbedrijf. Wij bieden mbo- en hbo-studenten een professionele en leerzame stageomgeving waarin praktijkervaring centraal staat. Tijdens je stage word je begeleid door ervaren monteurs, projectleiders en werkvoorbereiders, die hun vakkennis en expertise actief met je delen.</p>
+                <p>Ben je op zoek naar een stageplek waar je jezelf zowel vakinhoudelijk als professioneel kunt ontwikkelen? Bekijk onze openstaande stagevacatures en ontdek of jij binnenkort deel kunt uitmaken van SpaarElektra.</p>
+                <a href="careers.html" class="mp-btn">Bekijk onze vacatures</a>
+            </div>
+        </div>
+    </section>
 
-                    <div class="team-member-item">
-                        <div class="team-member-photo">
-                            <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Thijs Kuijpers">
-                        </div>
-                        <div class="team-member-details">
-                            <p class="team-member-position">Bedrijfsleider</p>
-                            <h3 class="team-member-fullname">Emirhan Kilinc</h3>
-                            <p class="team-member-statement">"Geen dag is hetzelfde. De afwisseling, bevalt me heel goed."</p>
-                        </div>
+    <!-- ==========================================
+         TEXT-IMAGE BLOCK - Certificeringen (reversed)
+         ========================================== -->
+    <section class="mp-imgtext mp-imgtext--reversed">
+        <div class="mp-imgtext-inner">
+            <div class="mp-imgtext-content">
+                <h2>Certificeringen &amp; Kwaliteit</h2>
+                <p>Kwaliteit en veiligheid staan bij SpaarElektra voorop. Al onze medewerkers zijn volledig gecertificeerd en volgen regelmatig bijscholingen om op de hoogte te blijven van de nieuwste normen en technieken. Zo garanderen wij dat elk project voldoet aan de hoogste kwaliteitseisen.</p>
+                <div class="mp-certs">
+                    <div class="mp-cert-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>VCA</span>
                     </div>
+                    <div class="mp-cert-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>NEN 3140</span>
+                    </div>
+                    <div class="mp-cert-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>BHV</span>
+                    </div>
+                    <div class="mp-cert-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span>ISO 9001</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mp-imgtext-image">
+                <img src="Fotos/Homepage-fotos/Test-1.webp" alt="SpaarElektra gecertificeerd werk">
+            </div>
+        </div>
+    </section>
 
-                    <div class="team-member-item">
-                        <div class="team-member-photo">
-                            <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Lucas Unger">
-                        </div>
-                        <div class="team-member-details">
-                            <p class="team-member-position">Projectleider</p>
-                            <h3 class="team-member-fullname">Emirhan Kilinc</h3>
-                            <p class="team-member-statement">"Wij verkopen veiligheid, wat een prachtproduct!"</p>
-                        </div>
+    <!-- ==========================================
+         FACES CAROUSEL - Dark bg, two-row
+         ========================================== -->
+    <section class="mp-faces">
+        <div class="mp-faces-inner">
+            <div class="mp-faces-header">
+                <h2 class="mp-faces-title">De gezichten van SpaarElektra</h2>
+                <div class="mp-faces-nav">
+                    <button class="mp-faces-btn mp-faces-prev" aria-label="Vorige">&larr;</button>
+                    <button class="mp-faces-btn mp-faces-next" aria-label="Volgende">&rarr;</button>
+                </div>
+            </div>
+            <div class="mp-faces-rows">
+                <div class="mp-faces-row mp-faces-row-1">
+                    <div class="mp-face-card">
+                        <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Emirhan Kilinc">
+                        <div class="mp-face-overlay"><span>Emirhan Kilinc</span></div>
                     </div>
-
-                    <div class="team-member-item">
-                        <div class="team-member-photo">
-                            <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Thomas Kemper">
-                        </div>
-                        <div class="team-member-details">
-                            <p class="team-member-position">Engineer</p>
-                            <h3 class="team-member-fullname">Thomas Kemper</h3>
-                            <p class="team-member-statement">"Je doet het samen, met elkaar. Je bent echt een team."</p>
-                        </div>
+                    <div class="mp-face-card">
+                        <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Emirhan Kilinc">
+                        <div class="mp-face-overlay"><span>Emirhan Kilinc</span></div>
                     </div>
-
-                    <div class="team-member-item">
-                        <div class="team-member-photo">
-                            <img src="Fotos/Homepage-fotos/Test-1.webp" alt="Team Member 5">
-                        </div>
-                        <div class="team-member-details">
-                            <p class="team-member-position">Werkvoorbereider</p>
-                            <h3 class="team-member-fullname">Naam Teamlid 5</h3>
-                            <p class="team-member-statement">"Samen zorgen we voor succesvolle projecten"</p>
-                        </div>
+                    <div class="mp-face-card">
+                        <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Thomas Kemper">
+                        <div class="mp-face-overlay"><span>Thomas Kemper</span></div>
                     </div>
-
-                    <div class="team-member-item">
-                        <div class="team-member-photo">
-                            <img src="Fotos/Homepage-fotos/Test-1.webp" alt="Team Member 6">
-                        </div>
-                        <div class="team-member-details">
-                            <p class="team-member-position">Uitvoerder</p>
-                            <h3 class="team-member-fullname">Naam Teamlid 6</h3>
-                            <p class="team-member-statement">"Innovatie en techniek gaan hand in hand"</p>
-                        </div>
+                    <div class="mp-face-card">
+                        <img src="Fotos/Homepage-fotos/Test-1.webp" alt="Naam Teamlid 5">
+                        <div class="mp-face-overlay"><span>Naam Teamlid 5</span></div>
                     </div>
-
-                    <div class="team-member-item">
-                        <div class="team-member-photo">
-                            <img src="Fotos/Homepage-fotos/Test-1.webp" alt="Team Member 7">
-                        </div>
-                        <div class="team-member-details">
-                            <p class="team-member-position">Hoofdmonteur</p>
-                            <h3 class="team-member-fullname">Naam Teamlid 7</h3>
-                            <p class="team-member-statement">"Kwaliteit staat bij ons voorop"</p>
-                        </div>
+                    <div class="mp-face-card">
+                        <img src="Fotos/Homepage-fotos/Test-1.webp" alt="Naam Teamlid 6">
+                        <div class="mp-face-overlay"><span>Naam Teamlid 6</span></div>
                     </div>
-
-                    <div class="team-member-item">
-                        <div class="team-member-photo">
-                            <img src="Fotos/Homepage-fotos/Test-1.webp" alt="Team Member 8">
-                        </div>
-                        <div class="team-member-details">
-                            <p class="team-member-position">Monteur</p>
-                            <h3 class="team-member-fullname">Naam Teamlid 8</h3>
-                            <p class="team-member-statement">"Vakmanschap is meesterschap"</p>
-                        </div>
+                </div>
+                <div class="mp-faces-row mp-faces-row-2">
+                    <div class="mp-face-card">
+                        <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Emirhan Kilinc">
+                        <div class="mp-face-overlay"><span>Emirhan Kilinc</span></div>
                     </div>
-                    
-                    <!-- New team member added: Emirhan Kilinc -->
-                    <div class="team-member-item">
-                        <div class="team-member-photo">
-                            <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Emirhan Kilinc">
-                        </div>
-                        <div class="team-member-details">
-                            <p class="team-member-position">Monteur</p>
-                            <h3 class="team-member-fullname">Emirhan Kilinc</h3>
-                            <p class="team-member-statement">"Blij om deel uit te maken van het team"</p>
-                        </div>
+                    <div class="mp-face-card">
+                        <img src="Fotos/Homepage-fotos/Test-1.webp" alt="Naam Teamlid 7">
+                        <div class="mp-face-overlay"><span>Naam Teamlid 7</span></div>
+                    </div>
+                    <div class="mp-face-card">
+                        <img src="Fotos/Homepage-fotos/Test-1.webp" alt="Naam Teamlid 8">
+                        <div class="mp-face-overlay"><span>Naam Teamlid 8</span></div>
+                    </div>
+                    <div class="mp-face-card">
+                        <img src="Fotos/Team/Emirhan kilinc.jpeg" alt="Emirhan Kilinc">
+                        <div class="mp-face-overlay"><span>Emirhan Kilinc</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Professioneel en innovatief Section -->
-    <section class="mens-centraal-section">
-        <div class="container">
-            <h2 class="mens-centraal-title" style="color: var(--text-dark);">Professioneel en innovatief met een familiaire sfeer</h2>
-            <p class="mens-centraal-text">Bij Aqua+ voelt iedereen zich welkom. De oorsprong ligt in een familiebedrijf en daardoor heerst hier nog steeds een familiaire sfeer: laagdrempelig, gemoedelijk en met oog voor elkaar. Collega's kennen elkaar, werken nauw samen en staan altijd klaar om te helpen. Tegelijkertijd zijn we een innovatief en professioneel bedrijf, waar we vooroplopen in techniek en ontwikkeling en streven naar duurzame toekomstbestendige oplossingen. Of je nu een nieuwe medewerker bent of al jarenlang klant, bij Aqua+ word je deel van een hecht en gedreven team dat samen werkt aan brandveilige oplossingen.</p>
+    <!-- ==========================================
+         CTA - Red background
+         ========================================== -->
+    <section class="mp-cta">
+        <div class="mp-cta-inner">
+            <h2>Kom werken bij SpaarElektra</h2>
+            <p>Ben jij een gedreven professional in de elektrotechniek? Wij zijn altijd op zoek naar talent om ons team te versterken.</p>
+            <a href="careers.html" class="mp-cta-btn">Bekijk vacatures</a>
         </div>
     </section>
-
-    <!-- Onze rijke historie Section -->
-    <section class="mens-centraal-section">
-        <div class="container">
-            <h2 class="mens-centraal-title" style="color: var(--text-dark);">Onze rijke historie</h2>
-            <p class="mens-centraal-text">Aqua+ kent een lange en bijzondere geschiedenis. De basis werd al gelegd in 1895, toen Bernard Walhof een installatiebedrijf oprichtte met een geleend bedrag van 500 gulden, dat hij binnen een jaar terugbetaalde. In 1977 voorzag Rudolf Walhof de groeiende behoefte aan sprinklersystemen en richtte hij Aqua+ op. Een leuk detail: oorspronkelijk wilde hij het bedrijf ABBA noemen, maar de naam was al populair door de gelijknamige popgroep. Een hoogtepunt in onze historie vond plaats op 5 maart 2021, toen Aqua+ het predicaat Koninklijk ontving van Zijne Majesteit de Koning. Dit onderstreept niet alleen onze traditie van innovatie en kwaliteit, maar ook onze toewijding aan een brandveilige toekomst.</p>
-        </div>
-    </section>
-
-    <!-- Image Text Section -->
-    <section class="image-text-section">
-        <div class="container">
-            <div class="image-text-wrapper">
-                <div class="image-text-left">
-                    <img src="Fotos/Homepage-fotos/Test-1.webp" alt="SpaarElektra Monteur">
-                </div>
-                <div class="image-text-right">
-                    <h2>Opleiding bij Spaar Electra</h2>
-                    <p>Spaar Electra is een erkend leerbedrijf.
-Wij bieden mbo- en hbo-studenten een professionele en leerzame stageomgeving waarin praktijkervaring centraal staat. Tijdens je stage word je begeleid door ervaren monteurs, projectleiders en werkvoorbereiders, die hun vakkennis en expertise actief met je delen.
-
-Ben je op zoek naar een stageplek waar je jezelf zowel vakinhoudelijk als professioneel kunt ontwikkelen?
-Bekijk onze openstaande stagevacatures en ontdek of jij binnenkort deel kunt uitmaken van Spaar Electra.</p>
-                    <a href="#" class="info-button">Bekijk onze vacatures</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Roles Section -->
-    <section class="team-roles-section">
-        <div class="container">
-            <div class="team-roles-grid">
-                <div class="team-role-card">
-                    <div class="team-role-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <line x1="22" y1="11" x2="16" y2="11"></line>
-                            <line x1="19" y1="8" x2="19" y2="14"></line>
-                        </svg>
-                    </div>
-                    <h3>Directeur</h3>
-                </div>
-
-                <div class="team-role-card">
-                    <div class="team-role-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3>Bedrijfsleider</h3>
-                </div>
-
-                <div class="team-role-card">
-                    <div class="team-role-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
-                    </div>
-                    <h3>Projectleider</h3>
-                </div>
-
-                <div class="team-role-card">
-                    <div class="team-role-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                        </svg>
-                    </div>
-                    <h3>Engineer</h3>
-                </div>
-
-                <div class="team-role-card">
-                    <div class="team-role-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                        </svg>
-                    </div>
-                    <h3>Werkvoorbereider</h3>
-                </div>
-
-                <div class="team-role-card">
-                    <div class="team-role-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Uitvoerder</h3>
-                </div>
-
-                <div class="team-role-card">
-                    <div class="team-role-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-                        </svg>
-                    </div>
-                    <h3>Hoofdmonteur</h3>
-                </div>
-
-                <div class="team-role-card">
-                    <div class="team-role-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-                        </svg>
-                    </div>
-                    <h3>Monteur</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <main class="team-content">
-        <div class="container">
-            <!-- Certifications Section -->
-            <section class="certifications-section">
-                <div class="section-header">
-                    <h2>Certificeringen & Kwalificaties</h2>
-                    <p>Onze medewerkers beschikken over alle benodigde certificaten</p>
-                </div>
-                <div class="certifications-grid">
-                    <div class="cert-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e10410" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                        <span>VCA Gecertificeerd</span>
-                    </div>
-                    <div class="cert-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e10410" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                        <span>NEN 3140 Erkend</span>
-                    </div>
-                    <div class="cert-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e10410" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                        <span>BHV Gecertificeerd</span>
-                    </div>
-                    <div class="cert-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e10410" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                        <span>ISO 9001 Geaccrediteerd</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Call to Action -->
-            <section class="team-cta-section">
-                <h2>Kom werken bij SpaarElektra</h2>
-                <p>Ben jij een gedreven professional in de elektrotechniek? Wij zijn altijd op zoek naar talent om ons team te versterken.</p>
-                <a href="#werken" class="cta-button">Bekijk vacatures</a>
-            </section>
-        </div>
-    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <!-- Footer Top Section -->
+        <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-top-left">
-                    <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra Logo" class="footer-logo">
+                    <p class="emergency-label">Storing melden? Bel direct:</p>
+                    <a href="tel:0203033446" class="emergency-number">(020) 303 3446</a>
                 </div>
                 <div class="footer-top-right">
-                    <p class="emergency-label">Storing melden?</p>
-                    <a href="tel:0203033446" class="emergency-number">Bel direct: 020 303 3446</a>
+                    <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra" class="footer-logo">
                 </div>
             </div>
 
-            <!-- Footer Content -->
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>SpaarElektra</h3>
-                    <p>Hoofdkantoor</p>
+                    <h4>Contact</h4>
+                    <p>Hoofdkantoor SpaarElektra</p>
                     <p>Poortland 34</p>
                     <p>1046 BD Amsterdam</p>
-                    <p>Tel: 020 303 3446</p>
-                    <p>Email: info@spaarelektra.nl</p>
+                    <a href="contact.html" class="footer-contact-btn">Neem contact op</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Over ons</h4>
+                    <h4>Bekijk ook</h4>
                     <ul>
-                        <li><a href="#bedrijf">Het bedrijf</a></li>
-                        <li><a href="#historie">Onze historie</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#over-ons">Over SpaarElektra</a></li>
                         <li><a href="mensen.html">Ons team</a></li>
-                        <li><a href="#vacatures">Vacatures</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Oplossingen</h4>
-                    <ul>
-                        <li><a href="#installaties">Installaties</a></li>
+                        <li><a href="careers.html">Vacatures</a></li>
                         <li><a href="#onderhoud">Onderhoud</a></li>
-                        <li><a href="#smart-home">Smart Home</a></li>
-                        <li><a href="#zonnepanelen">Zonnepanelen</a></li>
+                        <li><a href="#privacy">Privacy Statement</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
+                    <h4>Onze oplossingen</h4>
                     <ul>
-                        <li><a href="contact.html">Contactformulier</a></li>
-                        <li><a href="#vestigingen">Vestigingen</a></li>
-                        <li><a href="#support">Klantenservice</a></li>
+                        <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
+                        <li><a href="data-installatie.html">Data Installatie</a></li>
+                        <li><a href="camera-intercom-installatie.html">Camera- en Intercom</a></li>
+                        <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
+                        <li><a href="inspecties.html">Inspecties</a></li>
+                        <li><a href="verlichting.html">Verlichting</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Volg ons</h4>
-                    <div class="social-links">
-                        <a href="#linkedin">LinkedIn</a>
-                        <a href="#facebook">Facebook</a>
-                        <a href="#instagram">Instagram</a>
-                    </div>
+                    <h4>Volg ons online</h4>
+                    <ul>
+                        <li><a href="#facebook">Facebook</a></li>
+                        <li><a href="#instagram">Instagram</a></li>
+                        <li><a href="#linkedin">LinkedIn</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 SpaarElektra. Alle rechten voorbehouden.</p>
-                <div class="footer-links">
-                    <a href="#privacy">Privacy</a>
-                    <a href="#voorwaarden">Algemene voorwaarden</a>
-                    <a href="#cookies">Cookie beleid</a>
+                <div class="footer-bottom-links">
+                    <a href="#sitemap">Sitemap</a>
+                    <span>&bull;</span>
+                    <a href="#disclaimer">Disclaimer</a>
                 </div>
+                <div class="footer-copyright">&copy; 2026</div>
             </div>
         </div>
     </footer>
 
-    <script src="solution-page.js"></script>
+    <script src="script.js"></script>
+    <script src="mensen-page.js"></script>
 </body>
 </html>
