@@ -46,16 +46,16 @@
     max-width: 1480px;
     margin: 0 auto;
     padding: 0 50px;
-    min-height: 800px;
+    min-height: 620px;
 }
 
-/* Single hero image - positioned right, Aqua+ size: 840x800 */
+/* Single hero image - smaller, more centered like Aqua+ */
 .mp-hero-img {
     position: absolute;
-    top: 0;
-    right: 50px;
-    width: 58%;
-    height: 800px;
+    top: 20px;
+    right: 100px;
+    width: 46%;
+    height: 560px;
     object-fit: cover;
     z-index: 1;
 }
@@ -64,12 +64,12 @@
 .mp-hero-title {
     position: relative;
     z-index: 2;
-    font-size: clamp(80px, 12vw, 170px);
+    font-size: clamp(70px, 11vw, 150px);
     font-weight: 900;
     color: #b4a5aa;
-    line-height: 1.2;
+    line-height: 1.15;
     margin: 0;
-    padding-top: 100px;
+    padding-top: 60px;
     letter-spacing: -0.02em;
 }
 
@@ -77,11 +77,11 @@
 .mp-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 520px;
-    padding: 20px 0 80px 40px;
+    max-width: 460px;
+    padding: 16px 0 60px 40px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
 }
 
 .mp-breadcrumb {
@@ -103,14 +103,14 @@
 }
 
 .mp-hero-subtitle {
-    font-size: clamp(24px, 2.5vw, 34px);
+    font-size: clamp(20px, 2.2vw, 28px);
     font-weight: 900;
     color: var(--accent);
     margin: 0;
 }
 
 .mp-hero-text {
-    font-size: 22px;
+    font-size: 17px;
     line-height: 1.75;
     color: #6b7275;
     margin: 0;
@@ -121,7 +121,7 @@
     color: var(--accent);
     text-decoration: none;
     font-weight: 900;
-    font-size: 16px;
+    font-size: 15px;
     transition: color 0.3s ease;
 }
 
@@ -258,14 +258,14 @@
 }
 
 .mp-team-name {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 900;
     color: var(--accent);
-    margin: 0 0 10px;
+    margin: 0 0 8px;
 }
 
 .mp-team-quote {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.65;
     color: var(--text-dark);
     font-style: italic;
@@ -305,21 +305,21 @@
 }
 
 .mp-text-inner {
-    max-width: 800px;
+    max-width: 680px;
     margin: 0 auto;
     padding: 0 50px;
 }
 
 .mp-text h2 {
-    font-size: clamp(28px, 3vw, 40px);
+    font-size: clamp(24px, 2.8vw, 34px);
     font-weight: 900;
     color: var(--accent);
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .mp-text p {
-    font-size: 22px;
+    font-size: 17px;
     line-height: 1.75;
     color: #6b7275;
     margin: 0;
@@ -361,7 +361,7 @@
 }
 
 .mp-imgtext-content h2 {
-    font-size: clamp(26px, 3vw, 34px);
+    font-size: clamp(22px, 2.5vw, 28px);
     font-weight: 900;
     color: var(--accent);
     line-height: 1.2;
@@ -369,7 +369,7 @@
 }
 
 .mp-imgtext-content p {
-    font-size: 22px;
+    font-size: 17px;
     line-height: 1.75;
     color: #6b7275;
     margin: 0;
@@ -559,11 +559,11 @@
 }
 
 .mp-cta p {
-    font-size: 22px;
+    font-size: 17px;
     line-height: 1.75;
     color: rgba(255, 255, 255, 0.9);
-    max-width: 650px;
-    margin: 0 auto 36px;
+    max-width: 550px;
+    margin: 0 auto 30px;
 }
 
 .mp-cta-btn {
