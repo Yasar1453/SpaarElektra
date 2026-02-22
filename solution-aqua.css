@@ -225,16 +225,14 @@
 
 .sol-gallery-inner {
     position: relative;
-    max-width: 1480px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
 }
 
 /* Nav buttons - absolute right, vertically centered on images */
 .sol-gallery-nav {
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 40px;
     transform: translateY(-50%);
     z-index: 20;
     display: flex;
