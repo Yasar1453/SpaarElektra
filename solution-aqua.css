@@ -31,7 +31,7 @@
 .sol-hero-content {
     position: relative;
     z-index: 2;
-    margin-left: 15%;
+    margin-left: 20%;
     padding: 0 24px 0 0;
 }
 
@@ -74,7 +74,7 @@
     position: relative;
     z-index: 1;
     max-width: 550px;
-    margin-left: 15%;
+    margin-left: 20%;
     padding: 0;
 }
 
@@ -687,7 +687,7 @@
     }
 
     .sol-hero-content {
-        margin-left: 15%;
+        margin-left: 20%;
     }
 
     .sol-intro-inner,
