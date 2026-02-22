@@ -31,7 +31,7 @@
 .sol-hero-content {
     position: relative;
     z-index: 2;
-    max-width: 650px;
+    max-width: 750px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -147,7 +147,7 @@
 .sol-text-inner {
     position: relative;
     z-index: 1;
-    max-width: 650px;
+    max-width: 750px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -469,7 +469,7 @@
 .sol-related-inner {
     position: relative;
     z-index: 1;
-    max-width: 650px;
+    max-width: 750px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -513,7 +513,7 @@
 .sol-faq-inner {
     position: relative;
     z-index: 1;
-    max-width: 800px;
+    max-width: 750px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -619,7 +619,7 @@
 .sol-contact-inner {
     position: relative;
     z-index: 1;
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
     padding: 0 24px;
 }
