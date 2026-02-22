@@ -201,31 +201,51 @@
 }
 
 /* ========================================
-   PHOTO SLIDER - Horizontal carousel
+   PHOTO SLIDER - Horizontal carousel (Aqua+ style)
    ======================================== */
 .sol-gallery {
     position: relative;
-    padding: 0 0 80px;
+    padding: 100px 0 80px;
     background: var(--white);
-    overflow: hidden;
+    overflow: visible;
 }
 
-.sol-gallery-nav {
+/* Gray background block (left side, behind images) */
+.sol-gallery::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 45%;
+    height: 500px;
+    background: #ece8e9;
+    z-index: 0;
+}
+
+.sol-gallery-inner {
     position: relative;
-    z-index: 1;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Nav buttons - absolute right, stacked vertically */
+.sol-gallery-nav {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 20;
     display: flex;
-    gap: 8px;
-    margin-left: 20%;
-    margin-bottom: 24px;
-    padding: 0 24px 0 0;
+    flex-direction: column;
+    gap: 0;
 }
 
 .sol-gallery-btn {
     width: 50px;
     height: 50px;
-    background: rgba(0, 0, 0, 0.08);
-    border: 2px solid var(--primary);
-    color: var(--primary);
+    background: var(--accent);
+    border: none;
+    color: var(--white);
     font-size: 20px;
     cursor: pointer;
     display: flex;
@@ -235,17 +255,24 @@
 }
 
 .sol-gallery-btn:hover {
+    background: var(--accent-dark, #b30000);
+}
+
+.sol-gallery-btn.prev {
     background: var(--accent);
-    border-color: var(--accent);
-    color: var(--white);
+    opacity: 0.7;
+}
+
+.sol-gallery-btn.prev:hover {
+    opacity: 1;
 }
 
 .sol-gallery-track {
     position: relative;
     z-index: 1;
     display: flex;
-    gap: 20px;
-    padding: 0 20%;
+    gap: 30px;
+    margin-left: 20%;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -259,9 +286,9 @@
 
 .sol-gallery-slide {
     flex-shrink: 0;
-    width: 28vw;
-    min-width: 280px;
-    aspect-ratio: 4 / 3;
+    width: 38%;
+    min-width: 320px;
+    aspect-ratio: 580 / 520;
     overflow: hidden;
     position: relative;
 }
@@ -290,13 +317,13 @@
     font-weight: 500;
 }
 
-/* Plus decoration (like Aqua+) */
+/* Plus decoration (top-left, like Aqua+) */
 .sol-gallery-plus {
     position: absolute;
-    bottom: -30px;
-    right: 20%;
-    width: 80px;
-    height: 80px;
+    top: -20px;
+    left: 10%;
+    width: 120px;
+    height: 120px;
     pointer-events: none;
     z-index: 2;
 }
@@ -312,14 +339,14 @@
     top: 50%;
     left: 0;
     width: 100%;
-    height: 8px;
+    height: 4px;
     transform: translateY(-50%);
 }
 
 .sol-gallery-plus::after {
     top: 0;
     left: 50%;
-    width: 8px;
+    width: 4px;
     height: 100%;
     transform: translateX(-50%);
 }
@@ -700,10 +727,6 @@
     }
 
     .sol-gallery-track {
-        padding: 0 20%;
-    }
-
-    .sol-gallery-nav {
         margin-left: 20%;
     }
 }
@@ -780,17 +803,28 @@
         padding: 60px 0;
     }
 
+    .sol-gallery {
+        padding: 60px 0;
+    }
+
+    .sol-gallery::before {
+        width: 50%;
+        height: 400px;
+        top: 30px;
+    }
+
     .sol-gallery-nav {
-        margin-left: 24px;
+        right: 10px;
     }
 
     .sol-gallery-track {
-        padding: 0 24px;
+        margin-left: 24px;
         padding-right: 80px;
+        gap: 20px;
     }
 
     .sol-gallery-slide {
-        width: calc((100vw - 100px) / 2.3);
+        width: 45%;
         min-width: 260px;
     }
 
@@ -874,15 +908,23 @@
     }
 
     .sol-gallery {
-        padding: 0 0 60px;
+        padding: 40px 0 60px;
+    }
+
+    .sol-gallery::before {
+        display: none;
     }
 
     .sol-gallery-nav {
+        position: static;
+        flex-direction: row;
+        gap: 0;
         margin-left: 20px;
+        margin-bottom: 16px;
     }
 
     .sol-gallery-track {
-        padding: 0 20px;
+        margin-left: 20px;
         padding-right: 60px;
         gap: 16px;
     }
