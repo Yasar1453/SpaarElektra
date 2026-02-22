@@ -217,10 +217,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Search button
-const searchBtn = document.querySelector('.search-btn');
-if (searchBtn) {
-    searchBtn.addEventListener('click', () => {
-        alert('Zoekfunctie komt binnenkort beschikbaar!');
-    });
-}
+// Search button — handled by script.js, no duplicate needed
