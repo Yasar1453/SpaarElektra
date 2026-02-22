@@ -145,8 +145,8 @@
 .mp-team::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 40px;
+    left: -40px;
     width: 500px;
     height: 420px;
     background: #ece8e9;
