@@ -134,9 +134,11 @@
    ======================================== */
 .mp-team {
     background: var(--white);
-    padding: 100px 5% 80px 5%;
+    padding: 100px 0 80px;
     overflow: hidden;
     position: relative;
+    max-width: 88%;
+    margin: 0 auto;
 }
 
 /* Accent background block behind the title text (like Aqua+) */
@@ -144,9 +146,9 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 2%;
-    width: 460px;
-    height: 420px;
+    left: 0;
+    width: 420px;
+    height: 380px;
     background: #ece8e9;
     z-index: 0;
 }
@@ -587,6 +589,10 @@
    RESPONSIVE - 1920px+
    ======================================== */
 @media (min-width: 1920px) {
+    .mp-team {
+        max-width: 90%;
+    }
+
     .mp-team-card {
         flex: 0 0 400px;
     }
@@ -630,6 +636,10 @@
 
     .mp-hero-text {
         font-size: 18px;
+    }
+
+    .mp-team {
+        max-width: 94%;
     }
 
     .mp-team-track {
@@ -714,6 +724,7 @@
     }
 
     .mp-team {
+        max-width: 100%;
         padding: 60px 0 40px;
     }
 
