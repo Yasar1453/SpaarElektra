@@ -19,18 +19,18 @@ document.addEventListener('DOMContentLoaded', function () {
             return card.offsetWidth + gap;
         }
 
-        // Create dots
+        // Create dots - one per card, each click scrolls 1 card
         if (teamDots) {
-            var visibleW = teamTrack.clientWidth;
-            var totalW = teamTrack.scrollWidth;
-            var numDots = Math.max(1, Math.ceil(totalW / visibleW));
+            var cards = teamTrack.querySelectorAll('.mp-team-card');
+            var numDots = cards.length;
             for (var i = 0; i < numDots; i++) {
                 var dot = document.createElement('button');
                 dot.classList.add('dot');
                 if (i === 0) dot.classList.add('active');
                 (function (idx) {
                     dot.addEventListener('click', function () {
-                        teamTrack.scrollTo({ left: idx * visibleW, behavior: 'smooth' });
+                        var scrollAmount = idx * getTeamScroll();
+                        teamTrack.scrollTo({ left: scrollAmount, behavior: 'smooth' });
                     });
                 })(i);
                 teamDots.appendChild(dot);
@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             teamTrack.addEventListener('scroll', function () {
                 var dots = teamDots.querySelectorAll('.dot');
-                var activeIdx = Math.round(teamTrack.scrollLeft / visibleW);
+                var cardWidth = getTeamScroll();
+                var activeIdx = Math.round(teamTrack.scrollLeft / cardWidth);
                 dots.forEach(function (d, j) {
                     d.classList.toggle('active', j === activeIdx);
                 });
