@@ -258,7 +258,7 @@
     min-height: 400px;
     background: var(--white);
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 80px auto 80px;
 }
 
 .opl-service-photo {
