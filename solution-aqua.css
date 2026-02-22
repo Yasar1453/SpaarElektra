@@ -31,7 +31,7 @@
 .sol-hero-content {
     position: relative;
     z-index: 2;
-    margin-left: 20%;
+    margin-left: 25%;
     padding: 0 24px 0 0;
 }
 
@@ -74,7 +74,7 @@
     position: relative;
     z-index: 1;
     max-width: 550px;
-    margin-left: 20%;
+    margin-left: 25%;
     padding: 0;
 }
 
@@ -147,7 +147,7 @@
     position: relative;
     z-index: 1;
     max-width: 650px;
-    margin-left: 20%;
+    margin-left: 25%;
     padding: 0 24px 0 0;
 }
 
@@ -272,8 +272,7 @@
     z-index: 1;
     display: flex;
     gap: 30px;
-    margin-left: 20%;
-    max-width: 70%;
+    margin-left: 25%;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -387,7 +386,7 @@
 
 .sol-tabs-inner {
     max-width: 900px;
-    margin-left: 20%;
+    margin-left: 25%;
     padding: 0 24px 0 0;
 }
 
@@ -468,7 +467,7 @@
     position: relative;
     z-index: 1;
     max-width: 650px;
-    margin-left: 20%;
+    margin-left: 25%;
     padding: 0 24px 0 0;
 }
 
@@ -512,7 +511,7 @@
     position: relative;
     z-index: 1;
     max-width: 800px;
-    margin-left: 20%;
+    margin-left: 25%;
     padding: 0 24px 0 0;
 }
 
@@ -618,7 +617,7 @@
     position: relative;
     z-index: 1;
     max-width: 700px;
-    margin-left: 20%;
+    margin-left: 25%;
     padding: 0 24px 0 0;
 }
 
@@ -715,7 +714,7 @@
     }
 
     .sol-hero-content {
-        margin-left: 20%;
+        margin-left: 25%;
     }
 
     .sol-intro-inner,
@@ -724,11 +723,11 @@
     .sol-related-inner,
     .sol-faq-inner,
     .sol-contact-inner {
-        margin-left: 20%;
+        margin-left: 25%;
     }
 
     .sol-gallery-track {
-        margin-left: 20%;
+        margin-left: 25%;
     }
 }
 
