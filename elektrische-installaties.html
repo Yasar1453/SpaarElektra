@@ -3,360 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elektrische Installaties - SpaarElektra</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="solution-page.css">
-    <link rel="stylesheet" href="project-detail.css">
+    <title>Elektrotechniek - SpaarElektra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="solution-aqua.css?v=1">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header (from project-art-hotel.html) -->
     <header class="header scrolled">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra Logo" class="logo-img">
-                    </a>
-                </div>
-                <nav class="nav">
-                    <ul class="nav-menu">
-                        <li class="nav-item dropdown">
-                            <a href="#diensten">Wat wij doen</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
-                                <li><a href="data-installatie.html">Data Installatie</a></li>
-                                <li><a href="camera-intercom-installatie.html">Camera- En Intercom Installatie</a></li>
-                                <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
-                                <li><a href="inspecties.html">Inspecties</a></li>
-                                <li><a href="verlichting.html">Verlichting</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="projecten.html">Projecten</a></li>
-                        <li class="nav-item"><a href="#impact">Impact</a></li>
-                        <li class="nav-item"><a href="#onderhoud">Onderhoud</a></li>
-                        <li class="nav-item"><a href="mensen.html">Mensen</a></li>
-                        <li class="nav-item"><a href="careers.html">Kom werken!</a></li>
-                    </ul>
-                </nav>
-                <div class="header-actions">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra" class="logo-img">
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="elektrische-installaties.html">Wat wij doen <span class="dropdown-arrow">&#8595;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
+                            <li><a href="data-installatie.html">Data Installatie</a></li>
+                            <li><a href="camera-intercom-installatie.html">Camera- En Intercom Installatie</a></li>
+                            <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
+                            <li><a href="inspecties.html">Inspecties</a></li>
+                            <li><a href="verlichting.html">Verlichting</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="projecten.html">Projecten</a></li>
+                    <li class="nav-item"><a href="#impact">Impact</a></li>
+                    <li class="nav-item"><a href="#onderhoud">Onderhoud</a></li>
+                    <li class="nav-item"><a href="mensen.html">Mensen</a></li>
+                    <li class="nav-item"><a href="careers.html">Kom werken!</a></li>
+                </ul>
+                <div class="nav-actions">
                     <a href="contact.html" class="contact-btn">Contact</a>
+                    <button class="search-btn" aria-label="Zoeken">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
                 </div>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="contact-btn">Contact</a>
+                <button class="search-btn" aria-label="Zoeken">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
             </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span class="menu-label">menu</span>
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
         </div>
     </header>
 
-    <!-- Header Divider -->
-    <div class="header-divider"></div>
+    <!-- ==========================================
+         HERO - Big title over photo (Aqua+ style)
+         ========================================== -->
+    <section class="sol-hero">
+        <div class="sol-hero-image">
+            <img src="Fotos/diensten/Elektrische Installaties Photo.jpg" alt="Elektrische installatie">
+        </div>
+        <p class="sol-hero-label">Oplossing</p>
+        <h1 class="sol-hero-title">Elektrotechniek</h1>
+    </section>
 
-    <!-- Page Hero -->
-    <section class="page-hero" style="background-image: url('Fotos/diensten/Elektrische Installaties Photo.jpg');">
-        <div class="hero-text">
-            <div class="container">
-                <p class="hero-category">Diensten</p>
-                <h1>Elektrische Installaties</h1>
+    <!-- ==========================================
+         INTRO - Breadcrumb, subtitle, text
+         ========================================== -->
+    <section class="sol-intro">
+        <div class="sol-intro-inner">
+            <nav class="sol-breadcrumb">
+                <a href="index.html">Home</a> <span>&bull;</span>
+                <a href="index.html#diensten">Wat wij doen</a> <span>&bull;</span>
+                <span>Elektrotechniek</span>
+            </nav>
+            <h2 class="sol-intro-subtitle">Specialist in elektrische installaties</h2>
+            <p class="sol-intro-text">Met jarenlange ervaring en expertise leveren wij hoogwaardige elektrische installaties voor woningen, bedrijfspanden en grootschalige projecten.</p>
+            <a href="#sol-content" class="sol-scroll-link">Scroll verder &darr;</a>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TEXT BLOCKS - Wat is / Waaruit bestaat / Maatwerk
+         ========================================== -->
+    <section class="sol-text-section" id="sol-content">
+        <div class="sol-text-inner">
+            <h2>Wat is een elektrische installatie?</h2>
+            <p>Een elektrische installatie omvat alle componenten en systemen die nodig zijn voor de distributie en het gebruik van elektriciteit in een gebouw. Dit varieert van de meterkast en bekabeling tot stopcontacten, schakelaars en verlichting. Een goed ontworpen installatie is essentieel voor veiligheid, energie-effici&euml;ntie en gebruiksgemak.</p>
+
+            <h2>Waaruit bestaat een elektrotechnische installatie?</h2>
+            <p>Een complete elektrische installatie bestaat uit verschillende onderdelen:</p>
+            <ul>
+                <li><strong>Hoofdverdeling (meterkast):</strong> Het centrale punt waar de stroom binnenkomt en wordt verdeeld</li>
+                <li><strong>Bekabeling en leidingen:</strong> Voor veilige stroomtransport door het hele gebouw</li>
+                <li><strong>Groepen en zekeringen:</strong> Voor beveiliging en scheiding van circuits</li>
+                <li><strong>Eindpunten:</strong> Stopcontacten, schakelaars en aansluitpunten voor apparatuur</li>
+                <li><strong>Aarding en beveiliging:</strong> Voor maximale veiligheid tegen elektrocutie</li>
+            </ul>
+
+            <h2>Maatwerk ontwerp en installatie</h2>
+            <p>Bij SpaarElektra werken we altijd op maat. We analyseren uw situatie, denken mee over de beste oplossingen en zorgen voor een installatie die perfect aansluit bij uw behoeften. Of het nu gaat om een eenvoudige woning of een complex bedrijfspand, wij hebben de expertise in huis.</p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHOTO SLIDER - Horizontal carousel
+         ========================================== -->
+    <section class="sol-gallery">
+        <div class="sol-gallery-nav">
+            <button class="sol-gallery-btn next" aria-label="Volgende">&#8594;</button>
+            <button class="sol-gallery-btn prev" aria-label="Vorige">&#8592;</button>
+        </div>
+        <div class="sol-gallery-track">
+            <div class="sol-gallery-slide">
+                <img src="Fotos/diensten/Elektrische Installaties Photo.jpg" alt="Elektrische installatie 1">
+            </div>
+            <div class="sol-gallery-slide">
+                <div class="slide-placeholder">Foto 2 - Elektrische installatie</div>
+            </div>
+            <div class="sol-gallery-slide">
+                <div class="slide-placeholder">Foto 3 - Meterkast installatie</div>
+            </div>
+            <div class="sol-gallery-slide">
+                <div class="slide-placeholder">Foto 4 - Bekabeling</div>
+            </div>
+        </div>
+        <div class="sol-gallery-dots"></div>
+    </section>
+
+    <!-- ==========================================
+         TABS - Service types (dark bg)
+         ========================================== -->
+    <section class="sol-tabs">
+        <div class="sol-tabs-inner">
+            <div class="sol-tabs-header">
+                <button class="sol-tab-btn active" data-tab="nieuwbouw">Nieuwbouw</button>
+                <button class="sol-tab-btn" data-tab="renovatie">Renovatie</button>
+                <button class="sol-tab-btn" data-tab="onderhoud">Onderhoud</button>
+                <button class="sol-tab-btn" data-tab="storingsdienst">Storingsdienst</button>
+            </div>
+
+            <div class="sol-tab-panel active" id="tab-nieuwbouw">
+                <h3>Nieuwbouw installaties</h3>
+                <p>Complete elektrische installaties voor nieuwbouwprojecten, van ontwerp tot oplevering. Wij werken volgens de laatste normen en regelgeving, waaronder NEN 1010. Ons team denkt mee vanaf de tekentafel en zorgt voor een toekomstbestendige installatie.</p>
+                <p>Of het nu gaat om woningbouw, utiliteit of industrieel: wij hebben de kennis en capaciteit om elk nieuwbouwproject succesvol af te ronden.</p>
+            </div>
+
+            <div class="sol-tab-panel" id="tab-renovatie">
+                <h3>Renovatie en verbouwing</h3>
+                <p>Modernisering van bestaande installaties met minimale overlast. We zorgen voor een veilige upgrade die voldoet aan de huidige eisen en normen. Van het vervangen van een verouderde meterkast tot het compleet herbekabelen van een pand.</p>
+                <p>Wij adviseren u over de meest effici&euml;nte aanpak en zorgen ervoor dat uw installatie weer jaren meekan.</p>
+            </div>
+
+            <div class="sol-tab-panel" id="tab-onderhoud">
+                <h3>Onderhoud en keuring</h3>
+                <p>Regelmatig onderhoud en periodieke keuringen zorgen voor blijvende veiligheid en betrouwbaarheid van uw installatie. Wij bieden onderhoudscontracten op maat, zodat u zich nergens zorgen over hoeft te maken.</p>
+                <p>Onze gecertificeerde monteurs voeren NEN 1010 en NEN 3140 keuringen uit en leveren alle benodigde certificaten en keuringsrapporten.</p>
+            </div>
+
+            <div class="sol-tab-panel" id="tab-storingsdienst">
+                <h3>24/7 Storingsdienst</h3>
+                <p>Dag en nacht bereikbaar voor spoedgevallen. Onze monteurs staan klaar om storingen snel en professioneel op te lossen. Wij begrijpen dat een elektrische storing grote gevolgen kan hebben voor uw bedrijfsvoering.</p>
+                <p>Bel direct <strong>(020) 303 3446</strong> en wij zijn zo snel mogelijk ter plaatse.</p>
             </div>
         </div>
     </section>
 
-    <!-- Breadcrumb -->
-    <section class="breadcrumb-nav">
-        <div class="container">
-            <nav class="breadcrumb-content">
-                <a href="index.html" class="breadcrumb-link">Home</a>
-                <span class="breadcrumb-separator">›</span>
-                <a href="index.html#diensten" class="breadcrumb-link">Wat wij doen</a>
-                <span class="breadcrumb-separator">›</span>
-                <span class="breadcrumb-current">Elektrotechniek</span>
-            </nav>
+    <!-- ==========================================
+         RELATED SOLUTIONS - Text block
+         ========================================== -->
+    <section class="sol-related">
+        <div class="sol-related-inner">
+            <h2>Andere elektrotechnische oplossingen</h2>
+            <p>Naast elektrotechnische installaties biedt SpaarElektra een breed scala aan gerelateerde diensten. Denk aan <a href="data-installatie.html">data-installaties</a> voor uw netwerk, <a href="camera-intercom-installatie.html">camera- en intercomsystemen</a> voor uw veiligheid, <a href="brandbeveiliging.html">brandbeveiliging</a> conform alle normen, professionele <a href="inspecties.html">inspecties en keuringen</a>, en complete <a href="verlichting.html">verlichtingsoplossingen</a>.</p>
+
+            <h2>SpaarElektra: uw betrouwbare partner</h2>
+            <p>Al onze werkzaamheden worden uitgevoerd door gecertificeerde elektriciens. Wij werken volgens NEN 1010 en leveren alle benodigde certificaten en keuringsrapporten. Heeft u vragen over elektrische installaties of wilt u een vrijblijvende offerte? Neem dan contact met ons op.</p>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="solution-content">
-        <div class="container">
-            <!-- Introduction -->
-            <section class="intro-section">
-                <h2>SpaarElektra is uw specialist in elektrische installaties</h2>
-                <p>Met jarenlange ervaring en expertise leveren wij hoogwaardige elektrische installaties voor woningen, bedrijfspanden en grootschalige projecten. Van nieuwbouw tot renovatie, wij zorgen voor veilige en duurzame elektrotechnische oplossingen die perfect aansluiten bij uw wensen en eisen.</p>
-            </section>
-
-            <!-- Photo Gallery Slider -->
-            <section class="photo-gallery-section">
-                <div class="photo-gallery-slider">
-                    <div class="slider-track">
-                        <div class="photo-slide">
-                            <img src="Fotos/diensten/Elektrische Installaties Photo.jpg" alt="Elektrische installatie 1">
-                        </div>
-                        <div class="photo-slide">
-                            <div class="slide-placeholder">Foto 2 - Elektrische installatie</div>
-                        </div>
-                        <div class="photo-slide">
-                            <div class="slide-placeholder">Foto 3 - Meterkast installatie</div>
-                        </div>
-                        <div class="photo-slide">
-                            <div class="slide-placeholder">Foto 4 - Bekabeling</div>
-                        </div>
+    <!-- ==========================================
+         FAQ - Expandable accordion
+         ========================================== -->
+    <section class="sol-faq">
+        <div class="sol-faq-inner">
+            <h2>Veelgestelde vragen</h2>
+            <div class="sol-faq-list">
+                <div class="sol-faq-item">
+                    <button class="sol-faq-question">
+                        <span>Wat kost een nieuwe elektrische installatie?</span>
+                        <span class="sol-faq-icon">+</span>
+                    </button>
+                    <div class="sol-faq-answer">
+                        <p>De kosten vari&euml;ren per project en zijn afhankelijk van de grootte, complexiteit en uw specifieke wensen. Neem contact met ons op voor een vrijblijvende offerte op maat.</p>
                     </div>
                 </div>
-                <div class="gallery-controls">
-                    <button class="gallery-prev" aria-label="Vorige foto">‹</button>
-                    <button class="gallery-next" aria-label="Volgende foto">›</button>
-                </div>
-            </section>
 
-            <!-- Features Grid -->
-            <section class="features-grid-section">
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#e10410" stroke-width="2">
-                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                            </svg>
-                        </div>
-                        <h3>Veiligheid voorop</h3>
-                        <p>Alle installaties volgens NEN 1010 norm met volledige certificering</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#e10410" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                            </svg>
-                        </div>
-                        <h3>Snel en efficiënt</h3>
-                        <p>Professionele uitvoering met minimale overlast en binnen planning</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#e10410" stroke-width="2">
-                                <path d="M12 2v20M2 12h20"/>
-                            </svg>
-                        </div>
-                        <h3>Maatwerk oplossingen</h3>
-                        <p>Ontwerp en installatie volledig afgestemd op uw wensen</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#e10410" stroke-width="2">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                                <polyline points="22 4 12 14.01 9 11.01"/>
-                            </svg>
-                        </div>
-                        <h3>Garantie & service</h3>
-                        <p>Uitgebreide garantie en 24/7 storingsdienst voor volledige zekerheid</p>
+                <div class="sol-faq-item">
+                    <button class="sol-faq-question">
+                        <span>Hoe lang duurt een installatie?</span>
+                        <span class="sol-faq-icon">+</span>
+                    </button>
+                    <div class="sol-faq-answer">
+                        <p>De duur is afhankelijk van de omvang van het project. Een eenvoudige woning kan in enkele dagen klaar zijn, terwijl grotere projecten enkele weken kunnen duren.</p>
                     </div>
                 </div>
-            </section>
 
-            <!-- Content Sections -->
-            <section class="content-block">
-                <h2>Wat is een elektrische installatie?</h2>
-                <p>Een elektrische installatie omvat alle componenten en systemen die nodig zijn voor de distributie en het gebruik van elektriciteit in een gebouw. Dit varieert van de meterkast en bekabeling tot stopcontacten, schakelaars en verlichting. Een goed ontworpen installatie is essentieel voor veiligheid, energie-efficiëntie en gebruiksgemak.</p>
-            </section>
-
-            <section class="content-block">
-                <h2>Waaruit bestaat een elektrotechnische installatie?</h2>
-                <p>Een complete elektrische installatie bestaat uit verschillende onderdelen:</p>
-                <ul class="features-list">
-                    <li><strong>Hoofdverdeling (meterkast):</strong> Het centrale punt waar de stroom binnenkomt en wordt verdeeld</li>
-                    <li><strong>Bekabeling en leidingen:</strong> Voor veilige stroomtransport door het hele gebouw</li>
-                    <li><strong>Groepen en zekeringen:</strong> Voor beveiliging en scheiding van circuits</li>
-                    <li><strong>Eindpunten:</strong> Stopcontacten, schakelaars en aansluitpunten voor apparatuur</li>
-                    <li><strong>Aarding en beveiliging:</strong> Voor maximale veiligheid tegen elektrocutie</li>
-                </ul>
-            </section>
-
-            <section class="content-block">
-                <h2>Maatwerk ontwerp en installatie</h2>
-                <p>Bij SpaarElektra werken we altijd op maat. We analyseren uw situatie, denken mee over de beste oplossingen en zorgen voor een installatie die perfect aansluit bij uw behoeften. Of het nu gaat om een eenvoudige woning of een complex bedrijfspand, wij hebben de expertise in huis.</p>
-            </section>
-
-            <!-- Service Types -->
-            <section class="service-types">
-                <h2>Onze diensten</h2>
-
-                <div class="service-type-item">
-                    <h3>Nieuwbouw installaties</h3>
-                    <p>Complete elektrische installaties voor nieuwbouwprojecten, van ontwerp tot oplevering. Wij werken volgens de laatste normen en regelgeving.</p>
-                </div>
-
-                <div class="service-type-item">
-                    <h3>Renovatie en verbouwing</h3>
-                    <p>Modernisering van bestaande installaties. We zorgen voor een veilige upgrade die voldoet aan de huidige eisen.</p>
-                </div>
-
-                <div class="service-type-item">
-                    <h3>Onderhoud en keuring</h3>
-                    <p>Regelmatig onderhoud en periodieke keuringen zorgen voor blijvende veiligheid en betrouwbaarheid van uw installatie.</p>
-                </div>
-
-                <div class="service-type-item">
-                    <h3>Storingsdienst</h3>
-                    <p>24/7 bereikbaar voor spoedgevallen. Onze monteurs staan klaar om storingen snel en professioneel op te lossen.</p>
-                </div>
-            </section>
-
-            <!-- Certifications & Regulations -->
-            <section class="content-block">
-                <h2>Certificering en kwaliteit</h2>
-                <p>Alle werkzaamheden worden uitgevoerd door gecertificeerde elektriciens. Wij werken volgens NEN 1010 en leveren alle benodigde certificaten en keuringsrapporten.</p>
-            </section>
-
-            <!-- Benefits & Costs -->
-            <section class="benefits-section">
-                <h2>Voordelen van een professionele installatie</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <h4>Veiligheid</h4>
-                        <p>Correcte installatie volgens normen voorkomt brand en ongelukken</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>Energie-efficiëntie</h4>
-                        <p>Moderne installaties besparen energie en verlagen uw kosten</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>Betrouwbaarheid</h4>
-                        <p>Minder storingen en langere levensduur van uw installatie</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>Garantie</h4>
-                        <p>Volledige garantie op materiaal en vakmanschap</p>
+                <div class="sol-faq-item">
+                    <button class="sol-faq-question">
+                        <span>Moet ik mijn installatie laten keuren?</span>
+                        <span class="sol-faq-icon">+</span>
+                    </button>
+                    <div class="sol-faq-answer">
+                        <p>Ja, bij nieuwbouw, renovatie of koop van een woning is een NEN 1010 keuring verplicht. Ook wordt geadviseerd om elke 5 jaar een periodieke keuring uit te laten voeren.</p>
                     </div>
                 </div>
-            </section>
 
-            <!-- Related Solutions -->
-            <section class="related-solutions">
-                <h2>Andere elektrotechnische oplossingen</h2>
-                <div class="related-grid">
-                    <a href="#" class="related-item">
-                        <h4>Smart Home Systemen</h4>
-                        <p>Moderne domotica voor uw woning</p>
-                    </a>
-                    <a href="#" class="related-item">
-                        <h4>Laadpalen</h4>
-                        <p>Elektrisch rijden begint thuis</p>
-                    </a>
-                    <a href="#" class="related-item">
-                        <h4>Zonnepanelen</h4>
-                        <p>Duurzame energie-opwekking</p>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Closing Statement -->
-            <section class="closing-statement">
-                <h2>SpaarElektra: uw betrouwbare partner</h2>
-                <p>Heeft u vragen over elektrische installaties of wilt u een vrijblijvende offerte? Neem dan contact met ons op. Onze specialisten staan voor u klaar!</p>
-                <a href="#contact" class="cta-button">Neem contact op</a>
-            </section>
-
-            <!-- FAQ Section -->
-            <section class="faq-section">
-                <h2>Veelgestelde vragen</h2>
-                <div class="faq-container">
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Wat kost een nieuwe elektrische installatie?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>De kosten variëren per project en zijnafhankelijk van de grootte, complexiteit en uw specifieke wensen. Neem contact met ons op voor een vrijblijvende offerte op maat.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Hoe lang duurt een installatie?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>De duur is afhankelijk van de omvang van het project. Een eenvoudige woning kan in enkele dagen klaar zijn, terwijl grotere projecten enkele weken kunnen duren.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Moet ik mijn installatie laten keuren?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Ja, bij nieuwbouw, renovatie of koop van een woning is een NEN 1010 keuring verplicht. Ook wordt geadviseerd om elke 5 jaar een periodieke keuring uit te laten voeren.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Kunnen jullie ook in het weekend werken?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Ja, in overleg kunnen we ook in het weekend werkzaamheden uitvoeren. Voor spoedgevallen zijn we 24/7 bereikbaar.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Leveren jullie garantie op de installatie?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Ja, wij geven garantie op zowel materiaal als vakmanschap. De precieze garantievoorwaarden worden bij oplevering overlegd.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            <span>Zijn jullie gecertificeerd?</span>
-                            <span class="faq-icon">+</span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Ja, al onze monteurs zijn volledig gecertificeerd en bevoegd om elektrotechnische werkzaamheden uit te voeren. Wij werken volgens alle geldende normen en richtlijnen.</p>
-                        </div>
+                <div class="sol-faq-item">
+                    <button class="sol-faq-question">
+                        <span>Kunnen jullie ook in het weekend werken?</span>
+                        <span class="sol-faq-icon">+</span>
+                    </button>
+                    <div class="sol-faq-answer">
+                        <p>Ja, in overleg kunnen we ook in het weekend werkzaamheden uitvoeren. Voor spoedgevallen zijn we 24/7 bereikbaar.</p>
                     </div>
                 </div>
-            </section>
 
-            <!-- Contact Form -->
-            <section class="contact-form-section">
-                <h2>Meer weten over deze elektrotechnische oplossing?</h2>
-                <p>Vul onderstaand formulier in en wij nemen zo snel mogelijk contact met u op.</p>
-
-                <form class="solution-contact-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Naam *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Bedrijf</label>
-                            <input type="text" id="company" name="company">
-                        </div>
+                <div class="sol-faq-item">
+                    <button class="sol-faq-question">
+                        <span>Leveren jullie garantie op de installatie?</span>
+                        <span class="sol-faq-icon">+</span>
+                    </button>
+                    <div class="sol-faq-answer">
+                        <p>Ja, wij geven garantie op zowel materiaal als vakmanschap. De precieze garantievoorwaarden worden bij oplevering overlegd.</p>
                     </div>
+                </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">E-mailadres *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Telefoonnummer</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
+                <div class="sol-faq-item">
+                    <button class="sol-faq-question">
+                        <span>Zijn jullie gecertificeerd?</span>
+                        <span class="sol-faq-icon">+</span>
+                    </button>
+                    <div class="sol-faq-answer">
+                        <p>Ja, al onze monteurs zijn volledig gecertificeerd en bevoegd om elektrotechnische werkzaamheden uit te voeren. Wij werken volgens alle geldende normen en richtlijnen.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="address">Adres</label>
-                            <input type="text" id="address" name="address">
-                        </div>
-                        <div class="form-group">
-                            <label for="city">Woonplaats</label>
-                            <input type="text" id="city" name="city">
-                        </div>
+    <!-- ==========================================
+         CONTACT FORM
+         ========================================== -->
+    <section class="sol-contact" id="contact">
+        <div class="sol-contact-inner">
+            <h3>Meer weten over deze elektrotechnische oplossing?</h3>
+            <p>Vul onderstaand formulier in en wij nemen zo snel mogelijk contact met u op.</p>
+
+            <form class="sol-form">
+                <div class="sol-form-row">
+                    <div class="sol-form-group">
+                        <label for="name">Naam *</label>
+                        <input type="text" id="name" name="name" required>
                     </div>
+                    <div class="sol-form-group">
+                        <label for="address">Adres</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                </div>
 
-                    <div class="form-group">
+                <div class="sol-form-row">
+                    <div class="sol-form-group">
+                        <label for="city">Woonplaats</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <div class="sol-form-group">
+                        <label for="email">E-mailadres *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="sol-form-row">
+                    <div class="sol-form-group">
+                        <label for="phone">Telefoonnummer</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="sol-form-group">
                         <label for="subject">Onderwerp</label>
                         <select id="subject" name="subject">
                             <option value="">Selecteer een onderwerp</option>
@@ -366,89 +308,84 @@
                             <option value="afspraak">Afspraak maken</option>
                         </select>
                     </div>
+                </div>
 
-                    <div class="form-group">
+                <div class="sol-form-row">
+                    <div class="sol-form-group full-width">
                         <label for="message">Uw bericht</label>
                         <textarea id="message" name="message" rows="5"></textarea>
                     </div>
+                </div>
 
-                    <button type="submit" class="submit-btn">Verstuur bericht</button>
-                </form>
-            </section>
+                <button type="submit" class="sol-submit-btn">Versturen</button>
+            </form>
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
+    <!-- Footer (from project-art-hotel.html) -->
     <footer class="footer">
-        <div class="container">
-            <!-- Footer Top Section -->
+        <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-top-left">
-                    <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra Logo" class="footer-logo">
+                    <p class="emergency-label">Storing melden? Bel direct:</p>
+                    <a href="tel:0203033446" class="emergency-number">(020) 303 3446</a>
                 </div>
                 <div class="footer-top-right">
-                    <p class="emergency-label">Storing melden?</p>
-                    <a href="tel:0203033446" class="emergency-number">Bel direct: 020 303 3446</a>
+                    <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra" class="footer-logo">
                 </div>
             </div>
 
-            <!-- Footer Content -->
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>SpaarElektra</h3>
-                    <p>Hoofdkantoor</p>
+                    <h4>Contact</h4>
+                    <p>Hoofdkantoor SpaarElektra</p>
                     <p>Poortland 34</p>
                     <p>1046 BD Amsterdam</p>
-                    <p>Tel: 020 303 3446</p>
-                    <p>Email: info@spaarelektra.nl</p>
+                    <a href="contact.html" class="footer-contact-btn">Neem contact op</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Over ons</h4>
+                    <h4>Bekijk ook</h4>
                     <ul>
-                        <li><a href="#bedrijf">Het bedrijf</a></li>
-                        <li><a href="#historie">Onze historie</a></li>
-                        <li><a href="#team">Ons team</a></li>
-                        <li><a href="#vacatures">Vacatures</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Oplossingen</h4>
-                    <ul>
-                        <li><a href="#installaties">Installaties</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#over-ons">Over SpaarElektra</a></li>
+                        <li><a href="mensen.html">Ons team</a></li>
+                        <li><a href="careers.html">Vacatures</a></li>
                         <li><a href="#onderhoud">Onderhoud</a></li>
-                        <li><a href="#smart-home">Smart Home</a></li>
-                        <li><a href="#zonnepanelen">Zonnepanelen</a></li>
+                        <li><a href="#privacy">Privacy Statement</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
+                    <h4>Onze oplossingen</h4>
                     <ul>
-                        <li><a href="#contact">Contactformulier</a></li>
-                        <li><a href="#vestigingen">Vestigingen</a></li>
-                        <li><a href="#support">Klantenservice</a></li>
+                        <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
+                        <li><a href="data-installatie.html">Data Installatie</a></li>
+                        <li><a href="camera-intercom-installatie.html">Camera- en Intercom</a></li>
+                        <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
+                        <li><a href="inspecties.html">Inspecties</a></li>
+                        <li><a href="verlichting.html">Verlichting</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Volg ons</h4>
-                    <div class="social-links">
-                        <a href="#linkedin">LinkedIn</a>
-                        <a href="#facebook">Facebook</a>
-                        <a href="#instagram">Instagram</a>
-                    </div>
+                    <h4>Volg ons online</h4>
+                    <ul>
+                        <li><a href="#facebook">Facebook</a></li>
+                        <li><a href="#instagram">Instagram</a></li>
+                        <li><a href="#linkedin">LinkedIn</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 SpaarElektra. Alle rechten voorbehouden.</p>
-                <div class="footer-links">
-                    <a href="#privacy">Privacy</a>
-                    <a href="#voorwaarden">Algemene voorwaarden</a>
-                    <a href="#cookies">Cookie beleid</a>
+                <div class="footer-bottom-links">
+                    <a href="#sitemap">Sitemap</a>
+                    <span>&bull;</span>
+                    <a href="#disclaimer">Disclaimer</a>
                 </div>
+                <div class="footer-copyright">&copy; 2026</div>
             </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script src="solution-page.js"></script>
-    <script src="project-detail.js"></script>
 </body>
 </html>

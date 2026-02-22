@@ -1,88 +1,48 @@
-// Image Slider Functionality
+// ========================================
+// Solution Page JS - Supports both old and new (sol-) classes
+// ========================================
+
+// --- OLD SLIDER (backwards compat for other solution pages) ---
 const sliderTrack = document.querySelector('.slider-track');
 const prevBtn = document.querySelector('.slider-btn.prev');
 const nextBtn = document.querySelector('.slider-btn.next');
 
 if (sliderTrack && prevBtn && nextBtn) {
     prevBtn.addEventListener('click', () => {
-        sliderTrack.scrollBy({
-            left: -320,
-            behavior: 'smooth'
-        });
+        sliderTrack.scrollBy({ left: -320, behavior: 'smooth' });
     });
-
     nextBtn.addEventListener('click', () => {
-        sliderTrack.scrollBy({
-            left: 320,
-            behavior: 'smooth'
-        });
+        sliderTrack.scrollBy({ left: 320, behavior: 'smooth' });
     });
 }
 
-// FAQ Accordion Functionality
+// --- OLD FAQ (backwards compat) ---
 const faqItems = document.querySelectorAll('.faq-item');
-
 faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
-
     question.addEventListener('click', () => {
-        // Close all other items
-        faqItems.forEach(otherItem => {
-            if (otherItem !== item && otherItem.classList.contains('active')) {
-                otherItem.classList.remove('active');
+        faqItems.forEach(other => {
+            if (other !== item && other.classList.contains('active')) {
+                other.classList.remove('active');
             }
         });
-
-        // Toggle current item
         item.classList.toggle('active');
     });
 });
 
-// Contact Form Handling
-const contactForm = document.querySelector('.solution-contact-form');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+// --- OLD CONTACT FORM (backwards compat) ---
+const oldContactForm = document.querySelector('.solution-contact-form');
+if (oldContactForm) {
+    oldContactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-
-        // Get form data
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-
-        // Here you would normally send the data to a server
-        console.log('Form submitted:', data);
-
-        // Show success message (you can customize this)
+        const formData = new FormData(oldContactForm);
+        console.log('Form submitted:', Object.fromEntries(formData));
         alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.');
-
-        // Reset form
-        contactForm.reset();
+        oldContactForm.reset();
     });
 }
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Search button functionality
-const searchBtn = document.querySelector('.search-btn');
-if (searchBtn) {
-    searchBtn.addEventListener('click', () => {
-        alert('Zoekfunctie komt binnenkort beschikbaar!');
-    });
-}
-
-// Photo Gallery Slider Functionality - Nieuwe verbeterde versie
+// --- OLD GALLERY SLIDER (backwards compat) ---
 const gallerySliderTrack = document.querySelector('.photo-gallery-slider .slider-track');
 const galleryPrevBtn = document.querySelector('.gallery-prev');
 const galleryNextBtn = document.querySelector('.gallery-next');
@@ -92,100 +52,175 @@ if (gallerySliderTrack && galleryPrevBtn && galleryNextBtn) {
     const slides = gallerySliderTrack.querySelectorAll('.photo-slide');
     const totalSlides = slides.length;
 
-    function updateSlidePosition() {
-        // Elke slide is 500px breed + 25px gap = 525px per slide
+    function updateOldSlidePosition() {
         const slideWidth = 525;
         const offset = -(currentSlideIndex * slideWidth);
         gallerySliderTrack.style.transform = `translateX(${offset}px)`;
-
-        // Update button states
         galleryPrevBtn.style.opacity = currentSlideIndex === 0 ? '0.5' : '1';
-        galleryPrevBtn.style.cursor = currentSlideIndex === 0 ? 'not-allowed' : 'pointer';
-
         galleryNextBtn.style.opacity = currentSlideIndex >= totalSlides - 1 ? '0.5' : '1';
-        galleryNextBtn.style.cursor = currentSlideIndex >= totalSlides - 1 ? 'not-allowed' : 'pointer';
     }
 
-    // Previous button
     galleryPrevBtn.addEventListener('click', () => {
-        if (currentSlideIndex > 0) {
-            currentSlideIndex--;
-            updateSlidePosition();
-        }
+        if (currentSlideIndex > 0) { currentSlideIndex--; updateOldSlidePosition(); }
     });
-
-    // Next button
     galleryNextBtn.addEventListener('click', () => {
-        if (currentSlideIndex < totalSlides - 1) {
-            currentSlideIndex++;
-            updateSlidePosition();
+        if (currentSlideIndex < totalSlides - 1) { currentSlideIndex++; updateOldSlidePosition(); }
+    });
+    updateOldSlidePosition();
+}
+
+// ========================================
+// NEW: Sol- Gallery Slider
+// ========================================
+const solGalleryTrack = document.querySelector('.sol-gallery-track');
+const solNextBtn = document.querySelector('.sol-gallery-btn.next');
+const solPrevBtn = document.querySelector('.sol-gallery-btn.prev');
+const solGalleryDotsContainer = document.querySelector('.sol-gallery-dots');
+
+if (solGalleryTrack && solNextBtn && solPrevBtn) {
+    const solSlides = solGalleryTrack.querySelectorAll('.sol-gallery-slide');
+    const totalSolSlides = solSlides.length;
+    let solSlideIndex = 0;
+
+    // Create dots
+    if (solGalleryDotsContainer) {
+        for (let i = 0; i < totalSolSlides; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                solSlideIndex = i;
+                scrollToSolSlide();
+            });
+            solGalleryDotsContainer.appendChild(dot);
+        }
+    }
+
+    function scrollToSolSlide() {
+        if (solSlides[solSlideIndex]) {
+            solSlides[solSlideIndex].scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'start'
+            });
+        }
+        updateSolDots();
+    }
+
+    function updateSolDots() {
+        if (!solGalleryDotsContainer) return;
+        const dots = solGalleryDotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === solSlideIndex);
+        });
+    }
+
+    solNextBtn.addEventListener('click', () => {
+        if (solSlideIndex < totalSolSlides - 1) {
+            solSlideIndex++;
+            scrollToSolSlide();
         }
     });
 
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft' && currentSlideIndex > 0) {
-            currentSlideIndex--;
-            updateSlidePosition();
-        } else if (e.key === 'ArrowRight' && currentSlideIndex < totalSlides - 1) {
-            currentSlideIndex++;
-            updateSlidePosition();
+    solPrevBtn.addEventListener('click', () => {
+        if (solSlideIndex > 0) {
+            solSlideIndex--;
+            scrollToSolSlide();
         }
     });
 
     // Touch/swipe support
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    gallerySliderTrack.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
+    let solTouchStartX = 0;
+    solGalleryTrack.addEventListener('touchstart', (e) => {
+        solTouchStartX = e.changedTouches[0].screenX;
     });
-
-    gallerySliderTrack.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
+    solGalleryTrack.addEventListener('touchend', (e) => {
+        const diff = e.changedTouches[0].screenX - solTouchStartX;
+        if (diff < -50 && solSlideIndex < totalSolSlides - 1) {
+            solSlideIndex++;
+            scrollToSolSlide();
+        } else if (diff > 50 && solSlideIndex > 0) {
+            solSlideIndex--;
+            scrollToSolSlide();
+        }
     });
-
-    function handleSwipe() {
-        if (touchEndX < touchStartX - 50 && currentSlideIndex < totalSlides - 1) {
-            // Swipe left - next
-            currentSlideIndex++;
-            updateSlidePosition();
-        }
-        if (touchEndX > touchStartX + 50 && currentSlideIndex > 0) {
-            // Swipe right - previous
-            currentSlideIndex--;
-            updateSlidePosition();
-        }
-    }
-
-    // Initialiseer positie
-    updateSlidePosition();
 }
 
-// Team Members Slider Functionality
-const teamMembersSlider = document.querySelector('.team-members-slider');
-const teamMembersLeftArrow = document.querySelector('.team-members-arrow.left');
-const teamMembersRightArrow = document.querySelector('.team-members-arrow.right');
+// ========================================
+// NEW: Sol- Tabs
+// ========================================
+const solTabBtns = document.querySelectorAll('.sol-tab-btn');
+const solTabPanels = document.querySelectorAll('.sol-tab-panel');
 
-if (teamMembersSlider && teamMembersLeftArrow && teamMembersRightArrow) {
-    let teamScrollPosition = 0;
-    const teamCards = teamMembersSlider.querySelectorAll('.team-member-item');
+if (solTabBtns.length > 0) {
+    solTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tabId = btn.getAttribute('data-tab');
 
-    if (teamCards.length > 0) {
-        const teamCardWidth = teamCards[0].offsetWidth;
-        const teamGap = 30;
-        const teamScrollAmount = teamCardWidth + teamGap;
+            // Deactivate all
+            solTabBtns.forEach(b => b.classList.remove('active'));
+            solTabPanels.forEach(p => p.classList.remove('active'));
 
-        teamMembersLeftArrow.addEventListener('click', () => {
-            teamScrollPosition = Math.max(0, teamScrollPosition - teamScrollAmount);
-            teamMembersSlider.style.transform = `translateX(-${teamScrollPosition}px)`;
+            // Activate clicked
+            btn.classList.add('active');
+            const targetPanel = document.getElementById('tab-' + tabId);
+            if (targetPanel) targetPanel.classList.add('active');
         });
+    });
+}
 
-        teamMembersRightArrow.addEventListener('click', () => {
-            const maxScroll = teamMembersSlider.scrollWidth - teamMembersSlider.parentElement.offsetWidth;
-            teamScrollPosition = Math.min(maxScroll, teamScrollPosition + teamScrollAmount);
-            teamMembersSlider.style.transform = `translateX(-${teamScrollPosition}px)`;
+// ========================================
+// NEW: Sol- FAQ Accordion
+// ========================================
+const solFaqItems = document.querySelectorAll('.sol-faq-item');
+
+solFaqItems.forEach(item => {
+    const question = item.querySelector('.sol-faq-question');
+    question.addEventListener('click', () => {
+        // Close all other items
+        solFaqItems.forEach(other => {
+            if (other !== item && other.classList.contains('active')) {
+                other.classList.remove('active');
+            }
         });
-    }
+        item.classList.toggle('active');
+    });
+});
+
+// ========================================
+// NEW: Sol- Contact Form
+// ========================================
+const solForm = document.querySelector('.sol-form');
+
+if (solForm) {
+    solForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(solForm);
+        console.log('Form submitted:', Object.fromEntries(formData));
+        alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.');
+        solForm.reset();
+    });
+}
+
+// ========================================
+// Smooth scrolling for anchor links
+// ========================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+// Search button
+const searchBtn = document.querySelector('.search-btn');
+if (searchBtn) {
+    searchBtn.addEventListener('click', () => {
+        alert('Zoekfunctie komt binnenkort beschikbaar!');
+    });
 }
