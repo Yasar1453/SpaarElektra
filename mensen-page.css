@@ -222,9 +222,9 @@
     display: none;
 }
 
-/* Team cards - sized to show 3 + peek */
+/* Team cards - always 3.5 visible in 70% container */
 .mp-team-card {
-    flex: 0 0 320px;
+    flex: 0 0 calc(20vw - 26px);
     transition: transform 0.3s ease;
 }
 
@@ -590,11 +590,7 @@
    ======================================== */
 @media (min-width: 1920px) {
     .mp-team {
-        max-width: 60%;
-    }
-
-    .mp-team-card {
-        flex: 0 0 320px;
+        max-width: 70%;
     }
 
     .mp-text-inner {
@@ -647,7 +643,7 @@
     }
 
     .mp-team-card {
-        flex: 0 0 280px;
+        flex: 0 0 calc(20vw - 20px);
     }
 
     .mp-text-inner {
@@ -745,7 +741,7 @@
     }
 
     .mp-team-card {
-        flex: 0 0 280px;
+        flex: 0 0 80vw;
     }
 
     .mp-text {
@@ -828,7 +824,7 @@
     }
 
     .mp-team-card {
-        flex: 0 0 200px;
+        flex: 0 0 75vw;
     }
 
     .mp-team-title {
