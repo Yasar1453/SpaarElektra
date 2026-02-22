@@ -164,7 +164,7 @@
 }
 
 .mp-team-title {
-    font-size: clamp(28px, 3.5vw, 40px);
+    font-size: clamp(24px, 2.5vw, 32px);
     font-weight: 900;
     color: var(--accent);
     margin: 0;
@@ -224,7 +224,7 @@
 
 /* Team cards - sized to show 3 + peek */
 .mp-team-card {
-    flex: 0 0 400px;
+    flex: 0 0 360px;
     transition: transform 0.3s ease;
 }
 
