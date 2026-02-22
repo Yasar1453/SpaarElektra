@@ -137,16 +137,17 @@
     padding: 100px 0 80px;
     overflow: hidden;
     position: relative;
+    max-width: 1100px;
 }
 
-/* Accent background block behind slider title (like Aqua+) */
+/* Accent background block behind the title text (like Aqua+) */
 .mp-team::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 320px;
-    height: 280px;
+    top: 60px;
+    left: 120px;
+    width: 340px;
+    height: 140px;
     background: #f5f0ed;
     z-index: 0;
 }
@@ -154,9 +155,7 @@
 .mp-team-header {
     position: relative;
     z-index: 1;
-    max-width: 1480px;
-    margin: 0 auto;
-    padding: 0 50px 0 200px;
+    padding: 0 40px 0 160px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -214,17 +213,17 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding-left: 200px;
-    padding-right: 50px;
+    padding-left: 160px;
+    padding-right: 40px;
 }
 
 .mp-team-track::-webkit-scrollbar {
     display: none;
 }
 
-/* Aqua+ card image = 401x564 */
+/* Team cards - sized to show 3 + peek within container */
 .mp-team-card {
-    flex: 0 0 400px;
+    flex: 0 0 280px;
     transition: transform 0.3s ease;
 }
 
@@ -589,12 +588,20 @@
    RESPONSIVE - 1920px+
    ======================================== */
 @media (min-width: 1920px) {
+    .mp-team {
+        max-width: 1300px;
+    }
+
     .mp-team-header {
-        padding-left: 280px;
+        padding-left: 200px;
     }
 
     .mp-team-track {
-        padding-left: 280px;
+        padding-left: 200px;
+    }
+
+    .mp-team-card {
+        flex: 0 0 320px;
     }
 
     .mp-text-inner {
@@ -638,18 +645,22 @@
         font-size: 18px;
     }
 
+    .mp-team {
+        max-width: 100%;
+    }
+
     .mp-team-header {
-        padding: 0 24px 0 100px;
+        padding: 0 24px 0 80px;
     }
 
     .mp-team-track {
-        padding-left: 100px;
+        padding-left: 80px;
         padding-right: 24px;
         gap: 20px;
     }
 
     .mp-team-card {
-        flex: 0 0 300px;
+        flex: 0 0 260px;
     }
 
     .mp-text-inner {
