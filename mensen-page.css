@@ -103,14 +103,14 @@
 }
 
 .mp-hero-subtitle {
-    font-size: clamp(20px, 2.2vw, 28px);
+    font-size: clamp(24px, 2.5vw, 34px);
     font-weight: 900;
     color: var(--accent);
     margin: 0;
 }
 
 .mp-hero-text {
-    font-size: 17px;
+    font-size: 22px;
     line-height: 1.75;
     color: #6b7275;
     margin: 0;
@@ -209,7 +209,7 @@
     position: relative;
     z-index: 1;
     display: flex;
-    gap: 24px;
+    gap: 30px;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
@@ -224,7 +224,7 @@
 
 /* Aqua+ card image = 401x564 */
 .mp-team-card {
-    flex: 0 0 280px;
+    flex: 0 0 400px;
     transition: transform 0.3s ease;
 }
 
@@ -251,22 +251,24 @@
 }
 
 .mp-team-role {
-    font-size: 14px;
-    color: #6b7275;
+    font-size: 18px;
+    font-weight: 700;
+    color: #b4a5aa;
     margin: 0 0 6px;
     text-transform: none;
 }
 
 .mp-team-name {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 900;
     color: var(--accent);
     margin: 0 0 8px;
+    line-height: 1.2;
 }
 
 .mp-team-quote {
-    font-size: 14px;
-    line-height: 1.65;
+    font-size: 16px;
+    line-height: 1.75;
     color: var(--text-dark);
     font-style: italic;
     margin: 0;
@@ -311,7 +313,7 @@
 }
 
 .mp-text h2 {
-    font-size: clamp(24px, 2.8vw, 34px);
+    font-size: clamp(28px, 3.2vw, 40px);
     font-weight: 900;
     color: var(--accent);
     line-height: 1.2;
@@ -319,7 +321,7 @@
 }
 
 .mp-text p {
-    font-size: 17px;
+    font-size: 22px;
     line-height: 1.75;
     color: #6b7275;
     margin: 0;
@@ -361,7 +363,7 @@
 }
 
 .mp-imgtext-content h2 {
-    font-size: clamp(22px, 2.5vw, 28px);
+    font-size: clamp(26px, 3vw, 34px);
     font-weight: 900;
     color: var(--accent);
     line-height: 1.2;
@@ -369,7 +371,7 @@
 }
 
 .mp-imgtext-content p {
-    font-size: 17px;
+    font-size: 22px;
     line-height: 1.75;
     color: #6b7275;
     margin: 0;
@@ -559,10 +561,10 @@
 }
 
 .mp-cta p {
-    font-size: 17px;
+    font-size: 22px;
     line-height: 1.75;
     color: rgba(255, 255, 255, 0.9);
-    max-width: 550px;
+    max-width: 600px;
     margin: 0 auto 30px;
 }
 
@@ -647,7 +649,7 @@
     }
 
     .mp-team-card {
-        flex: 0 0 240px;
+        flex: 0 0 300px;
     }
 
     .mp-text-inner {
@@ -656,7 +658,7 @@
 
     .mp-text p,
     .mp-imgtext-content p {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .mp-imgtext-inner {
@@ -681,7 +683,7 @@
     }
 
     .mp-cta p {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
@@ -720,7 +722,7 @@
     }
 
     .mp-hero-text {
-        font-size: 17px;
+        font-size: 18px;
     }
 
     .mp-team {
@@ -744,7 +746,7 @@
     }
 
     .mp-team-card {
-        flex: 0 0 220px;
+        flex: 0 0 280px;
     }
 
     .mp-text {
@@ -758,7 +760,7 @@
 
     .mp-text p,
     .mp-imgtext-content p {
-        font-size: 17px;
+        font-size: 18px;
     }
 
     .mp-imgtext {
@@ -806,7 +808,7 @@
     }
 
     .mp-cta p {
-        font-size: 17px;
+        font-size: 18px;
     }
 }
 
