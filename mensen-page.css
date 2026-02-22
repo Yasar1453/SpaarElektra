@@ -147,8 +147,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 420px;
-    height: 380px;
+    width: 500px;
+    height: 420px;
     background: #ece8e9;
     z-index: 0;
 }
@@ -224,7 +224,7 @@
 
 /* Team cards - sized to show 3 + peek */
 .mp-team-card {
-    flex: 0 0 440px;
+    flex: 0 0 400px;
     transition: transform 0.3s ease;
 }
 
@@ -594,7 +594,7 @@
     }
 
     .mp-team-card {
-        flex: 0 0 500px;
+        flex: 0 0 460px;
     }
 
     .mp-text-inner {
