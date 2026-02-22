@@ -144,11 +144,11 @@
 .mp-team::before {
     content: '';
     position: absolute;
-    top: 60px;
-    left: 120px;
-    width: 340px;
-    height: 140px;
-    background: #f5f0ed;
+    top: 0;
+    left: 80px;
+    width: 460px;
+    height: 420px;
+    background: #ece8e9;
     z-index: 0;
 }
 
