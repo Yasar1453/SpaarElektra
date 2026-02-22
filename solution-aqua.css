@@ -53,14 +53,36 @@
 }
 
 /* ========================================
-   INTRO - Breadcrumb, subtitle, text
+   CONTENT WRAP - Beige page bg with stepped white sections
+   ======================================== */
+.sol-content-wrap {
+    background: var(--bg-light);
+    position: relative;
+}
+
+/* ========================================
+   INTRO - White bg block, narrower (stepped effect)
    ======================================== */
 .sol-intro {
-    background: var(--bg-light);
+    position: relative;
     padding: 0 0 80px;
+    background: transparent;
+}
+
+.sol-intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    background: var(--white);
+    z-index: 0;
 }
 
 .sol-intro-inner {
+    position: relative;
+    z-index: 1;
     max-width: 550px;
     margin-left: 20%;
     padding: 0;
@@ -122,11 +144,25 @@
    TEXT BLOCKS - Left-aligned content
    ======================================== */
 .sol-text-section {
-    background: var(--white);
+    position: relative;
+    background: transparent;
     padding: 80px 0;
 }
 
+.sol-text-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: var(--white);
+    z-index: 0;
+}
+
 .sol-text-inner {
+    position: relative;
+    z-index: 1;
     max-width: 650px;
     margin-left: 20%;
     padding: 0 24px 0 0;
@@ -185,11 +221,24 @@
 .sol-gallery {
     position: relative;
     padding: 0 0 80px;
-    background: var(--white);
+    background: transparent;
     overflow: hidden;
 }
 
+.sol-gallery::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 100%;
+    background: var(--bg-light);
+    z-index: 0;
+}
+
 .sol-gallery-nav {
+    position: relative;
+    z-index: 1;
     display: flex;
     gap: 8px;
     margin-left: 20%;
@@ -218,6 +267,8 @@
 }
 
 .sol-gallery-track {
+    position: relative;
+    z-index: 1;
     display: flex;
     gap: 20px;
     padding: 0 20%;
@@ -300,6 +351,8 @@
 }
 
 .sol-gallery-dots {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     gap: 8px;
@@ -402,11 +455,25 @@
    RELATED SOLUTIONS - Text block
    ======================================== */
 .sol-related {
-    background: var(--white);
+    position: relative;
+    background: transparent;
     padding: 80px 0;
 }
 
+.sol-related::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: var(--white);
+    z-index: 0;
+}
+
 .sol-related-inner {
+    position: relative;
+    z-index: 1;
     max-width: 650px;
     margin-left: 20%;
     padding: 0 24px 0 0;
@@ -442,11 +509,25 @@
    FAQ SECTION - Clean accordion
    ======================================== */
 .sol-faq {
-    background: var(--bg-light);
+    position: relative;
+    background: transparent;
     padding: 80px 0;
 }
 
+.sol-faq::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background: var(--bg-light);
+    z-index: 0;
+}
+
 .sol-faq-inner {
+    position: relative;
+    z-index: 1;
     max-width: 800px;
     margin-left: 20%;
     padding: 0 24px 0 0;
@@ -543,11 +624,25 @@
    CONTACT FORM
    ======================================== */
 .sol-contact {
-    background: var(--white);
+    position: relative;
+    background: transparent;
     padding: 80px 0;
 }
 
+.sol-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: var(--white);
+    z-index: 0;
+}
+
 .sol-contact-inner {
+    position: relative;
+    z-index: 1;
     max-width: 700px;
     margin-left: 20%;
     padding: 0 24px 0 0;
@@ -678,6 +773,15 @@
 
     .sol-hero-title {
         font-size: clamp(48px, 10vw, 80px);
+    }
+
+    .sol-intro::before,
+    .sol-text-section::before,
+    .sol-gallery::before,
+    .sol-related::before,
+    .sol-faq::before,
+    .sol-contact::before {
+        width: 100%;
     }
 
     .sol-intro {
