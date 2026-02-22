@@ -224,7 +224,7 @@
 
 /* Team cards - sized to show 3 + peek */
 .mp-team-card {
-    flex: 0 0 340px;
+    flex: 0 0 440px;
     transition: transform 0.3s ease;
 }
 
@@ -594,7 +594,7 @@
     }
 
     .mp-team-card {
-        flex: 0 0 400px;
+        flex: 0 0 500px;
     }
 
     .mp-text-inner {
