@@ -214,11 +214,11 @@
 .sol-gallery::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 0;
+    top: 35%;
+    left: 15%;
     transform: translateY(-50%);
-    width: 45%;
-    height: 80%;
+    width: 28%;
+    height: 60%;
     background: #ece8e9;
     z-index: 0;
 }
@@ -287,8 +287,8 @@
 
 .sol-gallery-slide {
     flex-shrink: 0;
-    width: 38%;
-    min-width: 320px;
+    width: 380px;
+    max-width: 380px;
     aspect-ratio: 580 / 520;
     overflow: hidden;
     position: relative;
@@ -321,8 +321,8 @@
 /* Plus decoration (top-left of gray block, like Aqua+) */
 .sol-gallery-plus {
     position: absolute;
-    top: 40px;
-    left: 5%;
+    top: 60px;
+    left: 18%;
     width: 120px;
     height: 120px;
     pointer-events: none;
