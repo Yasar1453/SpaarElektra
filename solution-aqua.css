@@ -228,11 +228,11 @@
     padding: 0;
 }
 
-/* Nav buttons - absolute right, vertically centered on images */
+/* Nav buttons - on the photos, vertically centered */
 .sol-gallery-nav {
     position: absolute;
     top: 50%;
-    right: 40px;
+    right: calc(10% + 20px);
     transform: translateY(-50%);
     z-index: 20;
     display: flex;
