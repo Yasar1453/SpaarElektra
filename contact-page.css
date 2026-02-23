@@ -29,8 +29,10 @@
 .ct-hero-title {
     position: absolute;
     bottom: 40px;
-    left: 0;
-    padding-left: max(40px, 20%);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 560px;
     font-size: clamp(36px, 4vw, 56px);
     font-weight: 900;
     color: var(--white);
@@ -39,16 +41,16 @@
 }
 
 /* ========================================
-   MAIN CONTENT - single column, indented
+   MAIN CONTENT - single column, centered
    ======================================== */
 .ct-main {
     background: var(--white);
     padding: 60px 40px 80px;
-    padding-left: max(40px, 20%);
 }
 
 .ct-content {
     max-width: 560px;
+    margin: 0 auto;
 }
 
 /* Intro heading */
@@ -307,11 +309,8 @@
    ======================================== */
 @media (max-width: 1024px) {
     .ct-hero-title {
-        padding-left: 40px;
-    }
-
-    .ct-main {
-        padding-left: 40px;
+        left: 40px;
+        transform: none;
     }
 }
 
@@ -321,8 +320,8 @@
     }
 
     .ct-hero-title {
-        left: 0;
-        padding-left: 20px;
+        left: 20px;
+        transform: none;
         bottom: 20px;
     }
 
