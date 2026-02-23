@@ -4,342 +4,262 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - SpaarElektra</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="contact-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=5">
+    <link rel="stylesheet" href="contact-page.css?v=2">
 </head>
 <body>
     <!-- Header -->
     <header class="header scrolled">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra Logo" class="logo-img">
-                    </a>
-                </div>
-                <nav class="nav">
-                    <ul class="nav-menu">
-                        <li class="nav-item dropdown">
-                            <a href="#diensten">Wat wij doen</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
-                                <li><a href="data-installatie.html">Data Installatie</a></li>
-                                <li><a href="camera-intercom-installatie.html">Camera- En Intercom Installatie</a></li>
-                                <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
-                                <li><a href="inspecties.html">Inspecties</a></li>
-                                <li><a href="verlichting.html">Verlichting</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="projecten.html">Projecten</a></li>
-                        <li class="nav-item"><a href="#impact">Impact</a></li>
-                        <li class="nav-item"><a href="#onderhoud">Onderhoud</a></li>
-                        <li class="nav-item"><a href="mensen.html">Mensen</a></li>
-                        <li class="nav-item"><a href="careers.html">Kom werken!</a></li>
-                    </ul>
-                </nav>
-                <div class="header-actions">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra" class="logo-img">
+            </a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="oplossingen.html">Wat wij doen <span class="dropdown-arrow">&#8595;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
+                            <li><a href="data-installatie.html">Data Installatie</a></li>
+                            <li><a href="camera-intercom-installatie.html">Camera- En Intercom Installatie</a></li>
+                            <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
+                            <li><a href="inspecties.html">Inspecties</a></li>
+                            <li><a href="verlichting.html">Verlichting</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="projecten.html">Projecten</a></li>
+                    <li class="nav-item"><a href="#impact">Impact</a></li>
+                    <li class="nav-item"><a href="#onderhoud">Onderhoud</a></li>
+                    <li class="nav-item"><a href="mensen.html">Mensen</a></li>
+                    <li class="nav-item"><a href="careers.html">Kom werken!</a></li>
+                </ul>
+                <div class="nav-actions">
                     <a href="contact.html" class="contact-btn">Contact</a>
+                    <button class="search-btn" aria-label="Zoeken">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
                 </div>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="contact-btn">Contact</a>
+                <button class="search-btn" aria-label="Zoeken">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
             </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span class="menu-label">menu</span>
+                <span class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
         </div>
     </header>
 
-    <!-- Page Hero -->
-    <section class="contact-hero">
-        <div class="container">
-            <div class="hero-content">
-                <p class="hero-tagline">Elektrotechnisch specialist sinds 1990</p>
-                <h1>Contact</h1>
-                <p class="hero-description">Neem gerust contact met ons op via telefoon of e-mail. Wij helpen u graag verder met al uw elektrotechnische vragen en projecten.</p>
+    <!-- Hero -->
+    <section class="ct-hero">
+        <img src="Fotos/elektrische-installatie-1.jpg" alt="SpaarElektra contact" class="ct-hero-photo">
+        <div class="ct-hero-content">
+            <h1 class="ct-hero-title">Contact</h1>
+            <div class="ct-hero-intro">
+                <nav class="ct-breadcrumb">
+                    <a href="index.html">Home</a> <span>&bull;</span>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <h3 class="ct-hero-subtitle">Elektrotechnisch specialist sinds 1990</h3>
+                <p class="ct-hero-text">Neem gerust contact met ons op via telefoon of e-mail. Wij helpen u graag verder met al uw elektrotechnische vragen en projecten.</p>
+                <a href="#ct-info" class="ct-scroll-link">Scroll verder &#8595;</a>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="contact-main">
-        <div class="container">
-            <!-- Contact Info Bar -->
-            <section class="contact-info-bar">
-                <div class="info-item">
-                    <div class="info-icon">📞</div>
-                    <div class="info-content">
-                        <h3>Telefoon</h3>
-                        <a href="tel:0203033446">020 303 3446</a>
-                    </div>
+    <!-- Contact Info -->
+    <section class="ct-info" id="ct-info">
+        <div class="ct-info-inner">
+            <div class="ct-info-left">
+                <h2>Algemene contactgegevens</h2>
+                <div class="ct-info-block">
+                    <span class="ct-info-label">Telefoon</span>
+                    <a href="tel:0203033446" class="ct-info-value">(020) 303 3446</a>
                 </div>
-                <div class="info-item">
-                    <div class="info-icon">✉️</div>
-                    <div class="info-content">
-                        <h3>E-mail</h3>
-                        <a href="mailto:info@spaarelektra.nl">info@spaarelektra.nl</a>
-                    </div>
+                <div class="ct-info-block">
+                    <span class="ct-info-label">E-mail</span>
+                    <a href="mailto:info@spaarelektra.nl" class="ct-info-value">info@spaarelektra.nl</a>
                 </div>
-                <div class="info-item">
-                    <div class="info-icon">🚨</div>
-                    <div class="info-content">
-                        <h3>24/7 Storing</h3>
-                        <a href="tel:0203033446">020 303 3446</a>
-                    </div>
+            </div>
+            <div class="ct-info-right">
+                <div class="ct-storing">
+                    <h3>Storing melden?</h3>
+                    <p>Bij storingen zijn wij <strong>24/7</strong> bereikbaar voor onze contractklanten.</p>
+                    <a href="tel:0203033446" class="ct-storing-tel">(020) 303 3446</a>
                 </div>
-            </section>
-
-            <!-- Contact Form Section -->
-            <section class="contact-form-section">
-                <div class="form-container">
-                    <h2>Stel uw vraag</h2>
-                    <p class="form-intro">Vul het formulier in en wij nemen zo spoedig mogelijk contact met u op.</p>
-
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Naam *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Bedrijf</label>
-                                <input type="text" id="company" name="company">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">E-mailadres *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Telefoonnummer</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="address">Adres</label>
-                                <input type="text" id="address" name="address">
-                            </div>
-                            <div class="form-group">
-                                <label for="city">Plaats</label>
-                                <input type="text" id="city" name="city">
-                            </div>
-                        </div>
-
-                        <div class="form-group full-width">
-                            <label for="subject">Onderwerp</label>
-                            <select id="subject" name="subject">
-                                <option value="">Selecteer een onderwerp</option>
-                                <option value="elektrische-installaties">Elektrische Installaties</option>
-                                <option value="data-installatie">Data Installatie</option>
-                                <option value="camera-intercom">Camera & Intercom</option>
-                                <option value="brandbeveiliging">Brandbeveiliging</option>
-                                <option value="inspecties">Inspecties</option>
-                                <option value="verlichting">Verlichting</option>
-                                <option value="storing">Storing melden</option>
-                                <option value="offerte">Offerte aanvragen</option>
-                                <option value="anders">Anders</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group full-width">
-                            <label for="message">Bericht *</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
-                        </div>
-
-                        <div class="form-group full-width">
-                            <label for="language">Voorkeurstaal</label>
-                            <select id="language" name="language">
-                                <option value="nl">Nederlands</option>
-                                <option value="en">English</option>
-                                <option value="de">Deutsch</option>
-                            </select>
-                        </div>
-
-                        <button type="submit" class="submit-btn">Verstuur bericht</button>
-                    </form>
-                </div>
-            </section>
-
-            <!-- Office Locations -->
-            <section class="office-locations">
-                <h2>Onze vestigingen</h2>
-                <p class="locations-intro">SpaarElektra is op meerdere locaties actief in Nederland. Bezoek ons of neem contact op met de vestiging bij u in de buurt.</p>
-
-                <div class="locations-grid">
-                    <!-- Hoofdkantoor Amsterdam -->
-                    <div class="location-card">
-                        <div class="location-header">
-                            <h3>Amsterdam</h3>
-                            <span class="location-badge">Hoofdkantoor</span>
-                        </div>
-                        <div class="location-details">
-                            <p class="location-address">
-                                <strong>Poortland 34</strong><br>
-                                1046 BD Amsterdam
-                            </p>
-                            <p class="location-contact">
-                                <a href="tel:0203033446">📞 020 303 3446</a><br>
-                                <a href="mailto:info@spaarelektra.nl">✉️ info@spaarelektra.nl</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Utrecht -->
-                    <div class="location-card">
-                        <div class="location-header">
-                            <h3>Utrecht</h3>
-                        </div>
-                        <div class="location-details">
-                            <p class="location-address">
-                                <strong>Voorstraat 123</strong><br>
-                                3512 AB Utrecht
-                            </p>
-                            <p class="location-contact">
-                                <a href="tel:0303033446">📞 030 303 3446</a><br>
-                                <a href="mailto:utrecht@spaarelektra.nl">✉️ utrecht@spaarelektra.nl</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Rotterdam -->
-                    <div class="location-card">
-                        <div class="location-header">
-                            <h3>Rotterdam</h3>
-                        </div>
-                        <div class="location-details">
-                            <p class="location-address">
-                                <strong>Coolsingel 45</strong><br>
-                                3011 AD Rotterdam
-                            </p>
-                            <p class="location-contact">
-                                <a href="tel:0103033446">📞 010 303 3446</a><br>
-                                <a href="mailto:rotterdam@spaarelektra.nl">✉️ rotterdam@spaarelektra.nl</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Den Haag -->
-                    <div class="location-card">
-                        <div class="location-header">
-                            <h3>Den Haag</h3>
-                        </div>
-                        <div class="location-details">
-                            <p class="location-address">
-                                <strong>Hofweg 78</strong><br>
-                                2511 AA Den Haag
-                            </p>
-                            <p class="location-contact">
-                                <a href="tel:0703033446">📞 070 303 3446</a><br>
-                                <a href="mailto:denhaag@spaarelektra.nl">✉️ denhaag@spaarelektra.nl</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Eindhoven -->
-                    <div class="location-card">
-                        <div class="location-header">
-                            <h3>Eindhoven</h3>
-                        </div>
-                        <div class="location-details">
-                            <p class="location-address">
-                                <strong>Vestdijk 56</strong><br>
-                                5611 CA Eindhoven
-                            </p>
-                            <p class="location-contact">
-                                <a href="tel:0403033446">📞 040 303 3446</a><br>
-                                <a href="mailto:eindhoven@spaarelektra.nl">✉️ eindhoven@spaarelektra.nl</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Map Section -->
-            <section class="map-section">
-                <h2>Vind ons op de kaart</h2>
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.8936!2d4.8245!3d52.3924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDIzJzMyLjYiTiA0wrA0OSczMC4yIkU!5e0!3m2!1snl!2snl!4v1234567890"
-                        width="100%"
-                        height="450"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </section>
+            </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="ct-form-section">
+        <div class="ct-form-inner">
+            <h2>Contact opnemen?</h2>
+            <p class="ct-form-intro">Vul het formulier in en wij nemen zo spoedig mogelijk contact met u op.</p>
+
+            <form class="ct-form" id="contactForm">
+                <div class="ct-form-row">
+                    <div class="ct-form-group">
+                        <label for="ct-naam">Naam *</label>
+                        <input type="text" id="ct-naam" name="naam" required>
+                    </div>
+                    <div class="ct-form-group">
+                        <label for="ct-email">E-mailadres *</label>
+                        <input type="email" id="ct-email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="ct-form-row">
+                    <div class="ct-form-group">
+                        <label for="ct-adres">Adres</label>
+                        <input type="text" id="ct-adres" name="adres">
+                    </div>
+                    <div class="ct-form-group">
+                        <label for="ct-woonplaats">Woonplaats</label>
+                        <input type="text" id="ct-woonplaats" name="woonplaats">
+                    </div>
+                </div>
+
+                <div class="ct-form-row">
+                    <div class="ct-form-group">
+                        <label for="ct-telefoon">Telefoonnummer</label>
+                        <input type="tel" id="ct-telefoon" name="telefoon">
+                    </div>
+                    <div class="ct-form-group">
+                        <label for="ct-onderwerp">Onderwerp</label>
+                        <select id="ct-onderwerp" name="onderwerp">
+                            <option value="">Selecteer een onderwerp</option>
+                            <option value="elektrische-installaties">Elektrische Installaties</option>
+                            <option value="data-installatie">Data Installatie</option>
+                            <option value="camera-intercom">Camera & Intercom</option>
+                            <option value="brandbeveiliging">Brandbeveiliging</option>
+                            <option value="inspecties">Inspecties</option>
+                            <option value="verlichting">Verlichting</option>
+                            <option value="storing">Storing melden</option>
+                            <option value="offerte">Offerte aanvragen</option>
+                            <option value="anders">Anders</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ct-form-group ct-full">
+                    <label for="ct-bericht">Bericht *</label>
+                    <textarea id="ct-bericht" name="bericht" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="ct-submit-btn">Versturen</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Vestiging -->
+    <section class="ct-vestiging">
+        <div class="ct-vestiging-inner">
+            <h2>Ons kantoor</h2>
+            <div class="ct-vestiging-grid">
+                <div class="ct-vestiging-card">
+                    <div class="ct-vestiging-header">
+                        <h3>Amsterdam</h3>
+                        <span class="ct-vestiging-badge">Hoofdkantoor</span>
+                    </div>
+                    <div class="ct-vestiging-details">
+                        <p class="ct-vestiging-address">
+                            Poortland 34<br>
+                            1046 BD Amsterdam
+                        </p>
+                        <div class="ct-vestiging-contact">
+                            <a href="tel:0203033446">(020) 303 3446</a>
+                            <a href="mailto:info@spaarelektra.nl">info@spaarelektra.nl</a>
+                        </div>
+                    </div>
+                    <div class="ct-vestiging-actions">
+                        <a href="tel:0203033446" class="ct-action-btn">Bel ons</a>
+                        <a href="mailto:info@spaarelektra.nl" class="ct-action-btn ct-action-outline">Stuur een e-mail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <!-- Footer Top Section -->
+        <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-top-left">
-                    <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra Logo" class="footer-logo">
+                    <p class="emergency-label">Storing melden? Bel direct:</p>
+                    <a href="tel:0203033446" class="emergency-number">(020) 303 3446</a>
                 </div>
                 <div class="footer-top-right">
-                    <p class="emergency-label">Storing melden?</p>
-                    <a href="tel:0203033446" class="emergency-number">Bel direct: 020 303 3446</a>
+                    <img src="Fotos/Logo's/spaarlogo.svg" alt="SpaarElektra" class="footer-logo">
                 </div>
             </div>
-
-            <!-- Footer Content -->
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>SpaarElektra</h3>
-                    <p>Hoofdkantoor</p>
+                    <h4>Contact</h4>
+                    <p>Hoofdkantoor SpaarElektra</p>
                     <p>Poortland 34</p>
                     <p>1046 BD Amsterdam</p>
-                    <p>Tel: 020 303 3446</p>
-                    <p>Email: info@spaarelektra.nl</p>
+                    <a href="contact.html" class="footer-contact-btn">Neem contact op</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Over ons</h4>
+                    <h4>Bekijk ook</h4>
                     <ul>
-                        <li><a href="#bedrijf">Het bedrijf</a></li>
-                        <li><a href="#historie">Onze historie</a></li>
-                        <li><a href="#team">Ons team</a></li>
-                        <li><a href="#vacatures">Vacatures</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Oplossingen</h4>
-                    <ul>
-                        <li><a href="#installaties">Installaties</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#over-ons">Over SpaarElektra</a></li>
+                        <li><a href="mensen.html">Ons team</a></li>
+                        <li><a href="careers.html">Vacatures</a></li>
                         <li><a href="#onderhoud">Onderhoud</a></li>
-                        <li><a href="#smart-home">Smart Home</a></li>
-                        <li><a href="#zonnepanelen">Zonnepanelen</a></li>
+                        <li><a href="#privacy">Privacy Statement</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
+                    <h4>Onze oplossingen</h4>
                     <ul>
-                        <li><a href="contact.html">Contactformulier</a></li>
-                        <li><a href="#vestigingen">Vestigingen</a></li>
-                        <li><a href="#support">Klantenservice</a></li>
+                        <li><a href="elektrische-installaties.html">Elektrotechniek</a></li>
+                        <li><a href="data-installatie.html">Data Installatie</a></li>
+                        <li><a href="camera-intercom-installatie.html">Camera- en Intercom</a></li>
+                        <li><a href="brandbeveiliging.html">Brandbeveiliging</a></li>
+                        <li><a href="inspecties.html">Inspecties</a></li>
+                        <li><a href="verlichting.html">Verlichting</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Volg ons</h4>
-                    <div class="social-links">
-                        <a href="#linkedin">LinkedIn</a>
-                        <a href="#facebook">Facebook</a>
-                        <a href="#instagram">Instagram</a>
-                    </div>
+                    <h4>Volg ons online</h4>
+                    <ul>
+                        <li><a href="#facebook">Facebook</a></li>
+                        <li><a href="#instagram">Instagram</a></li>
+                        <li><a href="#linkedin">LinkedIn</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 SpaarElektra. Alle rechten voorbehouden.</p>
-                <div class="footer-links">
-                    <a href="#privacy">Privacy</a>
-                    <a href="#voorwaarden">Algemene voorwaarden</a>
-                    <a href="#cookies">Cookie beleid</a>
+                <div class="footer-bottom-links">
+                    <a href="#sitemap">Sitemap</a>
+                    <span>&bull;</span>
+                    <a href="#disclaimer">Disclaimer</a>
                 </div>
+                <div class="footer-copyright">&copy; 2026</div>
             </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script src="contact-page.js"></script>
 </body>
 </html>
