@@ -103,7 +103,7 @@
    TEXT SECTIONS
    ======================================== */
 .imp-text-section {
-    background: #f0edee;
+    background: #e0dcdd;
     padding: 60px 40px;
 }
 
@@ -151,7 +151,7 @@
    PROJECTS CAROUSEL
    ======================================== */
 .imp-carousel-section {
-    background: #f5f3f4;
+    background: #e8e4e5;
     padding: 40px 40px 60px;
 }
 
@@ -267,7 +267,7 @@
    HOW & WHY SECTION
    ======================================== */
 .imp-howwhy {
-    background: #f0edee;
+    background: #e0dcdd;
     padding: 40px 40px 60px;
     text-align: center;
 }
@@ -302,7 +302,7 @@
    IMAGE + TEXT SECTIONS
    ======================================== */
 .imp-imgtext {
-    background: #f5f3f4;
+    background: #e8e4e5;
     padding: 40px 40px 60px;
 }
 
