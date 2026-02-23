@@ -32,7 +32,7 @@
     position: relative;
     z-index: 2;
     max-width: 750px;
-    margin: 0 auto;
+    margin-left: 15%;
     padding: 0 24px;
 }
 
@@ -275,7 +275,7 @@
     gap: 30px;
     max-width: 1300px;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: flex-start;
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
