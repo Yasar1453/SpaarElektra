@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=5">
-    <link rel="stylesheet" href="contact-page.css?v=2">
+    <link rel="stylesheet" href="contact-page.css?v=3">
 </head>
 <body>
     <!-- Header -->
@@ -66,132 +66,96 @@
         </div>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero Banner -->
     <section class="ct-hero">
-        <img src="Fotos/elektrische-installatie-1.jpg" alt="SpaarElektra contact" class="ct-hero-photo">
-        <div class="ct-hero-content">
-            <h1 class="ct-hero-title">Contact</h1>
-            <div class="ct-hero-intro">
-                <nav class="ct-breadcrumb">
-                    <a href="index.html">Home</a> <span>&bull;</span>
-                    <a href="contact.html">Contact</a>
-                </nav>
-                <h3 class="ct-hero-subtitle">Elektrotechnisch specialist sinds 1990</h3>
-                <p class="ct-hero-text">Neem gerust contact met ons op via telefoon of e-mail. Wij helpen u graag verder met al uw elektrotechnische vragen en projecten.</p>
-                <a href="#ct-info" class="ct-scroll-link">Scroll verder &#8595;</a>
-            </div>
-        </div>
+        <img src="Fotos/elektrische-installatie-1.jpg" alt="SpaarElektra monteurs" class="ct-hero-bg">
+        <div class="ct-hero-overlay"></div>
+        <h1 class="ct-hero-title">Contact</h1>
     </section>
 
-    <!-- Contact Info -->
-    <section class="ct-info" id="ct-info">
-        <div class="ct-info-inner">
-            <div class="ct-info-left">
-                <h2>Algemene contactgegevens</h2>
-                <div class="ct-info-block">
-                    <span class="ct-info-label">Telefoon</span>
-                    <a href="tel:0203033446" class="ct-info-value">(020) 303 3446</a>
-                </div>
-                <div class="ct-info-block">
-                    <span class="ct-info-label">E-mail</span>
-                    <a href="mailto:info@spaarelektra.nl" class="ct-info-value">info@spaarelektra.nl</a>
-                </div>
-            </div>
-            <div class="ct-info-right">
-                <div class="ct-storing">
-                    <h3>Storing melden?</h3>
-                    <p>Bij storingen zijn wij <strong>24/7</strong> bereikbaar voor onze contractklanten.</p>
-                    <a href="tel:0203033446" class="ct-storing-tel">(020) 303 3446</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Main Content - single column, white bg -->
+    <main class="ct-main">
+        <div class="ct-content">
 
-    <!-- Contact Form -->
-    <section class="ct-form-section">
-        <div class="ct-form-inner">
-            <h2>Contact opnemen?</h2>
-            <p class="ct-form-intro">Vul het formulier in en wij nemen zo spoedig mogelijk contact met u op.</p>
+            <!-- Intro -->
+            <h2 class="ct-heading">Elektrotechnisch specialist sinds 1990</h2>
+            <p class="ct-intro">Wilt u direct contact met één van onze medewerkers, heeft u vragen of opmerkingen? Neem dan telefonisch of per e-mail contact met ons op.</p>
+
+            <!-- Algemene contactgegevens -->
+            <h4 class="ct-subheading">Algemene contactgegevens</h4>
+            <p class="ct-text">Neem telefonisch contact op via <a href="tel:0203033446" class="ct-link">(020) 303 3446</a></p>
+            <p class="ct-text">Of stuur een e-mail naar <a href="mailto:info@spaarelektra.nl" class="ct-link">info@spaarelektra.nl</a></p>
+
+            <!-- Storing melden -->
+            <h4 class="ct-subheading">Storing melden?</h4>
+            <p class="ct-text">Geeft uw installatie een storing aan? Onze servicedienst is 24/7 bereikbaar.<br>Neem telefonisch contact op via: <a href="tel:0203033446" class="ct-link">(020) 303 3446</a></p>
+
+            <!-- Contact Form -->
+            <h4 class="ct-subheading">Contact opnemen?</h4>
+            <p class="ct-text">Laat uw bericht achter en we reageren snel!</p>
 
             <form class="ct-form" id="contactForm">
-                <div class="ct-form-row">
-                    <div class="ct-form-group">
-                        <label for="ct-naam">Naam *</label>
-                        <input type="text" id="ct-naam" name="naam" required>
-                    </div>
-                    <div class="ct-form-group">
-                        <label for="ct-email">E-mailadres *</label>
-                        <input type="email" id="ct-email" name="email" required>
-                    </div>
+                <div class="ct-field">
+                    <label for="ct-naam">Uw naam *</label>
+                    <input type="text" id="ct-naam" name="naam" placeholder="Voor- en achternaam" required>
                 </div>
-
-                <div class="ct-form-row">
-                    <div class="ct-form-group">
-                        <label for="ct-adres">Adres</label>
-                        <input type="text" id="ct-adres" name="adres">
-                    </div>
-                    <div class="ct-form-group">
-                        <label for="ct-woonplaats">Woonplaats</label>
-                        <input type="text" id="ct-woonplaats" name="woonplaats">
-                    </div>
+                <div class="ct-field">
+                    <label for="ct-adres">Adres</label>
+                    <input type="text" id="ct-adres" name="adres" placeholder="Uw adres">
                 </div>
-
-                <div class="ct-form-row">
-                    <div class="ct-form-group">
-                        <label for="ct-telefoon">Telefoonnummer</label>
-                        <input type="tel" id="ct-telefoon" name="telefoon">
-                    </div>
-                    <div class="ct-form-group">
-                        <label for="ct-onderwerp">Onderwerp</label>
-                        <select id="ct-onderwerp" name="onderwerp">
-                            <option value="">Selecteer een onderwerp</option>
-                            <option value="elektrische-installaties">Elektrische Installaties</option>
-                            <option value="data-installatie">Data Installatie</option>
-                            <option value="camera-intercom">Camera & Intercom</option>
-                            <option value="brandbeveiliging">Brandbeveiliging</option>
-                            <option value="inspecties">Inspecties</option>
-                            <option value="verlichting">Verlichting</option>
-                            <option value="storing">Storing melden</option>
-                            <option value="offerte">Offerte aanvragen</option>
-                            <option value="anders">Anders</option>
-                        </select>
-                    </div>
+                <div class="ct-field">
+                    <label for="ct-woonplaats">Woonplaats</label>
+                    <input type="text" id="ct-woonplaats" name="woonplaats" placeholder="Uw woonplaats">
                 </div>
-
-                <div class="ct-form-group ct-full">
-                    <label for="ct-bericht">Bericht *</label>
-                    <textarea id="ct-bericht" name="bericht" rows="6" required></textarea>
+                <div class="ct-field">
+                    <label for="ct-email">Uw e-mailadres *</label>
+                    <input type="email" id="ct-email" name="email" placeholder="E-mailadres" required>
                 </div>
-
-                <button type="submit" class="ct-submit-btn">Versturen</button>
+                <div class="ct-field">
+                    <label for="ct-telefoon">Telefoonnummer</label>
+                    <input type="tel" id="ct-telefoon" name="telefoon" placeholder="Telefoonnummer">
+                </div>
+                <div class="ct-field">
+                    <label for="ct-onderwerp">Onderwerp</label>
+                    <select id="ct-onderwerp" name="onderwerp">
+                        <option value="">Selecteer een onderwerp</option>
+                        <option value="elektrische-installaties">Elektrische Installaties</option>
+                        <option value="data-installatie">Data Installatie</option>
+                        <option value="camera-intercom">Camera & Intercom</option>
+                        <option value="brandbeveiliging">Brandbeveiliging</option>
+                        <option value="inspecties">Inspecties</option>
+                        <option value="verlichting">Verlichting</option>
+                        <option value="storing">Storing melden</option>
+                        <option value="offerte">Offerte aanvragen</option>
+                        <option value="anders">Anders</option>
+                    </select>
+                </div>
+                <div class="ct-field">
+                    <label for="ct-bericht">Laat een bericht achter</label>
+                    <textarea id="ct-bericht" name="bericht" placeholder="Eventuele opmerkingen" rows="5"></textarea>
+                </div>
+                <button type="submit" class="ct-submit">Versturen</button>
             </form>
-        </div>
-    </section>
 
-    <!-- Vestiging -->
-    <section class="ct-vestiging">
-        <div class="ct-vestiging-inner">
-            <h2>Ons kantoor</h2>
-            <div class="ct-vestiging-grid">
-                <div class="ct-vestiging-card">
-                    <div class="ct-vestiging-header">
-                        <h3>Amsterdam</h3>
-                        <span class="ct-vestiging-badge">Hoofdkantoor</span>
+        </div>
+    </main>
+
+    <!-- Vestigingen - dark bg -->
+    <section class="ct-vestigingen">
+        <div class="ct-vest-inner">
+            <h2 class="ct-vest-title">Onze vestigingen</h2>
+            <p class="ct-vest-sub">Bezoek ons bij onze vestiging<br>of neem direct contact met ons op.</p>
+            <div class="ct-vest-buttons">
+                <a href="tel:0203033446" class="ct-vest-btn ct-vest-btn-fill">Bel ons</a>
+                <a href="mailto:info@spaarelektra.nl" class="ct-vest-btn ct-vest-btn-outline">Stuur ons een e-mail</a>
+            </div>
+            <div class="ct-vest-grid">
+                <div class="ct-vest-card">
+                    <div class="ct-vest-pin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     </div>
-                    <div class="ct-vestiging-details">
-                        <p class="ct-vestiging-address">
-                            Poortland 34<br>
-                            1046 BD Amsterdam
-                        </p>
-                        <div class="ct-vestiging-contact">
-                            <a href="tel:0203033446">(020) 303 3446</a>
-                            <a href="mailto:info@spaarelektra.nl">info@spaarelektra.nl</a>
-                        </div>
-                    </div>
-                    <div class="ct-vestiging-actions">
-                        <a href="tel:0203033446" class="ct-action-btn">Bel ons</a>
-                        <a href="mailto:info@spaarelektra.nl" class="ct-action-btn ct-action-outline">Stuur een e-mail</a>
-                    </div>
+                    <p class="ct-vest-name">Amsterdam (hoofdkantoor)</p>
+                    <p class="ct-vest-address">Poortland 34<br>1046 BD Amsterdam<br>Nederland</p>
                 </div>
             </div>
         </div>
