@@ -1,0 +1,625 @@
+/* ========================================
+   Onderhoud Page - Aqua+ style
+   SpaarElektra black/red color scheme
+   ======================================== */
+
+/* ========================================
+   HERO - beige bg, photo upper-right
+   ======================================== */
+.oh-hero {
+    position: relative;
+    background: var(--bg-light);
+    padding: 0;
+    overflow: hidden;
+}
+
+.oh-hero-image {
+    position: absolute;
+    top: 0;
+    right: 12%;
+    width: 39%;
+    height: 62%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.oh-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.oh-hero-title {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(80px, 7.5vw, 170px);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.2;
+    letter-spacing: -2px;
+    padding-top: 220px;
+    margin-left: 15%;
+    margin-bottom: 24px;
+}
+
+.oh-hero-info {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+    margin-left: 20%;
+    padding: 10px 0 40px 0;
+}
+
+.oh-breadcrumb {
+    font-size: 16px;
+    color: #6b7275;
+    margin-bottom: 20px;
+}
+
+.oh-breadcrumb a {
+    color: #6b7275;
+    text-decoration: underline;
+}
+
+.oh-breadcrumb span {
+    margin: 0 6px;
+}
+
+.oh-hero-subtitle {
+    font-size: clamp(26px, 2.5vw, 34px);
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 20px;
+    line-height: 1.33;
+}
+
+.oh-hero-subtitle::before {
+    content: '+';
+    margin-right: 4px;
+    font-weight: 900;
+}
+
+.oh-hero-text {
+    font-size: clamp(16px, 1.2vw, 22px);
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.oh-scroll-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.oh-scroll-link:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   TABS SECTION
+   ======================================== */
+.oh-tabs-section {
+    background: var(--white);
+    padding: 80px 40px;
+}
+
+.oh-tabs-title {
+    font-size: clamp(20px, 2vw, 28px);
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 36px;
+    margin-left: 20%;
+}
+
+.oh-tabs {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+.oh-tabs-nav {
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
+    flex-shrink: 0;
+    background: var(--primary);
+    padding: 8px;
+}
+
+.oh-tab-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    color: rgba(255, 255, 255, 0.6);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.oh-tab-btn:hover {
+    color: var(--white);
+}
+
+.oh-tab-btn.active {
+    color: var(--white);
+    border-left-color: var(--accent);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.oh-tabs-content {
+    flex: 1;
+}
+
+.oh-tab-panel {
+    display: none;
+}
+
+.oh-tab-panel.active {
+    display: block;
+}
+
+.oh-tab-panel h4 {
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.oh-tab-panel p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.oh-tab-link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.oh-tab-link:hover {
+    opacity: 0.7;
+}
+
+/* ========================================
+   PHOTO SLIDER
+   ======================================== */
+.oh-slider-section {
+    background: var(--white);
+    padding: 0 40px 80px;
+}
+
+.oh-slider-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.oh-slider-controls {
+    position: absolute;
+    top: -48px;
+    right: 0;
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+}
+
+.oh-slider-arrow {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ddd;
+    background: var(--white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: #333;
+}
+
+.oh-slider-arrow:hover:not(:disabled) {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.oh-slider-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.oh-plus-icon {
+    position: absolute;
+    top: -24px;
+    left: -24px;
+    width: 48px;
+    height: 48px;
+    background: var(--accent);
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.oh-slider-track {
+    display: flex;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.oh-slide {
+    flex: 0 0 calc(33.333% - 8px);
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.oh-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.oh-slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.oh-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s;
+}
+
+.oh-dot.active {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ========================================
+   TEXT SECTIONS
+   ======================================== */
+.oh-text-section {
+    background: var(--white);
+    padding: 40px 40px 60px;
+}
+
+.oh-text-inner {
+    max-width: 650px;
+    margin-left: 20%;
+}
+
+.oh-section-heading {
+    font-size: clamp(20px, 2vw, 28px);
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.oh-text-inner p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.oh-text-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--accent);
+    transition: all 0.3s;
+    margin-top: 8px;
+}
+
+.oh-text-btn:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+/* ========================================
+   IMAGE + TEXT SECTION
+   ======================================== */
+.oh-imgtext {
+    background: var(--white);
+    padding: 40px 40px 60px;
+}
+
+.oh-imgtext-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.oh-imgtext-photo {
+    width: 40%;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.oh-imgtext-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.oh-imgtext-content {
+    flex: 1;
+}
+
+.oh-imgtext-content h3 {
+    font-size: clamp(20px, 2vw, 26px);
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.oh-imgtext-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.oh-imgtext-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--accent);
+    transition: all 0.3s;
+}
+
+.oh-imgtext-btn:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+/* ========================================
+   SECOND TABS SECTION
+   ======================================== */
+.oh-tabs-section-2 {
+    padding-top: 40px;
+}
+
+.oh-tabs-section-2 .oh-tabs-title {
+    display: none;
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+.oh-cta {
+    background: var(--accent);
+    padding: 60px 40px;
+}
+
+.oh-cta-inner {
+    max-width: 650px;
+    margin-left: 20%;
+}
+
+.oh-cta-title {
+    font-size: clamp(18px, 1.5vw, 22px);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 14px;
+}
+
+.oh-cta-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 24px;
+}
+
+.oh-cta-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: var(--white);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--white);
+    transition: all 0.3s;
+}
+
+.oh-cta-btn:hover {
+    background: transparent;
+    color: var(--white);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+    .oh-hero-title {
+        font-size: clamp(60px, 8vw, 100px);
+        margin-left: 40px;
+        padding-top: 160px;
+    }
+
+    .oh-hero-info {
+        margin-left: 40px;
+    }
+
+    .oh-hero-image {
+        width: 45%;
+        right: 5%;
+    }
+
+    .oh-tabs {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .oh-tabs-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .oh-tab-btn {
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .oh-tab-btn.active {
+        border-bottom-color: var(--accent);
+        border-left-color: transparent;
+    }
+
+    .oh-tabs-title {
+        margin-left: 0;
+    }
+
+    .oh-text-inner {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .oh-cta-inner {
+        margin-left: 0;
+    }
+
+    .oh-imgtext-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .oh-imgtext-photo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .oh-hero {
+        min-height: auto;
+    }
+
+    .oh-hero-image {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 250px;
+    }
+
+    .oh-hero-title {
+        padding-top: 30px;
+        margin-left: 20px;
+        font-size: 60px;
+    }
+
+    .oh-hero-info {
+        margin-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+
+    .oh-tabs-section {
+        padding: 50px 20px;
+    }
+
+    .oh-tabs-nav {
+        flex-direction: column;
+    }
+
+    .oh-tab-btn {
+        border-bottom: none;
+        border-left: 3px solid transparent;
+    }
+
+    .oh-tab-btn.active {
+        border-left-color: var(--accent);
+        border-bottom-color: transparent;
+    }
+
+    .oh-slider-section {
+        padding: 0 20px 50px;
+    }
+
+    .oh-slide {
+        flex: 0 0 calc(50% - 6px);
+    }
+
+    .oh-text-section {
+        padding: 30px 20px 40px;
+    }
+
+    .oh-imgtext {
+        padding: 30px 20px 40px;
+    }
+
+    .oh-cta {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .oh-hero-title {
+        font-size: 44px;
+    }
+
+    .oh-slide {
+        flex: 0 0 100%;
+    }
+
+    .oh-slider-controls {
+        top: -40px;
+    }
+
+    .oh-plus-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 22px;
+        top: -18px;
+        left: -8px;
+    }
+}

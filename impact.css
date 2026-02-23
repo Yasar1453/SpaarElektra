@@ -1,0 +1,471 @@
+/* ========================================
+   Impact Page - Aqua+ style
+   SpaarElektra black/red color scheme
+   ======================================== */
+
+/* ========================================
+   HERO - beige bg, photo upper-right
+   ======================================== */
+.imp-hero {
+    position: relative;
+    background: var(--bg-light);
+    padding: 0;
+    overflow: hidden;
+}
+
+.imp-hero-image {
+    position: absolute;
+    top: 0;
+    right: 12%;
+    width: 39%;
+    height: 62%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.imp-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.imp-hero-title {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(70px, 7vw, 160px);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    padding-top: 220px;
+    margin-left: 15%;
+    margin-bottom: 24px;
+}
+
+.imp-hero-info {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+    margin-left: 20%;
+    padding: 10px 0 40px 0;
+}
+
+.imp-breadcrumb {
+    font-size: 16px;
+    color: #6b7275;
+    margin-bottom: 20px;
+}
+
+.imp-breadcrumb a {
+    color: #6b7275;
+    text-decoration: underline;
+}
+
+.imp-breadcrumb span {
+    margin: 0 6px;
+}
+
+.imp-hero-subtitle {
+    font-size: clamp(26px, 2.5vw, 34px);
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 20px;
+    line-height: 1.33;
+}
+
+.imp-hero-subtitle::before {
+    content: '+';
+    margin-right: 4px;
+    font-weight: 900;
+}
+
+.imp-hero-text {
+    font-size: clamp(16px, 1.2vw, 22px);
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.imp-scroll-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.imp-scroll-link:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   TEXT SECTIONS
+   ======================================== */
+.imp-text-section {
+    background: var(--white);
+    padding: 60px 40px;
+}
+
+.imp-text-inner {
+    max-width: 650px;
+    margin-left: 20%;
+}
+
+.imp-section-heading {
+    font-size: clamp(20px, 2vw, 28px);
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.imp-text-inner p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.imp-text-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--accent);
+    transition: all 0.3s;
+    margin-top: 8px;
+}
+
+.imp-text-btn:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+/* ========================================
+   PROJECTS CAROUSEL
+   ======================================== */
+.imp-carousel-section {
+    background: var(--white);
+    padding: 40px 40px 60px;
+}
+
+.imp-carousel-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7275;
+    text-align: center;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
+.imp-carousel-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.imp-carousel-controls {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+}
+
+.imp-carousel-arrow {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ddd;
+    background: var(--white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: #333;
+}
+
+.imp-carousel-arrow:hover:not(:disabled) {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.imp-carousel-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.imp-carousel-track {
+    display: flex;
+    gap: 16px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.imp-card {
+    flex: 0 0 calc(33.333% - 11px);
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.imp-card:hover {
+    opacity: 0.85;
+}
+
+.imp-card-photo {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.imp-card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.imp-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.4;
+}
+
+.imp-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.imp-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.2s;
+}
+
+.imp-dot.active {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ========================================
+   HOW & WHY SECTION
+   ======================================== */
+.imp-howwhy {
+    background: var(--white);
+    padding: 40px 40px 60px;
+    text-align: center;
+}
+
+.imp-howwhy-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #6b7275;
+    margin-bottom: 12px;
+}
+
+.imp-howwhy-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--accent);
+    transition: all 0.3s;
+}
+
+.imp-howwhy-btn:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+/* ========================================
+   IMAGE + TEXT SECTIONS
+   ======================================== */
+.imp-imgtext {
+    background: var(--white);
+    padding: 40px 40px 60px;
+}
+
+.imp-imgtext-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.imp-imgtext-photo {
+    width: 42%;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.imp-imgtext-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.imp-imgtext-content {
+    flex: 1;
+}
+
+.imp-imgtext-heading {
+    font-size: clamp(20px, 2vw, 28px);
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.imp-imgtext-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.imp-imgtext-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--accent);
+    transition: all 0.3s;
+}
+
+.imp-imgtext-btn:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+/* Reverse layout: text left, image right */
+.imp-imgtext-reverse .imp-imgtext-inner {
+    flex-direction: row-reverse;
+}
+
+/* Bottom carousel spacing */
+.imp-carousel-bottom {
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+    .imp-hero-title {
+        font-size: clamp(56px, 8vw, 100px);
+        margin-left: 40px;
+        padding-top: 160px;
+    }
+
+    .imp-hero-info {
+        margin-left: 40px;
+    }
+
+    .imp-hero-image {
+        width: 45%;
+        right: 5%;
+    }
+
+    .imp-text-inner {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .imp-imgtext-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .imp-imgtext-reverse .imp-imgtext-inner {
+        flex-direction: column;
+    }
+
+    .imp-imgtext-photo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .imp-hero {
+        min-height: auto;
+    }
+
+    .imp-hero-image {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 250px;
+    }
+
+    .imp-hero-title {
+        padding-top: 30px;
+        margin-left: 20px;
+        font-size: 56px;
+    }
+
+    .imp-hero-info {
+        margin-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+
+    .imp-text-section {
+        padding: 40px 20px;
+    }
+
+    .imp-carousel-section {
+        padding: 30px 20px 40px;
+    }
+
+    .imp-card {
+        flex: 0 0 calc(50% - 8px);
+    }
+
+    .imp-imgtext {
+        padding: 30px 20px 40px;
+    }
+
+    .imp-howwhy {
+        padding: 30px 20px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .imp-hero-title {
+        font-size: 42px;
+    }
+
+    .imp-card {
+        flex: 0 0 100%;
+    }
+}
